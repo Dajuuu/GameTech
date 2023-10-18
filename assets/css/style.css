@@ -35,6 +35,39 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
+.newsletter {
+padding: 80px 20px;
+}
+
+.newsletter .content {
+max-width: 650px;
+margin: 0 auto;
+text-align: center;
+position: relative;
+z-index: 2; 
+}
+
+.newsletter .content .form-control {
+height: 50px;
+border-color: #2a6336;
+border-radius: 10px 0px 0px 10px;
+    
+}
+/*
+.newsletter .content.form-control:focus {
+box-shadow: none;
+border: 2px solid #2a6336;
+}
+*/
+
+.newsletter .content .btn {
+min-height: 50px; 
+border-radius: 0px 10px 10px 0px;
+background: #2a6336;
+color: #fff;
+font-weight: 600;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -491,6 +524,7 @@ h1, h2, h3, h4, h5, h6 {
 #carousel-section
 {
     padding-top: 50px;
+    padding-bottom: 20px;
 }
 .m-bottom20 {margin-bottom: 20px; }
 
@@ -1318,7 +1352,8 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+/*  background: url("../img/footer-bg.jpg") top center no-repeat;*/
+    background-color: rgb(48, 56, 49);
   color: #fff;
   font-size: 14px;
   position: relative;
