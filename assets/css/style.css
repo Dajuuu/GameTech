@@ -13,7 +13,7 @@ body {
 }
 /* scrollbar*/
 body::-webkit-scrollbar {
-    width: 0.4rem;
+    width: 1rem;
 }
 body::-webkit-scrollbar-track {
     background: #2e362f;
@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section-bg-color {
     background-color: ghostwhite;
+}
+.section-bg-color-green {
+    background-color: lightgreen;
 }
 
 .newsletter {
@@ -62,6 +65,9 @@ h1, h2, h3, h4, h5, h6 {
     background: #2a6336;
     color: #fff;
     font-weight: 600;
+}
+.newsletter .content .btn:hover {
+    background: #328042;
 }
 /*--------------------------------------------------------------
 # Back to top button
@@ -510,3 +516,160 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     font-weight: 600;
 }
+
+.contact .btn:hover {
+    background: #328042;
+}
+
+/**/
+/* Shop page*/
+/**/
+
+
+
+
+.shop-image{
+    margin: 60px 10px 60px 10px;
+}
+.shop-image #middle {
+    border-radius: 8px;
+    border: 10px outset #b52d0b;
+    width: 96%; 
+    height: 400px; 
+    opacity: 1;
+}
+
+.shop-image .image {
+    opacity: 1;
+    transition: .2s ease;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    width: 96%; 
+    height: 400px;
+}
+.shop-image .description-pos{
+    transition: .2s ease;
+    opacity: 0;
+    position: absolute;
+    top: 75%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.shop-image:hover .description-pos {
+    opacity: 1;
+
+}
+@media (max-width: 991px) {
+    .shop-image .description-pos {
+    opacity: 1;
+    }
+}
+@media (min-width: 992px) {
+.shop-image:hover .image {
+    opacity: 0.8;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    }
+}
+
+
+
+.shop-image .description-pos .btn { /* zmiana nazwy*/
+  background-color: #d1411d;
+    border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.shop-image .description-pos .btn:hover { /* zmiana nazwy*/
+  background-color: #b33212;
+}
+
+.shop-image .description-pos .text-up { /* zmiana nazwy*/
+  color: white;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+/* Zmodyfikowac text on hover w buy now (jest zielony co troche nie pasuje)*/
+
+.shop-image-below .image:hover {
+    opacity: 0.8;
+}
+.shop-image-below .description-pos .btn { /* zmiana nazwy*/
+  background-color: #d1411d;
+    border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.shop-image-below .description-pos .btn:hover { /* zmiana nazwy*/
+  background-color: #b33212;
+}
+
+/*load more button*/
+
+.shop-image-below {
+    height: 300px;
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    line-height: 100px; /* centering text just for view */
+    text-align: center;
+    background-color: grey;
+    margin: 10px;
+    border-radius: 8px;
+    display: none;
+    transition: .2s ease;
+    opacity: 1;
+}
+.shop-image-below:hover {
+    opacity: 0.8;
+}
+#loadMore {
+    width: 200px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #2a6336;
+    transition: .3s;
+}
+#loadMore:hover {
+    background-color: #328042;
+    text-decoration: none;
+}
+.noContent {
+    color: #000 !important;
+    background-color: transparent !important;
+    pointer-events: none;
+}
+
+/* Different positions */
+.corner-ribbon-right{
+    width: 100px;
+    top: 40px;
+    right: 53px;
+    left: auto;
+    background: #e43;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+}
+@media (max-width: 950px) {
+    
+    .corner-ribbon-right{
+    right: 48px;
+}
+

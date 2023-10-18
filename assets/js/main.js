@@ -140,5 +140,17 @@ if ($(window).scrollTop() > 100) {
     }, 1500, 'easeInOutExpo');
     return false;
   });
-
+    
+    
+$(document).ready(function(){
+  $(".shop-image-below").slice(0, 4).show();
+  $("#loadMore").on("click", function(e){
+    e.preventDefault();
+    $(".shop-image-below:hidden").slice(0, 4).slideDown();
+    if($(".shop-image-below:hidden").length == 0) {
+      $("#loadMore").text("").addClass("noContent");
+    }
+  });
+})
+    
 })(jQuery);
