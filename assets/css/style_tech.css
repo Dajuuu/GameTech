@@ -26,6 +26,14 @@ body {
     font-weight: 400;
 }
 
+/* maintains the size of sections/site*/
+.container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1380px;
+	overflow-x: hidden;
+}
+
 /* links colour*/
 a {
     color: #1a5496;
@@ -52,7 +60,11 @@ h1, h2, h3, h4, h5, h6 {
 .section-color-gw {
     background-color: ghostwhite;
 }
-
+/* author small column section*/
+.section-color-grey{
+    background-color: lightgray;
+    border-radius: 8px;
+}
 .m-bottom20 {margin-bottom: 20px; }
 
 video {
@@ -289,7 +301,7 @@ video {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-    background-color: rgba(84,227,114, 0.8);
+    background-color: rgba(38, 110, 191, 0.8);
     text-decoration: none;
 }
 /* background goes darker when user opens the navbar list*/
@@ -322,7 +334,7 @@ video {
     position: relative;
     width: 100%;
     height: 85vh;
-    background: url('../images/4.jpg') top center;
+    background: url('../images/9.jpg') top center;
     background-size: cover;
 }
 
@@ -402,42 +414,155 @@ video {
 /* - this code is written by myself*/
 /*----------*/
 
-/* maintains the size of the section*/
-.container-fluid {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1380px;
-	overflow-x: hidden;
-}
-
 /* section spacing*/
 .news-section {
 	padding-top: 40px;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 
+/* styling h3 heading in this section*/
+.news-section h3, h4 {
+    text-align: left;
+    font-weight: 500;
+    margin-top: 10px;
+}
 /* image styling*/
 .latest-news-img {
+    object-fit: cover;
     width: 100%; 
     height: 200px; 
     border-radius: 8px;
+    margin-top: 40px; 
+}
+
+/* gifs styling*/
+.latest-news-gif {
+    object-fit: cover;
+    width: 100%; 
+    height: 400px; 
+    border-radius: 8px;
+    margin-top: 40px;
+}
+/* outline between the news (left-side bar)*/
+.column-outline-left {
     margin-top: 20px;
+    margin-bottom: 30px;
+    border-left: 1px solid aqua;
+}
+/* outline between the news (right-side bar)*/
+.column-outline-right {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-right: 1px solid aqua;
+}
+/* - I have decided to make the row outlines for two sections*/
+/* - this helped maintain responsiveness of the site*/
+/* --- */
+/* outline between the upper/latest news rows*/
+.row-outline-upper {
+    border-bottom: 1px solid ghostwhite;
+}
+/* outline between the bottom/more news rows*/
+.row-outline-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-right: 1px;
+    border-bottom: 1px solid aqua;
 }
 
-/*----------*/
-/* Horizontal images*/
-/*----------*/
-#carousel {
-    width: 100%;
-    height: 250px;
-    background-color: #ff0000;
+/* row outlines and images behavior on small screen*/
+@media (max-width: 575px) {
     
-    overflow: auto;
-    white-space: nowrap;
+    /*changing the colour of rows to become "invisible"*/
+    .column-outline-left, .column-outline-right {
+        border-color: ghostwhite;
+    }
+    .row-outline-upper {
+        border-bottom-color: aqua; 
+    }
+    /* changing the margin of images*/
+    .latest-news-img, .latest-news-gif {
+        margin-top: 0px;
+    }
 }
 
-#carousel .slide {
-    display: inline-block;
+
+/*----------*/
+/* More news section*/
+/* - this code is written by myself*/
+/*----------*/
+
+/* more/bottom news spacing*/
+.news-bottom {
+    padding: 25px 15px 25px 10px;
+}
+
+/* bottom news image styling*/
+.news-bottom .image {
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 200px;
+    width: 350px;
+    float: left;
+}
+
+/* h3 header styling*/
+.news-bottom h3 {
+    margin: 10px 15px 10px 15px;
+    max-width: 450px;
+    float: right;
+}
+/* padding of author column*/
+.news-bottom-column {
+    padding: 30px;
+}
+/* column image styling*/
+.news-bottom-column .image {
+    object-fit: cover;
+    border-radius: 100%;
+    width: 200px;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+/* h3 header styling*/
+.news-bottom-column h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+/* h4 header styling*/
+.news-bottom-column h4 {
+    font-weight: 400;
+}
+
+/* bottom news images and text styling for large screen*/
+@media (max-width: 1274px) {
+    
+    .news-bottom h3{
+        max-width: none;
+    }
+    .news-bottom .image {
+        width: 100%;
+        margin-left: 20px;
+        margin-right: auto;
+    }
+}
+/* column image styling from very small to bigger screen*/
+@media (max-width: 991px){
+    
+    .news-bottom-column .image {
+        width: 180px;
+        height: 150px;
+        margin-bottom: 0px;
+        margin-top: 10px;   
+    }
 }
 
 /*----------*/

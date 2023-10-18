@@ -50,13 +50,16 @@ h1, h2, h3, h4, h5, h6 {
 .section-color-gw {
     background-color: ghostwhite;
 }
-
-.m-bottom20 {margin-bottom: 20px; }
-/*
-.section-bg-color-green {
+/* shop section colour*/
+.section-color-lg {
     background-color: lightgreen;
 }
-*/
+/* shop section colour*/
+.section-color-light {
+    background-color: #f5f0f0;
+}
+
+.m-bottom20 {margin-bottom: 20px;}
 
 /*----------*/
 /* Newsletter section */
@@ -105,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     right: 15px;
     bottom: 25px;
-    z-index: 10;
+    z-index: 100;
 }
 
 /* button styling */
@@ -135,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 /* header when user is on the of the page */
 /*  - changed: deleted background */
 #header {
-    z-index: 9;
+    z-index: 99;
     transition: all 0.3s;
     padding: 20px 0;
 }
@@ -232,7 +235,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     right: 15px;
     top: 26px;
-    z-index: 19;
+    z-index: 101;
     border: none;
     background: none;
     font-size: 25px;
@@ -250,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* colour of the navigation menu*/
 .mobile-nav-toggle i {
-  color: #fff;
+    color: #fff;
 }
 
 /* navigation menu itself*/
@@ -258,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 /*  - deleted: bottom*/
 /*  - changed: positioning, colour*/
 .mobile-nav { 
-    z-index: 20;
+    z-index: 95;
     overflow-y: auto;
     text-align: center;
     position: fixed;
@@ -296,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* background goes darker when user opens the navbar list*/
 .mobile-nav-overly {
-    z-index: 18;
+    z-index: 90;
     width: 100%;
     height: 100%;
     top: 0;
@@ -324,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 85vh;
-    background: url('../images/6.jpg') top center;
+    background: url('../images/7.jpg') top center;
     background-size: cover;
 }
 
@@ -420,6 +423,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* image styling*/
 .latest-news-img {
+    object-fit: cover;
     width: 100%; 
     height: 400px;  
     border-radius: 8px;
@@ -431,7 +435,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     width: 100%;
     bottom: 0px;
-    border-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
     background: rgba(4, 7, 23, 0.5);
     padding: 15px;
 }
@@ -464,6 +468,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* styling of the images in the carousel */
 .carousel-image {
+    object-fit: cover;
     height: 350px; 
     border-radius: 8px;
 }
@@ -472,6 +477,20 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-indicators li {
     border-radius: 100%;
     height: 5px;
+
+}
+/* carousel desription position*/
+.carousel-caption .margin {
+    margin-bottom: 30px;
+}
+/* h5 heading styling*/
+.carousel-caption h5{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    border-radius: 8px;
+    background: rgba(4, 7, 3, 0.6);
+    padding: 15px;  
 }
 
 /*----------*/
@@ -577,14 +596,16 @@ footer .footer-bottom {
 }
 /* images ine the middle section (latest additions)*/
 .shop-image #middle {
+    object-fit: cover;
     border-radius: 8px;
-    border: 10px outset #b52d0b;
+    border: 10px outset #248a38;
     width: 96%; 
     height: 400px; 
     opacity: 1;
 }
 /* images styling*/
 .shop-image .image {
+    object-fit: cover;
     opacity: 1;
     transition: .2s ease;
     backface-visibility: hidden;
@@ -618,15 +639,19 @@ footer .footer-bottom {
 /* - only on bigger screens*/
 @media (min-width: 992px) {
     
-    .shop-image:hover .image {
+    .shop-image:hover .image{
         opacity: 0.8;
         transform: scale(1.1);
+    }
+    .shop-image:hover #middle{
+        opacity: 0.8;
     }
 }
 
 /* text styling in the description box*/
 .shop-image .description .text-up {
     color: #fff;
+    font-weight: bold;
     font-size: 20px;
     padding-bottom: 20px;
 }
@@ -645,12 +670,12 @@ footer .footer-bottom {
 
 /* image styling for the images at the bottom*/
 .shop-image-below {
+    object-fit: cover;
     height: 300px;
     width: 100%;
     margin: 10px 0;
     border-radius: 8px;
     display: none;
-    transition: transform .2s ease;
     opacity: 1;
 }
 .shop-image-below:hover {
@@ -671,6 +696,7 @@ footer .footer-bottom {
     line-height: 40px;
     color: #fff;
     transform: rotate(30deg);
+    z-index: 10;
 }
 /* making sure the postion is right*/
 @media (max-width: 950px) {

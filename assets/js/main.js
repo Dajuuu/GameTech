@@ -47,7 +47,11 @@
 //      }
 //    }
 //  });
-
+    
+//document.getElementsByClassName('carousel-indicators').style.backgroundColor = "black";
+        
+    
+    
   // Mobile Navigation
   if ($('.nav-menu').length) {
     var $mobile_nav = $('.nav-menu').clone().prop({
@@ -171,7 +175,13 @@ $('.scroll-to-top-button').click(function() {
 /* end of scroll to the top button*/
     
     
-    
+// columns outline code
+//$(window).resize(function() {
+//    if($(window).width() < 550){
+//    var xlen = document.getElementsByClassName('column-outline-left column-outline-right').length;
+//    console.log(xlen);
+//    }
+//});
     
 //$(document).ready(function(){
 //    $(".shop-image-below").slice(0, 4).show();
