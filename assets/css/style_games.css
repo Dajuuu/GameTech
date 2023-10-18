@@ -26,6 +26,17 @@ body {
     font-weight: 400;
 }
 
+/* progress bar that appears on scroll*/
+.progressBar { 
+    background-color: red;
+    position: fixed;  
+    left: 0;
+    top: 0;
+    height: 4px; 
+    opacity: 1;
+    z-index: 100;
+}
+
 /* maintains the size of sections/site*/
 .container-fluid {
 	margin-left: auto;
@@ -273,7 +284,7 @@ video {
     overflow-y: auto;
     text-align: center;
     position: fixed;
-    top: 65px;
+    top: 100px;
     right: 15px;
     left: 15px;
     padding: 10px 0;
@@ -423,6 +434,7 @@ video {
 
 /* styling h3 heading in this section*/
 .news-section h3, h4 {
+    margin: 10px 15px 10px 15px;
     text-align: left;
     font-weight: 500;
     margin-top: 10px;
@@ -474,7 +486,7 @@ video {
 /* row outlines and images behavior on small screen*/
 @media (max-width: 575px) {
     
-    /*changing the colour of rows to become "invisible"*/
+    /*changing the colour of rows to become "invisible" */
     .column-outline-left, .column-outline-right {
         border-color: ghostwhite;
     }
@@ -487,6 +499,18 @@ video {
     }
 }
 
+@media (min-width: 576px) and (max-width: 991px) {
+    
+    .row-outline-bottom {
+        margin-left: 4px;
+    }
+}
+@media (max-width: 575px) {
+    
+    .row-outline-bottom {
+        margin-right: -20px;
+    }
+}
 
 /*----------*/
 /* More news section*/
@@ -550,7 +574,7 @@ video {
     }
     .news-bottom .image {
         width: 100%;
-        margin-left: 20px;
+        margin-left: auto;
         margin-right: auto;
     }
 }
