@@ -65,23 +65,34 @@ h1, h2, h3, h4, h5, h6 {
 .head-title {
 	margin-bottom: 1rem;
     text-align: center;
+    color: black;
 	line-height: 1.5;
 }
+
 /* section colours*/
-.section-color-gw {
-    background-color: ghostwhite;
+.section-color-white {
+    background-color: white;
 }
+.color-change-from-white {
+    background-color: #171717; /*very dark grey*/
+}
+.section-color-gw {
+    background-color: ghostwhite; /*ghostwhite*/
+}
+.color-change-from-gw {
+    background-color: #121212; /*very dark grey*/
+}
+
 /* author small column section*/
 .section-color-grey{
     background-color: lightgray;
     border-radius: 8px;
 }
-.m-bottom20 {margin-bottom: 20px; }
-
-video {
-  width: 100% !important;
-  height: auto !important;
+.color-change-grey {
+    background-color: #121212; /*very dark grey*/
 }
+
+.m-bottom20 {margin-bottom: 20px; }
 
 /*----------*/
 /* Newsletter section */
@@ -115,6 +126,11 @@ video {
 .newsletter .content .btn:hover {
     background: #3672b5; 
 }
+/* newsletter headers base text colour and padding*/
+.newsletter-header {
+    padding-bottom: 20px;
+    color: black;
+}
 
 /*----------*/
 /* Scroll to the top button */
@@ -129,7 +145,7 @@ video {
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 25px;
+    bottom: 70px;
     z-index: 10;
 }
 
@@ -149,9 +165,46 @@ video {
     transition: all 0.3s;
 }
 .scroll-to-top-button i:hover {
-    background: #fff;
+    background: darkgrey;
     color: #285d99;
 }
+
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/* button position*/
+.dark-mode-button {
+    display: none;
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    z-index: 100;
+}
+/* button styling */
+/* changed: colour, size, transistion time */
+.dark-mode-button i {
+    display: flex;
+    width: 60px;
+    height: 40px;
+    font-size: 30px; /* font size is needed to adjust the size of the arrow*/
+    border-radius: 20px;
+    border-style: solid;
+    border-width: thin;
+    align-items: center;
+    justify-content: center;
+    color: #285d99;
+    transition: all 0.3s;
+}
+.dark-mode-button i:hover {
+    background: darkgrey;
+    color: #285d99;
+}
+
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+
+
 
 /*----------*/
 /* Header */
@@ -425,6 +478,11 @@ video {
 /* - this code is written by myself*/
 /*----------*/
 
+/* text colour when the page is white*/
+.news-text-color {
+    color: black;
+}
+
 /* section spacing*/
 .news-section {
 	padding-top: 40px;
@@ -472,7 +530,9 @@ video {
 /* --- */
 /* outline between the upper/latest news rows*/
 .row-outline-upper {
-    border-bottom: 1px solid ghostwhite;
+    border-bottom-width: 1px; 
+    border-bottom-style: solid; 
+    border-bottom-color: rgba(248, 248, 255, 0);
 }
 /* outline between the bottom/more news rows*/
 .row-outline-bottom {
@@ -487,7 +547,7 @@ video {
     
     /*changing the colour of rows to become "invisible" */
     .column-outline-left, .column-outline-right {
-        border-color: ghostwhite;
+        border-color: rgba(248, 248, 255, 0);
     }
     .row-outline-upper {
         border-bottom-color: aqua; 
@@ -642,4 +702,11 @@ footer .social-links a:hover {
 /* deleted: z-index, position, padding-bottom, text-align;*/
 footer .footer-bottom {
     margin-top: 10px;
+}
+
+.color-change-to-white-text {
+    color: white;
+}
+.color-change-bg {
+    background: #44bbeb;
 }

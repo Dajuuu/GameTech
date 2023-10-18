@@ -6,11 +6,12 @@
 // ***
 // This part was kept almost without any change as this was exactly what I needed
 //  - changed: some variable names
+    
     if ($('.nav-menu').length) {
         var mobile_nav = $('.nav-menu').clone().prop(
         {class: 'mobile-nav d-lg-none'});
 
-        // Adding classes to the html
+        // Adding classes to the html - those classes are responsible for adding a dark overly behind the nav-bar box, as well as the nav-bar icon indicatior 
         $('body').append(mobile_nav);
         $('body').prepend('<button type="button" class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>');
         $('body').append('<div class="mobile-nav-overly"></div>');
@@ -63,12 +64,12 @@
 
     $(window).scroll(function() {
 
-        var bar_pos = $('.mobile-nav');
+        var barPos = $('.mobile-nav');
 
         if ($(this).scrollTop() > 100) {
-            $(bar_pos).css("top", "70px");
+            $(barPos).css("top", "70px");
         } else {
-            $(bar_pos).css("top", "100px");
+            $(barPos).css("top", "100px");
         }
     });       
 
@@ -86,29 +87,55 @@
         }
     });
 
+    //easing animation
     $('.scroll-to-top-button').click(function() {
         $('html, body').animate({scrollTop: 0}, 1200, 'easeInOutExpo');
         return false;
     });
     
 //--------------------------------------------
-// This is the scroll-to-top-button function, that appears in the 
-// bottom right corner of the screen after user is below fixed y coord.
-//  - changed: the y coordinate, animation time length
+// This is the dark mode function, that appears in the 
+// bottom right corner of the screen, above the scroll-to-top-button,   after user is below fixed y coord.
+//  - the $(window) part was coppied and adapted from scroll-to-top part
+//  - Everything after that was written by me
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() > 400) {
-            $('.scroll-to-top-button').fadeIn('slow');
+        if ($(window).scrollTop() > 20) {
+            $('.dark-mode-button').fadeIn('slow');
         } 
         else {
-            $('.scroll-to-top-button').fadeOut('slow');
+            $('.dark-mode-button').fadeOut('slow');
         }
     });
-
-    $('.scroll-to-top-button').click(function() {
-        $('html, body').animate({scrollTop: 0}, 1200, 'easeInOutExpo');
+    
+    //when user clicks the button some sections of the page changes colour 
+    $('.dark-mode-button').click(function() {
+        //this applies to all pages
+        $('.newsletter-header').toggleClass("color-change-to-white-text");
+        $('.head-title').toggleClass("color-change-to-white-text");
+        
+        //everything on the index.html / main page
+        $('.section-color-gw').toggleClass("color-change-from-gw");
+        $('.section-color-white').toggleClass("color-change-from-white");
+        $('.mobile-nav').toggleClass("color-change-bg");
+        
+        
+        
+        //games page
+        
+        $('.section-color-grey').toggleClass("color-change-grey");
+        $('.news-text-color').toggleClass("color-change-to-white-text");
+        
+        
+        //shop page
+        $('.section-color-lightgray').toggleClass('color-change-from-lightgray');
+        $('.section-color-lg').toggleClass('color-change-from-lg');
+        
+        
+        
         return false;
     });
+    
 //--------------------------------------------
 // Progress bar
 // ***
@@ -134,9 +161,9 @@
 // This is the alert that pops up when clicking buttons and images on the shop page
 // - This code was written by myself
 
-    var btn_alert = $('.shop-image .description .btn , .shop-image-below');
+    var btnAlert = $('.shop-image .description .btn , .shop-image-below');
     
-    $(btn_alert).click(function() {
+    $(btnAlert).click(function() {
         alert("Coming soon!");
     });
 

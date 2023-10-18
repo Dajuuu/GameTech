@@ -9,6 +9,7 @@
 /*----------*/
 
 /* scrollbar*/
+/* - this code is written by myself*/
 body::-webkit-scrollbar {
     width: 1rem;
 }
@@ -19,7 +20,14 @@ body::-webkit-scrollbar-thumb {
     background: #2a6336;
 }
 
+/* font used in the body section*/
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+}
+
 /* progress bar that appears on pages*/
+/* - this code is written by myself*/
 .progressBar { 
     background-color: green;
     position: fixed;  
@@ -30,10 +38,12 @@ body::-webkit-scrollbar-thumb {
     z-index: 100;
 }
 
-/* font used in the body section*/
-body {
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
+/* maintains the size of the sections/page*/
+.container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1380px;
+	overflow-x: hidden;
 }
 
 /* links colour*/
@@ -55,19 +65,37 @@ h1, h2, h3, h4, h5, h6 {
 .head-title {
 	margin-bottom: 1rem;
     text-align: center;
+    color: black;
 	line-height: 1.5;
 }
+
 /* section colours*/
+.section-color-white {
+    background-color: white;
+}
+.color-change-from-white {
+    background-color: #171717; /*very dark grey*/
+}
 .section-color-gw {
-    background-color: ghostwhite;
+    background-color: ghostwhite; /*ghostwhite*/
+}
+.color-change-from-gw {
+    background-color: #121212; /*very dark grey*/
 }
 /* shop section colour*/
 .section-color-lg {
     background-color: lightgreen;
 }
+
+.color-change-from-lg {
+    background-color: #292727; /*very dark grey*/
+}
 /* shop section colour*/
-.section-color-light {
+.section-color-lightgray {
     background-color: #f5f0f0;
+}
+.color-change-from-lightgray {
+    background-color: #171717; /*very dark grey*/
 }
 
 .m-bottom20 {margin-bottom: 20px;}
@@ -104,6 +132,15 @@ h1, h2, h3, h4, h5, h6 {
 .newsletter .content .btn:hover {
     background: #328042;
 }
+/* newsletter headers base text colour and padding*/
+.newsletter-header {
+    padding-bottom: 20px;
+    color: black;
+}
+/* changing the text colour when user clicks the button*/
+.color-change-newsletter {
+    color: white;
+}
 
 /*----------*/
 /* Scroll to the top button */
@@ -118,7 +155,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 25px;
+    bottom: 70px;
     z-index: 100;
 }
 
@@ -138,25 +175,24 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s;
 }
 .scroll-to-top-button i:hover {
-    background: #fff;
+    background: darkgrey;
     color: green;
 }
 
-/* button position */
-/* changed: bottom and z-index*/
-.scroll-to-top-button {
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/*-------------------------------------------------------------*/
+/* button position*/
+.dark-mode-button {
     display: none;
     position: fixed;
     right: 15px;
-    bottom: 25px;
-    z-index: 100;
+    bottom: 20px;
+    z-index: 110;
 }
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
 /* button styling */
 /* changed: colour, size, transistion time */
-.dark-mode i {
+.dark-mode-button i {
     display: flex;
     width: 60px;
     height: 40px;
@@ -169,8 +205,8 @@ h1, h2, h3, h4, h5, h6 {
     color: green;
     transition: all 0.3s;
 }
-.scroll-to-top-button i:hover {
-    background: #fff;
+.dark-mode-button i:hover {
+    background: darkgrey;
     color: green;
 }
 /*-------------------------------------------------------------*/
@@ -298,9 +334,9 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
 }
 
-/* colour of the navigation menu*/
+/* colour of the navigation menu icon*/
 .mobile-nav-toggle i {
-  color: #fff;
+    color: #fff;
 }
 
 /* navigation menu itself*/
@@ -308,7 +344,7 @@ h1, h2, h3, h4, h5, h6 {
 /*  - deleted: bottom*/
 /*  - changed: positioning, colour*/
 .mobile-nav { 
-    z-index: 95;
+    z-index: 102;
     overflow-y: auto;
     text-align: center;
     position: fixed;
@@ -346,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* background goes darker when user opens the navbar list*/
 .mobile-nav-overly {
-    z-index: 90;
+    z-index: 100;
     width: 100%;
     height: 100%;
     top: 0;
@@ -454,14 +490,6 @@ h1, h2, h3, h4, h5, h6 {
 /* - this code is written by myself*/
 /*----------*/
 
-/* maintains the size of the section*/
-.container-fluid {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1380px;
-	overflow-x: hidden;
-}
-
 /* section spacing*/
 .news-section {
 	padding-top: 40px;
@@ -524,7 +552,6 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-indicators li {
     border-radius: 100%;
     height: 5px;
-
 }
 /* carousel desription position*/
 .carousel-caption .margin {
@@ -603,8 +630,7 @@ footer .footer-bottom {
 
 /* section spacing*/
 .contact-space {
-    padding-bottom: 30px;
-    padding-top: 10px;
+    padding: 30px; 
 }
 
 /* spacing between the form boxes*/
@@ -633,7 +659,7 @@ footer .footer-bottom {
 }
 
 /*----------*/
-/* Contact page*/
+/* Shop page*/
 /* Only some parts are copied and modified from other sources*/
 /*----------*/
 
@@ -787,4 +813,11 @@ footer .footer-bottom {
 .noContent {
     background-color: transparent !important;
     pointer-events: none;
+}
+
+.color-change-to-white-text {
+    color: white;
+}
+.color-change-bg {
+    background: lightgreen;
 }

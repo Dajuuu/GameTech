@@ -3,25 +3,27 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="600">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
     <meta name="keywords" content="Games, Tech, technology, news, JS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTech Homepage</title>
+    <title>GameTech Contact Page</title>
+    
     <!-- fonts are used from the: https://fonts.google.com -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animacje przejscia - css -->
-    <link href="assets/css/style.css" rel="stylesheet">   
+    <!-- CSS stylesheets -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- icofont --> 
+    <link href="assets/css/style.css" rel="stylesheet">  <!-- my css styling-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
 </head>
 
 <body>
+    <!-- Progress bar that appears at the top of the page-->
+    <!-- Progress bar code is also in the .js and style.css -->
     <div class="progressBar"></div>
 <!-- ======= Header ======= -->
 <header id="header" class="header-scrolled-contact mobile-nav-toggle-scrolled-contact fixed-top d-flex align-items-center header-transparent">
@@ -41,7 +43,7 @@
 </header>
     
 <!-- ======= Main image and text  ======= -->
-<section class="news-section" style="margin-top: 110px; margin-bottom: -40px;">
+<section class="section-color-lightgray news-section" style="padding-top: 140px; margin-bottom: -40px;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
@@ -52,7 +54,7 @@
 </section>
     
 <!-- Main shop image-->
-<section class="section-bg-color">
+<section class="section-color-lightgray">
     <div class="row container-fluid" style="padding-right: 0px;">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
             <div class="shop-image">
@@ -120,7 +122,7 @@
     </div>
 </section>
     <!--    images below 2-->
-<section class="section-color-light" style="padding-top: 50px">
+<section class="section-color-lightgray" style="padding-top: 50px">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
@@ -164,17 +166,17 @@
         <a href="#" id="loadMore">Load More</a>
     </div>
 </section>
-<section class="newsletter">
+<section class="section-color-gw newsletter">
     <div class="container">
         <div class="row">
             <div class="col-sm-12"> 
                 <div class="content">
                     <div data-aos="fade-right">
                         <form>
-                            <h3 style="padding-bottom: 20px; ">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                            <h6 style="padding-bottom: 20px; ">Stay up to date with our latest news</h6>
+                            <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                            <h6 class="newsletter-header">Stay up to date with our latest news</h6>
                             <div class="input-group" >
-                                <input type="email" class="form-control section-color-gw" placeholder="Write your e-mail here">
+                                <input type="email" class="form-control" placeholder="Write your e-mail here">
                                 <span class="input-group-btn">
                                     <button class="btn" type="submit">Subscribe</button>
                                 </span>
@@ -206,6 +208,7 @@
 
 <!-- back to the top button -->
 <a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
+    <a class="dark-mode-button"><i class="icofont-adjust"></i></a>
 
 <!-- Vendor JS Files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
