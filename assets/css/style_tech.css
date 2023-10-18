@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 /* titles size and position*/
 .head-title {
 	margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     color: black;
 	line-height: 1.5;
@@ -74,25 +75,31 @@ h1, h2, h3, h4, h5, h6 {
     background-color: white;
 }
 .color-change-from-white {
-    background-color: #171717; /*very dark grey*/
+    background-color: #171717; /*darkmode*/
 }
-.section-color-gw {
-    background-color: ghostwhite; /*ghostwhite*/
+.section-color-ghostwhite {
+    background-color: ghostwhite; 
 }
-.color-change-from-gw {
-    background-color: #121212; /*very dark grey*/
+.color-change-from-ghostwhite {
+    background-color: #121212; /*darkmode*/
 }
 
 /* author small column section*/
-.section-color-grey{
+.section-color-gray{
     background-color: lightgray;
     border-radius: 8px;
 }
-.color-change-grey {
-    background-color: #121212; /*very dark grey*/
+.color-change-from-gray {
+    background-color: #121212; /*darkmode*/
 }
 
-.m-bottom20 {margin-bottom: 20px; }
+/* small positioning classes*/
+.m-rightAuto {margin-right: auto;}
+.m-bottom20 {margin-bottom: 20px;}
+
+.display-flex {display: flex;}
+.align-center {align-items: center;}
+.text-center {text-align: center;} 
 
 /*----------*/
 /* Newsletter section */
@@ -217,7 +224,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.3s;
     padding: 20px 0;
 }
-
+/* makes header in fixed position*/
+/* - this was made by me*/
+.header-fixed-pos {
+    position: fixed;
+    z-index: 80;
+    top: 0;
+    right: 0;
+    left: 0; 
+}
 /* header when user is below the fixed y coordinate (main.js file) */
 /*  - changed: different padding and background values */
 #header.header-scrolled {
@@ -394,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* welcome background image*/
 /*  - changed: height, image*/
-#welcome {
+.welcome {
     position: relative;
     width: 100%;
     height: 85vh;
@@ -403,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* background image overlay*/
-#welcome:before {
+.welcome:before {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -416,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 /* text on the background*/
 /*  - added: margin-top*/
 /*  - deleted: padding*/
-#welcome .welcome-container {
+.welcome .container {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -433,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 /* welcome section h1 styling*/
 /*  - deleted: margin*/
 /*  - changed: font-size, font-weight, line-height*/
-#welcome h1 {
+.welcome h2.big {
     font-size: 45px;
     font-weight: 600;
     line-height: 76px;
@@ -442,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* welcome section h2 styling*/
-#welcome h2 {
+.welcome h2 {
     font-size: 24px;
     margin-bottom: 30px;
     color: #fff;
@@ -451,7 +466,7 @@ h1, h2, h3, h4, h5, h6 {
 /* this @media allows background's parallax effect on bigger screens*/
 @media (min-width: 1024px) {
     
-    #welcome {
+    .welcome {
         background-attachment: fixed;
         }
     }
@@ -459,12 +474,12 @@ h1, h2, h3, h4, h5, h6 {
 /* shrinks the text size on smaller screens */
 @media (max-width: 768px) {
     
-    #welcome h1 {
+    .welcome h1 {
         font-size: 28px;
         line-height: 36px;
     }
     /* added: margin-left, margin-right*/
-    #welcome h2 {
+    .welcome h2 {
         font-size: 18px;
         line-height: 24px;
         margin-bottom: 30px;

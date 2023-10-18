@@ -1,144 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- All of the meta information, fonts and css stylesheets used-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="600">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
     <meta name="keywords" content="Games, Tech, technology, news, JS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTech Homepage</title>
-    <!-- Google Fonts -->
+    <title>GameTech Contact Page</title>
+    
     <!-- fonts are used from the: https://fonts.google.com -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animacje przejscia - css -->
-    <link href="assets/css/style.css" rel="stylesheet">   
+    <!-- CSS stylesheets -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
+    <link href="assets/css/style.css" rel="stylesheet">  <!-- my css styling -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
 </head>
 
 <body>
-    
-<!-- ======= Header ======= -->
-<!-- Header -->
-<header id="header" class="fixed-top align-items-center d-flex header-scrolled-contact mobile-nav-toggle-scrolled-contact">
-    <div class="container-fluid d-flex align-items-center">
-        <div class="logo mr-auto">
-            <h1><a href="index.html"><span>GAMETECH</span></a></h1>
+    <!-- Header -->
+    <!-- *** header code was greatly modified and changed compared to the template - more in the style.css in the header section-->
+    <!-- -->
+    <!-- * header-scrolled-contact, mobile-nav-toggle-scrolled-contact, header-fixed-pos: responsive behaviour of the header (these classes are written by me) - more info in the style.css -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <!-- * align-center, display-flex - pretty self-explanatory classes (style.css) -->
+    <!-- * m-rightAuto - margin-right: auto (style.css) -->
+    <header id="header" class="header-scrolled-constant mobile-nav-toggle-scrolled-constant header-fixed-pos">
+        <div class="container-fluid display-flex align-center">
+            <div class="logo m-rightAuto"> <!-- logo class was from the template (modified) - more info in the style.css -->
+                <h1><a href="index.html">GAMETECH</a></h1> <!-- logo as a hyperlink to the main page -->
+            </div>
+            <!-- Hyperlinks to other sites -->
+            <!-- nav tag classes names remained the same. Only nav-manu CSS was changed -->
+            <!-- * nav-menu - navigation styling etc. More in style.css -->
+            <!-- * d-none - display: none (bootstrap) -->
+            <!-- * d-lg-block - display: block (bootstrap) -->
+            <nav class="nav-menu d-none d-lg-block"> 
+                <ul>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="tech.html">Tech</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
-<!-- ======= Main image and text  ======= -->
-<section class="section-color-white news-section" style="padding-top: 140px">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">Contact Us</h2>
+    <!-- Text above section -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-white - section color (white) -->
+    <!-- * contact-padding - text positioning (style.css) -->
+    <!-- * container-fluid - maintains header width -->
+    <section class="section-color-white contact-padding">
+        <div class="container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="head-title">Contact Us</h2> <!-- head title styling (style.css) -->
+                </div>
             </div>
         </div>
-    </div>
     </section>
-<section class="section-color-white">
-<div class="contact container-fluid">
-        <div class="row contact-space">
     
-          <div class="col-lg-6 ">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9940.488848344783!2d-0.0354080000000335!3d51.474271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb2cff5d2300d7f8!2sGoldsmiths%2C%20University%20of%20London!5e0!3m2!1spl!2spl!4v1616533019971!5m2!1spl!2spl" frameborder="0" style="border-radius: 10px; width: 100%; height: 400px;" allowfullscreen></iframe>
-          </div>
-          <div class="col-lg-6">
-            <form>
-                <div class="input-group boxes-margin">
-                  <input type="text" class="form-control boxes-styling" placeholder="Name"/>
+    <!-- Map and input fields -->
+    <!-- *** This code is written by myself with small help of w3schools.com and one bootstrap class - form-control *** -->
+    <!-- *** HTML Input Type - https://www.w3schools.com/html/html_form_input_types.asp *** -->
+    <!-- *** Bootstrap forms - https://getbootstrap.com/docs/4.6/components/forms *** -->
+    <!-- -->
+    <!-- * section-color-white - section colour (white) (style.css) -->
+    <!-- * container-fluid - maintains header width -->
+    <!-- * contact - base class (style.css) -->
+    <!-- * contact-space - section spacing (style.css) -->
+    <section class="section-color-white">
+        <div class="contact container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row space">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <h3 class="header">Find us here</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9940.488848344783!2d-0.0354080000000335!3d51.474271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xeb2cff5d2300d7f8!2sGoldsmiths%2C%20University%20of%20London!5e0!3m2!1spl!2spl!4v1616533019971!5m2!1spl!2spl" allowfullscreen></iframe> <!-- iframe was taken from Google Maps -->
                 </div>
-                <div class="input-group boxes-margin ">
-                  <input type="email" class="form-control boxes-styling" placeholder="E-mail" />
-                </div>
-              <div class="input-group boxes-margin">
-                <input type="text" class="form-control boxes-styling" placeholder="Subject" />
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                    <h3 class="header">Contact Form</h3>
+                    <!-- input fields -->
+                    <!-- * form-control - class I mentioned before, it helped me with "Message" box sizing. It also has a focus property which I needed, therefore I used it in all input fields (bootstrap) -->
+                    <!-- * boxes-margin - margin styling (style.css) -->
+                    <!-- * boxes-styling - background and border colour (style.css) -->
+                    <!-- * text-center - text-align: center (style.css) -->
+                    <!-- * btn - submit button styling (style.css) -->
+                    <form>
+                        <div class="boxes-margin">
+                            <input type="text" class="form-control boxes-styling" placeholder="Name"/>
+                        </div>
+                        <div class="boxes-margin">
+                            <input type="email" class="form-control boxes-styling" placeholder="E-mail"/>
+                        </div>
+                        <div class="boxes-margin">
+                            <input type="text" class="form-control boxes-styling" placeholder="Subject"/>
+                        </div>
+                        <div class="boxes-margin">
+                            <textarea class="form-control boxes-styling" rows="7" data-rule="required" placeholder="Message"></textarea>
+                        </div>
+                        <div class="text-center"><button class="btn" type="submit">Send Message</button></div>
+                    </form>
               </div>
-              <div class="input-group boxes-margin">
-                <textarea class="form-control boxes-styling" rows="7" data-rule="required" placeholder="Message"></textarea>
-              </div>
-              <div class="text-center input-group-btn"><button class="btn" type="submit">Send Message</button></div>
-            </form>
-          </div>
-
-    </div>
-    </div>
-</section>    
-<section class="section-color-gw newsletter">
-    <div class="container">
+            </div>
+        </div>
+    </section>    
+    
+    <!-- Newsletter -->
+    <!-- *** This code was copied and modified - more in the report.html *** -->
+    <!-- -->
+    <!-- * section-color-ghostwhite - section color (ghostwhite) -->
+    <!-- * newsletter - padding and text alignment -->
+    <section class="section-color-ghostwhite newsletter">
+        <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
-            <div class="col-sm-12"> 
-                <div class="content">
-                    <div data-aos="fade-right">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                <div class="content"> <!-- maintains this section width -->
+                    <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
+                            <!-- headers styling and text-->
                             <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
                             <h6 class="newsletter-header">Stay up to date with our latest news</h6>
-                            <div class="input-group" >
+                            <!-- email input field with field's styling-->
+                            <div class="input-group">
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
-                                <span class="input-group-btn">
-                                    <button class="btn" type="submit">Subscribe</button>
-                                </span>
+                                <button class="btn" type="submit">Subscribe</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     
-<!-- ======= Footer ======= -->
-<footer>
-    <div class="container">
+    <!-- Footer -->
+    <!-- This code was greatly modified from the template - only classes names are the same -->
+    <!-- CSS styling was changed as well as whole footer code here -->
+    <!-- -->
+    <!-- * social-links - styling of the buttons (style.css)-->
+    <footer>
         <div class="social-links">
-            <a href="#"><img src="assets/images/icons/twitter.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/facebook.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/instagram.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/whatsapp.png" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/facebook.png" alt="Facebook icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/instagram.png" alt="Instagram icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/whatsapp.png" alt="Whatsapp icon" class="social-links-size"></a>
         </div>
-    </div>
-    <div class="container footer-bottom">
-        <div class="copyright">
-            <p>&copy; Copyright <strong><span>GameTech</span></strong>. All Rights Reserved</p>
+        <div class="footer-bottom">
+            <p>&copy; Copyright <b>GameTech</b>. All Rights Reserved</p>
             <a href="report.html">report.html</a>
         </div>
-    </div>
-</footer><!-- End Footer -->
-<a class="dark-mode-button"><i class="icofont-adjust"></i></a>
+    </footer>
 
-<!-- back to the top button -->
-<a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
+    <!-- Back to the top and toggle dark-mode buttons -->
+    <!-- styling classes for both buttons are in the style.css -->
+    <!-- JavaScript code responsible for them to work is in the main.js -->
+    <!-- In both buttons there are IcoFont icons used - more in the report.html -->
+    <a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
+    <a class="dark-mode-button"><i class="icofont-adjust"></i></a>
 
-<!-- Vendor JS Files -->
+    <!-- JavaScript files -->
+    
+    <!-- jQuery files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- Bootstrap files -->
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>    
     <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- AOS (Animate on scroll) library .js file -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
-
-<!--    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>-->
-<!--    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
-<!--    <script src="assets/vendor/venobox/venobox.min.js"></script>-->
-    
-    <script src="assets/js/main.js"></script>
+    <!-- my JavaScript file -->
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>

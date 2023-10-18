@@ -1,0 +1,1 @@
+All subpages of the "Games", "Tech" and "Shop" pages are a placeholders. Only 5 pages are made and working ("Homepage", "Games", "Tech", "Shop" and "Contact")

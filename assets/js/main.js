@@ -112,10 +112,10 @@
     $('.dark-mode-button').click(function() {
         //this applies to all pages
         $('.newsletter-header').toggleClass("color-change-to-white-text");
-        $('.head-title').toggleClass("color-change-to-white-text");
+        $('.head-title, .contact .header').toggleClass("color-change-to-white-text");
         
         //everything on the index.html / main page
-        $('.section-color-gw').toggleClass("color-change-from-gw");
+        $('.section-color-ghostwhite').toggleClass("color-change-from-ghostwhite");
         $('.section-color-white').toggleClass("color-change-from-white");
         $('.mobile-nav').toggleClass("color-change-bg");
         
@@ -123,13 +123,13 @@
         
         //games page
         
-        $('.section-color-grey').toggleClass("color-change-grey");
+        $('.section-color-gray').toggleClass("color-change-from-gray");
         $('.news-text-color').toggleClass("color-change-to-white-text");
         
         
         //shop page
         $('.section-color-lightgray').toggleClass('color-change-from-lightgray');
-        $('.section-color-lg').toggleClass('color-change-from-lg');
+        $('.section-color-lightgreen').toggleClass('color-change-from-lightgreen');
         
         
         

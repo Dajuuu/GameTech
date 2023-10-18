@@ -1,214 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- All of the meta information, fonts and css stylesheets used-->
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="600">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
-    <meta name="keywords" content="Games, Tech, technology, news, JS">
+    <meta name="keywords" content="Games, Tech, technology, news, JS, CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameTech Homepage</title>
+    
     <!-- fonts are used from the: https://fonts.google.com -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-
-  <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animacje przejscia - css -->
-    <link href="assets/css/style_games.css" rel="stylesheet">   
+    <!-- CSS stylesheets -->
+    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
+    <link href="assets/css/style_games.css" rel="stylesheet">  <!-- my css styling -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
 </head>
 
 <body>
+    <!-- Progress bar that appears at the top of the page -->
+    <!-- Progress bar code is also in the main.js and style.css - more info there-->
     <div class="progressBar"></div>
-<!-- ======= Header ======= -->
-<header id="header" class="fixed-top d-flex align-items-center header-transparent" >
-    <div class="container-fluid d-flex align-items-center">
-        <div class="logo mr-auto">
-            <h1><a href="index.html"><span>GAMETECH</span></a></h1>
-        </div>
-        <nav class="nav-menu d-none d-lg-block">
-            <ul>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="tech.html">Tech</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!-- ======= Main image and text  ======= -->
-<section id="welcome">
-    <div class="welcome-container">
-        <h1>Welcome to GameTech</h1>
-        <h2>Your daily games and technology news</h2>
-    </div>
-</section>
-
-<!-- Introduction section -->
-<section class="section-color-white news-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">Latest games news</h2>
-            </div>
-        </div>
-    </div>
-    <!-- latest box news section with lightgrey backround-->
-    <div class="section-color-gw">
-        <div class="row container-fluid">  
-            <!-- latest boxes-->
-            <div class="column-outline-left column-outline-right row-outline-upper  col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                            <img src="assets/images/games-page/games-gif1.gif" alt="Image" class="latest-news-gif">
-                        <h3 class="news-text-color">Netflix announces <b>Tomb Raider</b> Anime Series</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="column-outline-left row-outline-upper row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                    <img src="assets/images/games-page/news1.jpg" alt="Image" class="latest-news-img">
-                        <h3 class="news-text-color">EA cancels the <b>Anthem 'Next'</b>. BioWare to focus on new Dragon Age game</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="column-outline-left column-outline-right row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                    <img src="assets/images/games-page/news2.jpg" alt="Image" class="latest-news-img">
-                        <h3 class="news-text-color"><b>Tom Clancy's Ghost Recon: Breakpoint</b> to receive new content in 2021, but we do not know what will it be</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="column-outline-left row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                    <img src="assets/images/games-page/news3.jpg" alt="Image" class="latest-news-img">
-                        <h3 class="news-text-color"><b>Life is Strange 3 and 4?</b> New character in the series and possible return of Max and Chloe</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="column-outline-left column-outline-right row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                    <img src="assets/images/games-page/news4.jpg" alt="Image" class="latest-news-img">
-                        <h3 class="news-text-color">We will not see new <b>Need For Speed</b> this year. Criterion will help with the work on other games</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="column-outline-left column-outline-right col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
-                <div class="m-bottom20">
-                    <div data-aos="fade-down"> <!-- AOS effect -->
-                            <img src="assets/images/games-page/games-gif2.gif" alt="Image" class="latest-news-gif">
-                        <h3 class="news-text-color"><b>Rachet & Clank</b> available for free on both PS4 and PS5</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section-color-white">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">More news</h2>
-            </div>
-        </div>
-    </div>
-    <div class="row container-fluid">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
-            <div class="row news-bottom row-outline-bottom">
-                <img src="assets/images/games-page/news-hor1.jpg" class="image">
-                <h3 class="news-text-color">Sony closes the <b>Japan Studio</b> - left many employees without the job</h3>
-            </div>        
-            <div class="row news-bottom row-outline-bottom">
-                <img src="assets/images/games-page/news-below2.jpg" class="image">
-                <h3 class="news-text-color"><b>Days Gone</b> with upgraded graphics on PC, increased field of view and many, many more</h3>
-            </div>        
-            <div class="row news-bottom row-outline-bottom m-bottom20">
-                <img src="assets/images/games-page/news-below3.jpg" class="image">
-                <h3 class="news-text-color">343 Industries kept themselfves busy. <b>Halo Infinite</b> now looks much better</h3>
-            </div>  
-        </div>
-        <div class="section-color-grey m-bottom20 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
-            <div class="row news-bottom-column">
-                <img src="assets/images/games-page/author.jpg" class="image">
-                <h3 class="news-text-color"><b>Author:</b> Jennifer Soul</h3>
-                <h4 class="news-text-color">Apart from writing gaming news, as a inveterate PC games addict she would love to have time to play every game that is out there.</h4>
-            </div> 
-        </div>
-    </div>
-</section>
     
-<section class="section-color-gw newsletter">
-    <div class="container">
+    <!-- Header -->
+    <!-- *** header code was greatly modified and changed compared to the template - more in the style.css in the header section-->
+    <!-- -->
+    <!-- * header-scrolled-contact, mobile-nav-toggle-scrolled-contact, header-fixed-pos: responsive behaviour of the header (these classes are written by me) - more info in the style.css -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <!-- * align-center, display-flex - pretty self-explanatory classes (style.css) -->
+    <!-- * m-rightAuto - margin-right: auto (style.css) -->
+    <header id="header" class="header-fixed-pos">
+        <div class="container-fluid display-flex align-center">
+            <div class="logo m-rightAuto"> <!-- logo class was from the template (modified) - more info in the style.css -->
+                <h1><a href="index.html"><span>GAMETECH</span></a></h1> <!-- logo as a hyperlink to the main page -->
+            </div>
+            <!-- Hyperlinks to other sites -->
+            <!-- nav tag classes names remained the same. Only nav-manu CSS was changed -->
+            <!-- * nav-menu - navigation styling etc. More in style.css -->
+            <!-- * d-none - display: none (bootstrap) -->
+            <!-- * d-lg-block - display: block (bootstrap) -->
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Background and welcome text -->
+    <!-- This code uses template's modified CSS and changed names -->
+    <section class="welcome"> <!-- background-->
+        <div class="container"> <!-- text on the background -->
+            <h2 class="big">Welcome to GameTech</h2>
+            <h2>Your daily games and technology news</h2>
+        </div>
+    </section>
+
+    <!-- Text above section 1 -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-white - section color (white) (style.css) -->
+    <!-- * news-section - text positioning (style.css) -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <section class="section-color-white news-section">
+        <div class="container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="head-title">Latest games news</h2> <!-- head title styling -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 1 - Latest games news -->
+        <!-- *** This code is written by myself *** -->
+        <!-- -->
+        <!-- four images and two gifs (as hyperlinks) with responsive behaviour -->
+        <!-- * section-color-ghostwhite - section color (ghostwhite) (style.css) -->
+        <div class="section-color-ghostwhite">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <!-- * container-fluid - maintains this section width (style.css) -->
+            <!-- * column-outline-left - small bars that separate news (left-side) (style.css) -->
+            <!-- * column-outline-right - small bars that separate news (right-side) (style.css) -->
+            <!-- * row-outline-upper - horizontal bar that appears on smaller screens (style.css) -->
+            <!-- * latest-news-gif - gifs styling (style.css) -->
+            <!-- * latest-news-img - images styling (style.css) -->
+            <!-- * news-text-color - base colour of text (no darkmode) (style.css) -->
+            <div class="row container-fluid">  
+                <div class="column-outline-left column-outline-right row-outline-upper col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/games-gif1.gif" alt="Woman walking into two opening circles" class="latest-news-gif"></a>
+                            <h3 class="news-text-color"> Netflix announces <b>Tomb Raider</b> Anime Series</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-outline-left row-outline-upper row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/news1.jpg" alt="Few characters in flying suits. Brown/green background" class="latest-news-img"></a>
+                            <h3 class="news-text-color">EA cancels the <b>Anthem 'Next'</b>. BioWare to focus on new Dragon Age game</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-outline-left column-outline-right row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/news2.jpg" alt="Four characters looking into the distance" class="latest-news-img"></a>
+                            <h3 class="news-text-color"><b>Tom Clancy's Ghost Recon: Breakpoint</b> to receive new content in 2021, but we do not know what will it be</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-outline-left row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/news3.jpg" alt="Instax photo of a woman holding her hand infront of her" class="latest-news-img"></a>
+                            <h3 class="news-text-color"><b>Life is Strange 3 and 4?</b> New character in the series and possible return of Max and Chloe</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-outline-left column-outline-right row-outline-upper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/news4.jpg" alt="Two cars, red and green, driving sideways" class="latest-news-img"></a>
+                            <h3 class="news-text-color">We will not see new <b>Need For Speed</b> this year. Criterion will help with the work on other games</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-outline-left column-outline-right col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
+                    <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                        <div data-aos="fade-down"> <!-- AOS effect -->
+                            <a href="#"><img src="assets/images/games-page/games-gif2.gif" alt="Small surprised robot and female character holding big hammer" class="latest-news-gif"></a>
+                            <h3 class="news-text-color"><b>Rachet & Clank</b> available for free on both PS4 and PS5</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text above section 2 -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-white - section color (white) (style.css) -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <section class="section-color-white">
+        <div class="container-fluid">
+             <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+                    <h2 class="head-title">More games news</h2> <!-- head title styling -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2 - more games news -->
+        <!-- *** This code is written by myself *** -->
+        <!-- -->
+        <!-- three images (as hyperlinks) with responsive behaviour -->
+        <!-- bootstrap responsive flexbox (row and col classes) -->
+        <!-- * news-bottom - more/bottom news spacing (style.css) -->
+        <!-- * row-outline-bottom - horizontal bar that separate news (style.css) -->
+        <!-- * news-text-color - base colour of text (no darkmode) (style.css) -->
+        <!-- * image - image styling (style.css) -->
+        <div class="row container-fluid">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+                <div class="row news-bottom row-outline-bottom">
+                    <img src="assets/images/games-page/news-hor1.jpg" alt="Two female anime characters flying" class="image">
+                    <h3 class="news-text-color">Sony closes the <b>Japan Studio</b> - left many employees without the job</h3>
+                </div>        
+                <div class="row news-bottom row-outline-bottom">
+                    <img src="assets/images/games-page/news-below2.jpg" alt="Male character looking into the distance. Woods and mountains as background" class="image">
+                    <h3 class="news-text-color"><b>Days Gone</b> with upgraded graphics on PC, increased field of view and many, many more</h3>
+                </div>        
+                <div class="row news-bottom row-outline-bottom m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
+                    <img src="assets/images/games-page/news-below3.jpg" alt="Someone holding a futuristic weapon looking at high building" class="image">
+                    <h3 class="news-text-color">343 Industries kept themselfves busy. <b>Halo Infinite</b> now looks much better</h3>
+                </div>  
+            </div>
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <!-- * section-color-gray - section colour (gray) (style.css) -->
+            <!-- * m-bottom20 - margin-bottom (style.css) -->
+            <!-- * news-bottom-column - padding (style.css) -->
+            <!-- * image - styling of author image (style.css) -->
+            <!-- * news-text-color - base colour of text (no darkmode) (style.css) -->
+            <div class="section-color-gray m-bottom20 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+                <div class="row news-bottom-column">
+                    <img src="assets/images/games-page/author.jpg" alt="Smiling woman with headphones holding her phone making a selfie" class="image">
+                    <h3 class="news-text-color"><b>Author:</b> Jennifer Soul</h3>
+                    <h4 class="news-text-color">Apart from writing gaming news, as a inveterate PC games addict she would love to have time to play every game that is out there.</h4>
+                </div> 
+            </div>
+        </div>
+    </section>
+    
+    <!-- Newsletter -->
+    <!-- *** This code was copied and modified - more in the report.html *** -->
+    <!-- -->
+    <!-- * section-color-ghostwhite - section color (ghostwhite) -->
+    <!-- * newsletter - padding and text alignment -->
+    <section class="section-color-ghostwhite newsletter">
+        <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
-            <div class="col-sm-12"> 
-                <div class="content">
-                    <div data-aos="fade-right">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                <div class="content"> <!-- maintains this section width -->
+                    <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
+                            <!-- headers styling and text-->
                             <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
                             <h6 class="newsletter-header">Stay up to date with our latest news</h6>
-                            <div class="input-group" >
+                            <!-- email input field with field's styling-->
+                            <div class="input-group">
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
-                                <span class="input-group-btn">
-                                    <button class="btn" type="submit">Subscribe</button>
-                                </span>
+                                <button class="btn" type="submit">Subscribe</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="social-links">
-                <a href="#"><img src="assets/images/icons/twitter.png" class="social-links-size"></a>
-                <a href="#"><img src="assets/images/icons/facebook.png" class="social-links-size"></a>
-                <a href="#"><img src="assets/images/icons/instagram.png" class="social-links-size"></a>
-                <a href="#"><img src="assets/images/icons/whatsapp.png" class="social-links-size"></a>
-            </div>
+    <!-- Footer -->
+    <!-- This code was greatly modified from the template - only classes names are the same -->
+    <!-- CSS styling was changed as well as whole footer code here -->
+    <!-- -->
+    <!-- * social-links - styling of the buttons (style.css)-->
+    <footer>
+        <div class="social-links">
+            <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/facebook.png" alt="Facebook icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/instagram.png" alt="Instagram icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/whatsapp.png" alt="Whatsapp icon" class="social-links-size"></a>
         </div>
-    </div>
-    <div class="container footer-bottom clearfix">
-        <div class="copyright">
-            <p>&copy; Copyright <strong><span>GameTech</span></strong>. All Rights Reserved</p>
+        <div class="footer-bottom">
+            <p>&copy; Copyright <b>GameTech</b>. All Rights Reserved</p>
             <a href="report.html">report.html</a>
         </div>
-    </div>
-</footer><!-- End Footer -->
+    </footer>
 
-<!-- back to the top button -->
-<a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
-<a class="dark-mode-button"><i class="icofont-adjust"></i></a>
+    <!-- Back to the top and toggle dark-mode buttons -->
+    <!-- styling classes for both buttons are in the style.css -->
+    <!-- JavaScript code responsible for them to work is in the main.js -->
+    <!-- In both buttons there are IcoFont icons used - more in the report.html -->
+    <a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
+    <a class="dark-mode-button"><i class="icofont-adjust"></i></a>
 
-<!-- Vendor JS Files -->
+    <!-- JavaScript files -->
+    
+    <!-- jQuery files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- Bootstrap files -->
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>    
     <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- AOS (Animate on scroll) library .js file -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
-
-<!--    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>-->
-<!--    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
-<!--    <script src="assets/vendor/venobox/venobox.min.js"></script>-->
-    
-    <script src="assets/js/main.js"></script>
+    <!-- my JavaScript file -->
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>

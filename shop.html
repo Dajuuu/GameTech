@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- All of the meta information, fonts and css stylesheets used-->
 <head>
     <meta charset="utf-8">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
     <meta name="keywords" content="Games, Tech, technology, news, JS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTech Contact Page</title>
+    <title>GameTech Shop Page</title>
     
     <!-- fonts are used from the: https://fonts.google.com -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,214 +17,286 @@
 
     <!-- CSS stylesheets -->
     <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- icofont --> 
-    <link href="assets/css/style.css" rel="stylesheet">  <!-- my css styling-->
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
+    <link href="assets/css/style.css" rel="stylesheet">  <!-- my css styling -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
 </head>
 
 <body>
-    <!-- Progress bar that appears at the top of the page-->
-    <!-- Progress bar code is also in the .js and style.css -->
+    <!-- Progress bar that appears at the top of the page -->
+    <!-- Progress bar code is also in the main.js and style.css - more info there-->
     <div class="progressBar"></div>
-<!-- ======= Header ======= -->
-<header id="header" class="header-scrolled-contact mobile-nav-toggle-scrolled-contact fixed-top d-flex align-items-center header-transparent">
-    <div class="container-fluid d-flex align-items-center">
-        <div class="logo mr-auto">
-            <h1><a href="index.html"><span>GAMETECH</span></a></h1>
-        </div>
-        <nav class="nav-menu d-none d-lg-block"> <!-- skrypt odpowiedzialnu za navbar jest w main.js-->
-            <ul>
-                <li><a href="games.html">Games</a></li>
-                <li><a href="tech.html">Tech</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
     
-<!-- ======= Main image and text  ======= -->
-<section class="section-color-lightgray news-section" style="padding-top: 140px; margin-bottom: -40px;">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">Futured</h2>
+    <!-- Header -->
+    <!-- *** header code was greatly modified and changed compared to the template - more in the style.css in the header section-->
+    <!-- -->
+    <!-- * header-scrolled-contact, mobile-nav-toggle-scrolled-contact, header-fixed-pos: responsive behaviour of the header (these classes are written by me) - more info in the style.css -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <!-- * align-center, display-flex - pretty self-explanatory classes (style.css) -->
+    <!-- * m-rightAuto - margin-right: auto (style.css) -->
+    <header id="header" class="header-scrolled-constant mobile-nav-toggle-scrolled-constant header-fixed-pos">
+        <div class="container-fluid display-flex align-center">
+            <div class="logo m-rightAuto"> <!-- logo class was from the template (modified) - more info in the style.css -->
+                <h1><a href="index.html">GAMETECH</a></h1> <!-- logo as a hyperlink to the main page -->
             </div>
+            <!-- Hyperlinks to other sites -->
+            <!-- nav tag classes names remained the same. Only nav-manu CSS was changed -->
+            <!-- * nav-menu - navigation styling etc. More in style.css -->
+            <!-- * d-none - display: none (bootstrap) -->
+            <!-- * d-lg-block - display: block (bootstrap) -->
+            <nav class="nav-menu d-none d-lg-block"> 
+                <ul>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
     
-<!-- Main shop image-->
-<section class="section-color-lightgray">
-    <div class="row container-fluid" style="padding-right: 0px;">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div class="shop-image">
-            <img src="assets/images/shop-page/product1.png" alt="Image" class="image">
-                <div class="description">
-                    <div class="text-up">Razer Kraken X</div>
-                    <button class="btn">Buy Now!</button>
+    <!-- Text above section 1 -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-lightgray - section colour (lightgray) -->
+    <!-- * news-section-shop - text positioning (style.css) -->
+    <!-- * container-fluid - maintains header width -->
+    <section class="section-color-lightgray news-section-shop">
+        <div class="container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                    <h2 class="head-title">Futured</h2> <!-- head title styling (style.css) -->
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div class="shop-image">
-            <img src="assets/images/shop-page/product2.jpg" alt="Image" class="image">
-                <div class="description">
-                    <div class="text-up">Creative Pebble V2</div>
-                    <button class="btn">Buy Now!</button>
+    </section>
+    
+    <!-- Section 1 - futured shop products -->
+    <!-- *** This code is written by myself *** -->
+    <!-- three images (with text and buttons) with responsive behaviour -->
+    <!-- -->
+    <!-- * section-color-lightgray - section colour (lightgray) -->
+    <section class="section-color-lightgray">
+        <!-- bootstrap responsive flexbox (row and col classes) -->
+        <!-- * container-fluid - maintains this section width -->
+        <!-- * padding-right - making images align perfectly -->
+        <div class="row container-fluid" style="padding-right: 0px"> 
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <div class="shop-image">  <!-- spacing between images -->
+                <!-- image (with its source), text and button styling -->
+                <!-- more info in style.css -->
+                <img src="assets/images/shop-page/product1.png" alt="Black headphones with blury background" class="image">
+                    <div class="description">
+                        <h6 class="text-up">Razer Kraken X</h6>
+                        <button class="btn">Buy Now!</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <div class="shop-image">
-            <img src="assets/images/shop-page/product3.jpg" alt="Image" class="image">
-                <div class="description">
-                    <div class="text-up">Nintendo Switch</div>
-                    <button class="btn">Buy Now!</button>
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                <div class="shop-image">  <!-- spacing between images -->
+                <!-- image (with its source), text and button styling -->
+                <!-- more info in style.css -->
+                <img src="assets/images/shop-page/product2.jpg" alt="Black speakers on a darkblue background" class="image">
+                    <div class="description">
+                        <h6 class="text-up">Creative Pebble V2</h6>
+                        <button class="btn">Buy Now!</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-<!--    images below 1-->
-<section class="section-color-lg">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title" style="margin-top: 40px;">Latest additions</h2>
-            </div>
-        </div>
-    </div>
-    <div class="row container-fluid" style="padding-right: 0px;">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"> 
-            <div data-aos="flip-up">
-                <div class="shop-image">
-                <div class="corner-ribbon">Low Price!</div>
-                <img src="assets/images/shop-page/latest-product1.jpg" alt="Image" id="middle">
-                    <div class="description" style="height: 150px">
-                        <div class="text-up">Logitech G915 Lightspeed</div>
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+                <div class="shop-image">   <!-- spacing between images -->
+                <!-- image (with its source), text and button styling -->
+                <!-- more info in style.css -->
+                <img src="assets/images/shop-page/product3.jpg" alt="Video game console on a red background" class="image">
+                    <div class="description">
+                        <h6 class="text-up">Nintendo Switch</h6>
                         <button class="btn">Buy Now!</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <div data-aos="flip-up">
-                <div class="shop-image">
-                <div class="corner-ribbon">Low Price!</div>
-                <img src="assets/images/shop-page/latest-product2.jpg" alt="Image" id="middle">
-                    <div class="description" style="height: 150px">
-                        <div class="text-up">HyperX QuadCast Microphone</div>
-                        <button class="btn">Buy Now!</button>
+    </section>
+
+    <!-- Text above section 2 -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-lightgreen - section colour (lightgreen) -->
+    <!-- * container-fluid - maintains this section width -->
+    <section class="section-color-lightgreen">
+        <div class="container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes)-->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="head-title" style="margin-top: 2.5rem;">Latest additions</h2> <!-- styling (margin) for this section-->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2 - latest additions in shop -->
+        <!-- *** This code is written by myself *** -->
+        <!-- -->
+        <!-- bootstrap responsive flexbox (row and col classes) -->
+        <!-- two images (with text and buttons) with responsive behaviour -->
+        <!-- * container-fluid - maintains this section width -->
+        <!-- * padding-right - making images align perfectly -->
+        <div class="row container-fluid" style="padding-right: 0px;">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div data-aos="flip-up"> <!-- AOS library animation -->
+                    <!-- image (with its source), text and button styling -->
+                    <!-- more info in style.css -->
+                    <div class="shop-image">
+                    <div class="corner-ribbon">Low Price!</div> <!-- ribbon that appears in the top right corner of the image -->
+                    <img class="middle" src="assets/images/shop-page/latest-product1.jpg" alt="Black RGB Logitech keyboard on a dark pad">
+                        <div class="description">
+                            <h6 class="text-up">Logitech G915 Lightspeed</h6>
+                            <button class="btn">Buy Now!</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>     
-    </div>
-</section>
-    <!--    images below 2-->
-<section class="section-color-lightgray" style="padding-top: 50px">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">More shop offers</h2>
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div data-aos="flip-up">  <!-- AOS library animation -->
+                    <!-- image (with its source), text and button styling -->
+                    <!-- more info in style.css -->
+                    <div class="shop-image">
+                    <div class="corner-ribbon">Low Price!</div>  <!-- ribbon that appears in the top right corner of the image -->
+                    <img class="middle" src="assets/images/shop-page/latest-product2.jpg" alt="RGB microphone standing, gradient background">
+                        <div class="description">
+                            <h6 class="text-up">HyperX QuadCast Microphone</h6>
+                            <button class="btn">Buy Now!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </section>
+    
+    <!-- Text above section 3 -->
+    <!-- *** This code is written by myself *** -->
+    <!-- -->
+    <!-- * section-color-lightgray - section colour (lightgray) -->
+    <!-- * container-fluid - maintains this section width -->
+    <!-- * padding-top - positioning of this section -->
+    <section class="section-color-lightgray" style="padding-top: 50px">
+        <div class="container-fluid">
+            <!-- bootstrap responsive flexbox (row and col classes) -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 class="head-title">More shop offers</h2>  <!-- head title styling -->
+                </div>
             </div>
         </div>
-    </div>
+        
+        <!-- Section 3 - more shop offers -->
+        <!-- *** This code is written by myself *** -->
+        <!-- -->
+        <!-- * container-fluid - maintains this section width -->
+        <!-- * shop-image-below - images styling. More in style.css -->
+        <!-- bootstrap responsive flexbox (row and col classes) -->
+        <!-- all images have their alternative texts (alt) -->
+        <div class="row container-fluid">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below1.png" alt="AMD Ryzen 7 processor gray/dark box" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below2.jpg" alt="Triss Merigold (The Witcher series) figurine" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below3.jpg" alt="Johnny Silverhand (Cyberpunk 2077) Funko POP figurine" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below4.png" alt="LEGO Iron Man set" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below5.png" alt="Cyberpunk 2077 PC game box" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below6.png" alt="Diablo Chair X-Horn 2.0 (XL) black/white" class="shop-image-below">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below7.png" alt="MSI black gaming laptop" class="shop-image-below">
+            </div>        
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                <img src="assets/images/shop-page/product-below8.png" alt="Nvidia Rtx graphics card" class="shop-image-below">
+            </div>
+
+            <!-- Load more button under the first row of images (4 images)-->
+            <!-- By clicking the button other row of images shows up -->
+            <!-- More info in style.css, main.js and report.html-->
+            <a id="loadMore">Load More</a>
+        </div>
+    </section>
     
-    <div class="row container-fluid">
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below1.png" alt="Image" class="shop-image-below">
-        </div>
-        
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below2.jpg" alt="Image" class="shop-image-below">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below3.jpg" alt="Image" class="shop-image-below">
-        </div>
-        
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below4.png" alt="Image" class="shop-image-below">
-        </div>
-        
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below5.png" alt="Image" class="shop-image-below">
-        </div>
-        
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below6.png" alt="Image" class="shop-image-below">
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below7.png" alt="Image" class="shop-image-below">
-        </div>        
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <img src="assets/images/shop-page/product-below8.png" alt="Image" class="shop-image-below">
-        </div>
-
-        <!-- Load more button under the first row of images-->
-        <a href="#" id="loadMore">Load More</a>
-    </div>
-</section>
-<section class="section-color-gw newsletter">
-    <div class="container">
+    <!-- Newsletter -->
+    <!-- *** This code was copied and modified - more in the report.html *** -->
+    <!-- -->
+    <!-- * section-color-ghostwhite - section colour (ghostwhite) -->
+    <!-- * newsletter - padding and text alignment -->
+    <section class="section-color-ghostwhite newsletter">
+        <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
-            <div class="col-sm-12"> 
-                <div class="content">
-                    <div data-aos="fade-right">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
+                <div class="content"> <!-- maintains this section width -->
+                    <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
+                            <!-- headers styling and text-->
                             <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
                             <h6 class="newsletter-header">Stay up to date with our latest news</h6>
-                            <div class="input-group" >
+                            <!-- email input field with field's styling-->
+                            <div class="input-group">
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
-                                <span class="input-group-btn">
-                                    <button class="btn" type="submit">Subscribe</button>
-                                </span>
+                                <button class="btn" type="submit">Subscribe</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>    
-<!-- ======= Footer ======= -->
-<footer>
-    <div class="container">
+    </section>
+    
+    <!-- Footer -->
+    <!-- This code was greatly modified from the template - only classes names are the same -->
+    <!-- CSS styling was changed as well as whole footer code here -->
+    <!-- -->
+    <!-- * social-links - styling of the buttons (style.css)-->
+    <footer>
         <div class="social-links">
-            <a href="#"><img src="assets/images/icons/twitter.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/facebook.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/instagram.png" class="social-links-size"></a>
-            <a href="#"><img src="assets/images/icons/whatsapp.png" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/facebook.png" alt="Facebook icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/instagram.png" alt="Instagram icon" class="social-links-size"></a>
+            <a href="#"><img src="assets/images/icons/whatsapp.png" alt="Whatsapp icon" class="social-links-size"></a>
         </div>
-    </div>
-    <div class="container footer-bottom">
-        <div class="copyright">
-            <p>&copy; Copyright <strong><span>GameTech</span></strong>. All Rights Reserved</p>
+        <div class="footer-bottom">
+            <p>&copy; Copyright <b>GameTech</b>. All Rights Reserved</p>
             <a href="report.html">report.html</a>
         </div>
-    </div>
-</footer><!-- End Footer -->
+    </footer>
 
-<!-- back to the top button -->
-<a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
+    <!-- Back to the top and toggle dark-mode buttons -->
+    <!-- styling classes for both buttons are in the style.css -->
+    <!-- JavaScript code responsible for them to work is in the main.js -->
+    <!-- In both buttons there are IcoFont icons used - more in the report.html -->
+    <a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
     <a class="dark-mode-button"><i class="icofont-adjust"></i></a>
 
-<!-- Vendor JS Files -->
+    <!-- JavaScript files -->
+    
+    <!-- jQuery files -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- Bootstrap files -->
     <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>    
     <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <!-- AOS (Animate on scroll) library .js file -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
-
-<!--    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>-->
-<!--    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
-<!--    <script src="assets/vendor/venobox/venobox.min.js"></script>-->
-    
-    <script src="assets/js/main.js"></script>
+    <!-- my JavaScript file -->
+    <script src="assets/js/main.js"></script> 
 </body>
 </html>
