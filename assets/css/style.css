@@ -110,6 +110,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px 0;
     background: rgba(42, 99, 54, 0.7);
 }
+#header.header-scrolled-contact {
+    background: rgba(42, 99, 54, 0.9);
+}
 
 #header .logo h1 {
     font-size: 36px;
@@ -202,6 +205,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .mobile-nav-toggle-scrolled { /*kreseczki kiedy sie zjedzie w dol*/
     top: 12px;
+}
+.mobile-nav-toggle-scrolled-contact{
+    margin-top: 0px;
 }
 
 .mobile-nav-toggle i { /*kolorek kreseczek*/
@@ -480,4 +486,27 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding-bottom: 20px;
     text-align: center;
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact-space {
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+.contact .boxes-margin {
+    margin-bottom: 11px;
+    margin-top: 11px;   
+}
+.contact .outline {
+    border-color: #2a6336;
+    background: ghostwhite;
+}
+.contact .btn {
+    min-height: 50px; 
+    border-radius: 10px;
+    background: #2a6336;
+    color: #fff;
+    font-weight: 600;
 }

@@ -107,28 +107,23 @@
   });
 
   // Toggle .header-scrolled class to #header when page is scrolled
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('#header').addClass('header-scrolled');
-    } else {
-      $('#header').removeClass('header-scrolled');
-    }
-  });
-
-  if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');  
-  } 
-    
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
-    } else {
-      $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
+    if(location.pathname=='/index.html'){
+        if ($(this).scrollTop() > 100) {
+            $('#header').addClass('header-scrolled');
+            $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
+        } else {
+            $('#header').removeClass('header-scrolled');
+            $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
+        }
     }
-  });
+});
+if(location.pathname=='/index.html'){
 if ($(window).scrollTop() > 100) {
+    $('#header').addClass('header-scrolled');
     $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
-  }
+} 
+}
 
   // Back to top button zmieniccccccccccccccccccccccccccccccccccccccccccccc
   $(window).scroll(function() {
