@@ -49,8 +49,8 @@
 //  });
 
   // Mobile Navigation
-  if ($('.nav-menu').length) {
-    var $mobile_nav = $('.nav-menu').clone().prop({
+  if ($('.nav-menu , .nav-menu-games').length) {
+    var $mobile_nav = $('.nav-menu , .nav-menu-games').clone().prop({
       class: 'mobile-nav d-lg-none'
     });
     $('body').append($mobile_nav);
@@ -85,7 +85,7 @@
 
   // Navigation active state on scroll
   var nav_sections = $('section');
-  var main_nav = $('.nav-menu, .mobile-nav');
+  var main_nav = $('.nav-menu, .nav-menu-games, .mobile-nav');
 
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 200;
@@ -117,12 +117,27 @@ $(window).scroll(function() {
             $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
         }
     }
+    else if(location.pathname=='/games.html'){
+        if ($(this).scrollTop() > 100) {
+            $('#header').addClass('header-scrolled-games');
+            $('.mobile-nav-toggle-games').addClass('mobile-nav-toggle-scrolled-games');
+        } else {
+            $('#header').removeClass('header-scrolled-games');
+            $('.mobile-nav-toggle-games').removeClass('mobile-nav-toggle-scrolled-games');
+        }
+    }
 });
 if(location.pathname=='/index.html'){
-if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
-    $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
-} 
+    if ($(window).scrollTop() > 100) {
+        $('#header').addClass('header-scrolled');
+        $('.mobile-nav-toggle-games').addClass('mobile-nav-toggle-scrolled-games');
+    } 
+}
+if(location.pathname=='/games.html'){
+    if ($(window).scrollTop() > 100) {
+        $('#header').addClass('header-scrolled-games');
+        $('.mobile-nav-toggle-games').addClass('mobile-nav-toggle-scrolled-games');
+    } 
 }
 
   // Back to top button zmieniccccccccccccccccccccccccccccccccccccccccccccc
