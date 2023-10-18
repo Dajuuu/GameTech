@@ -5,12 +5,10 @@
 * License: https://bootstrapmade.com/license/
 */
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-    font-family: "Open Sans", sans-serif;
-}
+/*----------*/
+/* General */
+/*----------*/
+
 /* scrollbar*/
 body::-webkit-scrollbar {
     width: 1rem;
@@ -22,6 +20,13 @@ body::-webkit-scrollbar-thumb {
     background: #c73e14;
 }
 
+/* font used in the body section*/
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+}
+
+/* links colour*/
 a {
     color: #e8633a;
 }
@@ -30,169 +35,198 @@ a:hover {
     color: #fa6d42;
     text-decoration: none;
 }
+
+/* headings styling*/
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
-.section-bg-color {
+
+/* titles size and position*/
+.head-title {
+	margin-bottom: 1rem;
+    text-align: center;
+	line-height: 1.5;
+}
+/* section colours*/
+.section-color-gw {
     background-color: ghostwhite;
 }
-.section-bg-color-green {
-    background-color: lightgreen;
+
+.m-bottom20 {margin-bottom: 20px; }
+
+video {
+  width: 100% !important;
+  height: auto !important;
 }
+
+/*----------*/
+/* Newsletter section */
+/* - This section was copied and modified */
+/* - https://bootsnipp.com/snippets/gN8P1 */
+/* - More in the report.html in Newsletter section*/
+/*----------*/
 
 .newsletter {
     padding: 80px 20px;
-}
-
-.newsletter .content {
-    max-width: 650px;
-    margin: 0 auto;
     text-align: center;
-    position: relative;
-    z-index: 2; 
 }
-
+.newsletter .content {
+    max-width: 600px;
+    margin: auto;
+}
+/* styling "email writing" section*/
 .newsletter .content .form-control {
-    height: 50px;
     border-color: #b3350e;
     border-radius: 10px 0px 0px 10px;
-    
+    height: 50px;
 }
-
+/* styling button*/
 .newsletter .content .btn {
-    min-height: 50px; 
-    border-radius: 0px 10px 10px 0px;
     background: #b3350e;
     color: #fff;
-    font-weight: 600;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: 400;
+    height: 50px;
 }
 .newsletter .content .btn:hover {
-    background: #c94116;
+    background: #c94116; 
 }
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+
+/*----------*/
+/* Scroll to the top button */
+/* - This section was copied and modified */
+/* - https://codepen.io/matthewcain/pen/ZepbeR */
+/* - More in the report.html in Scroll to the top button section*/
+/*----------*/
+
+/* button position */
+/* changed: bottom and z-index*/
 .scroll-to-top-button {
+    display: none;
+    position: fixed;
     right: 15px;
     bottom: 25px;
-    position: fixed;
-    display: none;
     z-index: 10;
 }
 
+/* button styling */
+/* changed: colour, size, transistion time */
 .scroll-to-top-button i {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
     width: 60px;
     height: 40px;
+    font-size: 30px; /* font size is needed to adjust the size of the arrow*/
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
+    align-items: center;
+    justify-content: center;
     color: #b3350e;
     transition: all 0.3s;
 }
-
 .scroll-to-top-button i:hover {
     background: #fff;
     color: #b3350e;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/*----------*/
+/* Header */
+/*----------*/
+
+/* header when user is on the of the page */
+/*  - changed: deleted background */
 #header {
     z-index: 9;
     transition: all 0.3s;
     padding: 20px 0;
 }
 
-#header.header-transparent {
-    background: none;
-}
-
+/* header when user is below the fixed y coordinate (main.js file) */
+/*  - changed: different padding and background values */
 #header.header-scrolled {
     padding: 5px 0;
     background: rgba(179, 53, 14, 0.7);
 }
 
+/* logo size and posistioning */
+/*  - changed: positioning of the logo */
 #header .logo h1 {
-    font-size: 36px;
     padding-left: 10px;
-    /* zabawa ze strzalkami w logo*/
     padding-bottom: 7px;
     padding-top: 7px;
     margin: 0;
     line-height: 1;
+    font-size: 36px;
     font-weight: 400;
-    letter-spacing: 5px;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
-
 #header .logo h1 a, #header .logo h1 a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-#header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
-}
-
+/* @media to adjust the font-size of the logo*/
+/*  - changed: font-size */
+/*  - added: @media for the container-fluid */
 @media (max-width: 768px) {
     
     #header .logo h1 {
-    font-size: 28px;
-      
-      }
+        font-size: 30px;
+    }
+    /* container-fluid padding to make sure everything is aligned*/
     .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
     }
-.news-section {
-	padding-top: 0px;
-	padding-bottom: 0px;
-
-  }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+/*----------*/
+/* Desktop Navigation Menu */
+/*----------*/
+
+/* navbar spacing and positioning*/
+/*  - changed: positioning */
 .nav-menu,.nav-menu * {
     margin: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
     list-style: none;
 }
-
+/* navbar buttons alignment*/
+/*  - deleted: white-space */
 .nav-menu > ul > li {
     position: relative;
-    white-space: nowrap;
     float: left;
 }
 
+/* navbar buttons*/
+/*  - changed: padding, font-size */
 .nav-menu a {
     display: block;
     position: relative;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
     color: #fff;
     padding: 10px 15px 10px 15px;
     transition: 0.3s;
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
 }
-
+/* changed: colour */
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
     color: rgb(250, 109, 66);
     text-decoration: none;
 }
-/* Mobile Navigation */
-.mobile-nav-toggle { /*kreseczki */
+
+/*----------*/
+/* Mobile Navigation Menu*/
+/*----------*/
+
+/* navigation menu at the top of the page */
+/*  - deleted: cursor, outline, line-height, text-align */
+.mobile-nav-toggle { 
     position: fixed;
     right: 15px;
     top: 26px;
@@ -201,47 +235,50 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     font-size: 25px;
     transition: all 0.3s;
-    outline: none !important;
-    line-height: 1;
-    cursor: pointer;
-/*    text-align: right;  */
 }
-.mobile-nav-toggle-scrolled { /*kreseczki kiedy sie zjedzie w dol*/
+/* navigation menu position when user scrolls down */
+.mobile-nav-toggle-scrolled {
     top: 12px;
 }
+
+/* navigation menu position on the contact and shop pages */
 .mobile-nav-toggle-scrolled-contact{
     margin-top: 0px;
 }
 
-.mobile-nav-toggle i { /*kolorek kreseczek*/
+/* colour of the navigation menu*/
+.mobile-nav-toggle i {
   color: #fff;
-/*    rgb(133, 242, 156)*/
 }
 
-.mobile-nav { /* kiedy juz zostanie rozsueniety*/
+/* navigation menu itself*/
+/*  - added: text-align, height */
+/*  - deleted: bottom*/
+/*  - changed: positioning, colour*/
+.mobile-nav { 
+    z-index: 20;
+    overflow-y: auto;
     text-align: center;
     position: fixed;
     top: 65px;
     right: 15px;
-/*    bottom: 15px;*/
     left: 15px;
-    z-index: 20;
-    overflow-y: auto;
-    background: #fff;
+    padding: 10px 0;
+    height: 200px;
+    border-radius: 20px;
+    background: ghostwhite;
     transition: ease-in-out 0.2s;
     opacity: 0;
     visibility: hidden;
-    border-radius: 20px;
-    padding: 10px 0;
-    height: 200px;
 }
 
+/* navigation menu list*/
 .mobile-nav * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
 }
-
+/* navigation menu list bars*/
 .mobile-nav a {
     display: block;
     position: relative;
@@ -252,14 +289,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-    color: rgb(52, 128, 68);
-    background-color: rgb(84,227,114);
+    background-color: rgba(41, 150, 70, 0.8);
     text-decoration: none;
 }
+/* background goes darker when user opens the navbar list*/
 .mobile-nav-overly {
+    z-index: 18;
     width: 100%;
     height: 100%;
-    z-index: 18;
     top: 0;
     left: 0;
     position: fixed;
@@ -269,39 +306,41 @@ h1, h2, h3, h4, h5, h6 {
     transition: ease-out 0.2s;
 }
 
-/*
-.mobile-nav-active { chowa scrollbar po wejsciu w okienko
-  overflow: hidden;
-}
-*/
-
+/* opacity of the navbar list*/
 .mobile-nav-active .mobile-nav {
     opacity: 1;
     visibility: visible;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
+/*----------*/
+/* Welcome section - image and text user sees first*/
+/*----------*/
+
+/* welcome background image*/
+/*  - changed: height, image*/
+#welcome {
+    position: relative;
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     background: url('../images/4.jpg') top center;
     background-size: cover;
-    position: relative;
 }
 
-#hero:before {
-    content: "";
-    background: rgba(5, 44, 63, 0.5);
+/* background image overlay*/
+#welcome:before {
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
+    content: "";
+    background: rgba(10, 44, 44, 0.5);
 }
 
-#hero .hero-container {
+/* text on the background*/
+/*  - added: margin-top*/
+/*  - deleted: padding*/
+#welcome .welcome-container {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -313,185 +352,81 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     text-align: center;
     margin-top: 300px;
-    padding: 0 15px;
 }
 
-#hero h1 {
-    margin: 0 0 15px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
+/* welcome section h1 styling*/
+/*  - deleted: margin*/
+/*  - changed: font-size, font-weight, line-height*/
+#welcome h1 {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 76px;
     text-transform: uppercase;
     color: #fff;
 }
 
-#hero h2 {
-    color: #eee;
-    margin-bottom: 30px;
+/* welcome section h2 styling*/
+#welcome h2 {
     font-size: 24px;
-}
-
-/*
-#hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 28px;
-    border-radius: 4px;
-    transition: 0.5s;
-    border: 2px solid #85b0be;
+    margin-bottom: 30px;
     color: #fff;
 }
-*/
 
-#hero .btn-get-started:hover {
-    background: #85b0be;
-    border: 2px solid #85b0be;
-}
-
+/* this @media allows background's parallax effect on bigger screens*/
 @media (min-width: 1024px) {
-    #hero {
+    
+    #welcome {
         background-attachment: fixed;
         }
     }
 
+/* shrinks the text size on smaller screens */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
+    
+    #welcome h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    /* added: margin-left, margin-right*/
+    #welcome h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
-/*do intodcution section*/
-.news-section {
-	padding-top: 40px;
-	padding-bottom: 10px;
-}
+/*----------*/
+/* Latest news section*/
+/* - this code is written by myself*/
+/*----------*/
+
+/* maintains the size of the section*/
 .container-fluid {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1380px;
 	overflow-x: hidden;
 }
-.head-title {
 
-	margin-bottom: 1rem;
-    text-align: center;
-	line-height: 1.4;
-}
-
-.small-news-boxes .small-news-boxes-transp {
-    position: absolute;
-    border-radius: 8px;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 15px;
-}
-.head-title-sub {
-	font-size: 1.4rem;
-	max-width: 1500px;
-	margin: 0 auto 80px;
-}
-.small-news-link {
-    color: white;
-}
-.small-news-link:hover, .small-news-link:focus {
-    color: #3db856;
-    text-decoration: none;
+/* section spacing*/
+.news-section {
+	padding-top: 40px;
+	padding-bottom: 10px;
 }
 
-.small-news-img {
+/* image styling*/
+.latest-news-img {
+    width: 100%; 
+    height: 200px; 
     border-radius: 8px;
     margin-top: 20px;
-    width: 100%; 
-    height: 200px;  
-    float: left;
-}
-#carousel-section
-{
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-.m-bottom20 {margin-bottom: 20px; }
-
-.carousel-padding{
-    padding-left: 15px; 
-    padding-right: 15px;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-/*  background: url("../img/footer-bg.jpg") top center no-repeat;*/
-    background-color: rgb(48, 56, 49);
-    color: #fff;
-    font-size: 14px;
-    position: relative;
-}
-
-#footer::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(1, 11, 16, 0.6);
-    z-index: 1;
-}
-
-#footer .footer-top {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 20px 20px;
-}
-
-#footer .footer-top .social-links {
-    margin-top: 10px;
-}
-#footer .footer-top .social-links-size { /*szerokosc ikonek*/
-    width: 20px; 
-    height: 20px;
-}
-
-#footer .footer-top .social-links a { /*szerokosc guzikow*/
-    font-size: 18px;
-    display: inline-block;
-    background: rgb(179, 53, 14);
-    color: #fff;
-    line-height: 1;
-    padding: 7px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 36px;
-    height: 36px;
-    transition: 0.3s;
-}
-
-#footer .footer-top .social-links a:hover {
-    background: #fff;
-}
-
-#footer .footer-bottom {
-    z-index: 2;
-    position: relative;
-    padding-bottom: 20px;
-    text-align: center;
-}
+/*----------*/
+/* Horizontal images*/
+/*----------*/
 #carousel {
     width: 100%;
     height: 250px;
@@ -504,8 +439,58 @@ h1, h2, h3, h4, h5, h6 {
 #carousel .slide {
     display: inline-block;
 }
-video {
-  /* override other styles to make responsive */
-  width: 100%    !important;
-  height: auto   !important;
+
+/*----------*/
+/* Footer*/
+/*----------*/
+
+/* footer base styling*/
+/*  - added: background-color, padding text-align */
+/*  - deleted: background*/
+/*  - changed: font-size*/
+footer {
+    background-color: rgb(23, 26, 23);
+    color: #fff;
+    font-size: 15px;
+    position: relative;
+    padding: 30px 0px 30px 0;
+    text-align: center;
+}
+
+/* size of the icons used*/
+/* written by myself*/
+/* icons: https://www.flaticon.com/categories/social-media */
+footer .social-links-size { 
+    margin-top: 3px;
+    margin-left: 1px;
+    width: 20px; 
+    height: 20px;
+}
+
+/* size, positioning and colour of the buttons*/
+/*  - deleted: font-size, margin*/
+/*  - changed: background, height, width */
+footer .social-links a { 
+    display: inline-block;
+    background: rgb(179, 53, 14);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    padding: 7px 0;
+    margin: 0px 4px 15px 4px;
+    border-radius: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+footer .social-links a:hover {
+    background: #fff;
+}
+
+/* styling of bottom lines of text*/
+/* added: margin-top */
+/* deleted: z-index, position, padding-bottom, text-align;*/
+footer .footer-bottom {
+    margin-top: 10px;
 }
