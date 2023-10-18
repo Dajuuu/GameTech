@@ -1,123 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="600">
+    <meta name="author" content="Daniel Zielinski">
+    <meta name="description" content="Games and technology news website">
+    <meta name="keywords" content="Games, Tech, technology, news, JS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Classic - Responsive Bootstrap 4.0 Template</title>
-<!--
-Classic Template
-http://www.templatemo.com/tm-488-classic
--->
+    <title>Main page</title> 
     <!-- load stylesheets -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
-     <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> <!-- font-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!--Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animacje przejscia - css -->
     
 </head>
     <body>
-        <div class="container-fluid">
-            <div class="header">
-                <a href="index.html" class="navbar-brand header-name">GameTech</a>
-                    
-                    <!-- navbar -->
-                    <nav class="navbar subpage-button">
-
-                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-button">
-                            &#9776;
-                        </button>
-                        
-                        <div class="collapse navbar-toggleable-sm" id="navbar-button">
-                            <ul class="nav navbar-nav">
-                                <li class="nav-item">
-                                    <a href="index.html" class="nav-link">Games</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="about.html" class="nav-link">Tech</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="blog.html" class="nav-link">Shop</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="contact.html" class="nav-link">Contact</a>
-                                </li>
-                            </ul>                        
-                        </div>
-                        
-                    </nav>  
-
-                </div>                                  
-            </div>            
-
+<!--        <div class="container-fluid">-->
+        <div class="header">
+            <a href="index.html" class="navbar-brand header-name">GameTech</a>
+           
+            <!-- navbar -->
+            <nav class="navbar subpage-button">
+                <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbar-button">&#9776;</button>
+            <div class="collapse navbar-toggleable-sm" id="navbar-button">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Games</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">Tech</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>                        
+            </div>         
+            </nav>  
+        </div>                                  
+        <!--This is for the smaller devices to show the main image-->
         <div class="main-images">
-            <img src="img/tm-home-img.jpg" alt="Image" class="hidden-lg-up img-fluid">
+            <img src="img/2.jpg" alt="Image" class="hidden-lg-up img-fluid" style="">
         </div>
-
-        <section class="section-responsive">
+        
+        <!-- Introduction section -->
+        <section class="news-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                        <h2 class="text-colour head-title">Introduction</h2>
-                        <p class="head-title-sub">Suspendisse ut magna vel velit cursus tempor ut nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p>
+                        <div data-aos="zoom-in-up"> <!-- AOS effect -->
+                            <h2 class="text-colour head-title">Introduction</h2>
+                            <p class="head-title-sub">Suspendisse ut magna vel velit cursus tempor ut nec nunc. Mauris vehicula, augue in tincidunt porta, purus ipsum blandit massa.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
+                <!-- small box news section with grey backround-->
+                <div class="row" style="background-color: ghostwhite;">
+                    
+                    <!-- small boxes-->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">           
                         <div class="small-news-boxes">
-                            <img src="img/tm-img-310x180-1.jpg" alt="Image" class=" m-bottom20 img-fluid">
-                            <h4 class="m-bottom20 text-colour">Lorem ipsum dolor #1</h4>
-                            <p class="m-bottom20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="button text-uppercase m-bottom20">Detail</a>    
-                        </div>  
-
+                            <div data-aos="fade-up"> <!-- AOS effect -->
+                            <img src="img/1.jpg" alt="Image" class="m-bottom20 img-fluid">
+                                <div class="small-news-boxes-transp">
+                                    <a href="index.html" class= "m-bottom20 small-news-link">Mortal Kombat: Filmowy reboot otrzymal pierwszy krwawy zwiastun!</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">           
                         <div class="small-news-boxes">
-                            <img src="img/tm-img-310x180-2.jpg" alt="Image" class="m-bottom20 img-fluid">
-                            <h4 class="m-bottom20 text-colour">Lorem ipsum dolor #2</h4>
-                            <p class="m-bottom20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="button text-uppercase m-bottom20">Read More</a>    
-                        </div>  
-
+                            <div data-aos="fade-up"> <!-- AOS effect -->
+                            <img src="img/1.jpg" alt="Image" class="m-bottom20 img-fluid">
+                                <div class="small-news-boxes-transp">
+                                    <a href="index.html" class= "m-bottom20 small-news-link">Mortal Kombat: Filmowy reboot otrzymal pierwszy krwawy zwiastun!</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">           
                         <div class="small-news-boxes">
-                            <img src="img/tm-img-310x180-3.jpg" alt="Image" class="m-bottom20 img-fluid">
-                            <h4 class="m-bottom20 text-colour">Lorem ipsum dolor #3</h4>
-                            <p class="m-bottom20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="button text-uppercase m-bottom20">Detail</a>    
-                        </div>  
-
+                            <div data-aos="fade-up"> <!-- AOS effect -->
+                            <img src="img/3.jpg" alt="Image" class="m-bottom20 img-fluid">
+                                <div class="small-news-boxes-transp">
+                                    <a href="index.html" class= "m-bottom20 small-news-link">Mortal Kombat: Filmowy reboot otrzymal pierwszy krwawy zwiastun!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">           
+                        <div class="small-news-boxes">
+                            <div data-aos="fade-up"> <!-- AOS effect -->
+                            <img src="img/1.jpg" alt="Image" class="m-bottom20 img-fluid">
+                                <div class="small-news-boxes-transp">
+                                    <a href="index.html" class= "m-bottom20 small-news-link">Mortal Kombat: Filmowy reboot otrzymal pierwszy krwawy zwiastun!</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="small-news-boxes">
-                            <img src="img/tm-img-310x180-4.jpg" alt="Image" class="m-bottom20 img-fluid">
-                            <h4 class="m-bottom20 text-colour">Lorem ipsum dolor #4</h4>
-                            <p class="m-bottom20">Aenean cursus tellus mauris, quis
-                            consequat mauris dapibus id. Donec
-                            scelerisque porttitor pharetra</p>
-                            <a href="#" class="button text-uppercase m-bottom20">Read More</a>    
-                        </div>  
-
-                    </div>
                 </div> <!-- row -->
                 
                 <!--big boxes-->
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+                        <div data-aos="zoom-in-up"> <!-- AOS effect -->
+                            <h2 class="text-colour head-title">Introduction</h2>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row" style="margin-top: 70px">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
@@ -186,6 +185,10 @@ http://www.templatemo.com/tm-488-classic
         <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
         <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+    AOS.init();
+    </script>
        
 </body>
 </html>
