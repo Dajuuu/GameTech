@@ -1,0 +1,511 @@
+/**
+* Template Name: Vlava - v2.2.1
+* Template URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+}
+/* scrollbar*/
+body::-webkit-scrollbar {
+    width: 1rem;
+}
+body::-webkit-scrollbar-track {
+    background: #2e362f;
+}
+body::-webkit-scrollbar-thumb {
+    background: #c73e14;
+}
+
+a {
+    color: #e8633a;
+}
+
+a:hover {
+    color: #fa6d42;
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+.section-bg-color {
+    background-color: ghostwhite;
+}
+.section-bg-color-green {
+    background-color: lightgreen;
+}
+
+.newsletter {
+    padding: 80px 20px;
+}
+
+.newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: #b3350e;
+    border-radius: 10px 0px 0px 10px;
+    
+}
+
+.newsletter .content .btn {
+    min-height: 50px; 
+    border-radius: 0px 10px 10px 0px;
+    background: #b3350e;
+    color: #fff;
+    font-weight: 600;
+}
+.newsletter .content .btn:hover {
+    background: #c94116;
+}
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.scroll-to-top-button {
+    right: 15px;
+    bottom: 25px;
+    position: fixed;
+    display: none;
+    z-index: 10;
+}
+
+.scroll-to-top-button i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: thin;
+    color: #b3350e;
+    transition: all 0.3s;
+}
+
+.scroll-to-top-button i:hover {
+    background: #fff;
+    color: #b3350e;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    z-index: 9;
+    transition: all 0.3s;
+    padding: 20px 0;
+}
+
+#header.header-transparent {
+    background: none;
+}
+
+#header.header-scrolled {
+    padding: 5px 0;
+    background: rgba(179, 53, 14, 0.7);
+}
+
+#header .logo h1 {
+    font-size: 36px;
+    padding-left: 10px;
+    /* zabawa ze strzalkami w logo*/
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+@media (max-width: 768px) {
+    
+    #header .logo h1 {
+    font-size: 28px;
+      
+      }
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+.news-section {
+	padding-top: 0px;
+	padding-bottom: 0px;
+
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu,.nav-menu * {
+    margin: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    list-style: none;
+}
+
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    float: left;
+}
+
+.nav-menu a {
+    display: block;
+    position: relative;
+    color: #fff;
+    padding: 5px 5px 10px 25px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+    color: rgb(250, 109, 66);
+    text-decoration: none;
+}
+/* Mobile Navigation */
+.mobile-nav-toggle { /*kreseczki */
+    position: fixed;
+    right: 15px;
+    top: 26px;
+    z-index: 19;
+    border: none;
+    background: none;
+    font-size: 25px;
+    transition: all 0.3s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+/*    text-align: right;  */
+}
+.mobile-nav-toggle-scrolled { /*kreseczki kiedy sie zjedzie w dol*/
+    top: 12px;
+}
+.mobile-nav-toggle-scrolled-contact{
+    margin-top: 0px;
+}
+
+.mobile-nav-toggle i { /*kolorek kreseczek*/
+  color: #fff;
+/*    rgb(133, 242, 156)*/
+}
+
+.mobile-nav { /* kiedy juz zostanie rozsueniety*/
+    text-align: center;
+    position: fixed;
+    top: 65px;
+    right: 15px;
+/*    bottom: 15px;*/
+    left: 15px;
+    z-index: 20;
+    overflow-y: auto;
+    background: #fff;
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 20px;
+    padding: 10px 0;
+    height: 200px;
+}
+
+.mobile-nav * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mobile-nav a {
+    display: block;
+    position: relative;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 500;
+    outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+    color: rgb(52, 128, 68);
+    background-color: rgb(84,227,114);
+    text-decoration: none;
+}
+.mobile-nav-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 18;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(11, 11, 11, 0.6);
+    overflow: hidden;
+    display: none;
+    transition: ease-out 0.2s;
+}
+
+/*
+.mobile-nav-active { chowa scrollbar po wejsciu w okienko
+  overflow: hidden;
+}
+*/
+
+.mobile-nav-active .mobile-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 80vh;
+    background: url('../images/4.jpg') top center;
+    background-size: cover;
+    position: relative;
+}
+
+#hero:before {
+    content: "";
+    background: rgba(5, 44, 63, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 300px;
+    padding: 0 15px;
+}
+
+#hero h1 {
+    margin: 0 0 15px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#hero h2 {
+    color: #eee;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/*
+#hero .btn-get-started {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    border: 2px solid #85b0be;
+    color: #fff;
+}
+*/
+
+#hero .btn-get-started:hover {
+    background: #85b0be;
+    border: 2px solid #85b0be;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+        }
+    }
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*do intodcution section*/
+.news-section {
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+.container-fluid {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1380px;
+	overflow-x: hidden;
+}
+.head-title {
+
+	margin-bottom: 1rem;
+    text-align: center;
+	line-height: 1.4;
+}
+
+.small-news-boxes .small-news-boxes-transp {
+    position: absolute;
+    border-radius: 8px;
+    bottom: 0;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 15px;
+}
+.head-title-sub {
+	font-size: 1.4rem;
+	max-width: 1500px;
+	margin: 0 auto 80px;
+}
+.small-news-link {
+    color: white;
+}
+.small-news-link:hover, .small-news-link:focus {
+    color: #3db856;
+    text-decoration: none;
+}
+
+.small-news-img {
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%; 
+    height: 200px;  
+    float: left;
+}
+#carousel-section
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.m-bottom20 {margin-bottom: 20px; }
+
+.carousel-padding{
+    padding-left: 15px; 
+    padding-right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+/*  background: url("../img/footer-bg.jpg") top center no-repeat;*/
+    background-color: rgb(48, 56, 49);
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+}
+
+#footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(1, 11, 16, 0.6);
+    z-index: 1;
+}
+
+#footer .footer-top {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+#footer .footer-top .social-links {
+    margin-top: 10px;
+}
+#footer .footer-top .social-links-size { /*szerokosc ikonek*/
+    width: 20px; 
+    height: 20px;
+}
+
+#footer .footer-top .social-links a { /*szerokosc guzikow*/
+    font-size: 18px;
+    display: inline-block;
+    background: rgb(179, 53, 14);
+    color: #fff;
+    line-height: 1;
+    padding: 7px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+    background: #fff;
+}
+
+#footer .footer-bottom {
+    z-index: 2;
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+}
+#carousel {
+    width: 100%;
+    height: 250px;
+    background-color: #ff0000;
+    
+    overflow: auto;
+    white-space: nowrap;
+}
+
+#carousel .slide {
+    display: inline-block;
+}
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+}

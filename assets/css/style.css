@@ -30,14 +30,6 @@ a:hover {
     color: #40b357;
     text-decoration: none;
 }
-a.games {
-    color: #c44e3f;
-}
-
-a.games:hover {
-    color: #c44e3f;
-    text-decoration: none;
-}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
 }
@@ -127,10 +119,6 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled-contact {
     background: rgba(42, 99, 54, 0.9);
 }
-#header.header-scrolled-games {
-    padding: 5px 0;
-    background: rgba(161, 40, 24, 0.7);
-}
 
 #header .logo h1 {
     font-size: 36px;
@@ -177,20 +165,20 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-.nav-menu, .nav-menu *, .nav-menu-games, .nav-menu-games * {
+.nav-menu,.nav-menu * {
     margin: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
     list-style: none;
 }
 
-.nav-menu > ul > li, .nav-menu-games > ul > li {
+.nav-menu > ul > li {
     position: relative;
     white-space: nowrap;
     float: left;
 }
 
-.nav-menu a, .nav-menu-games a{
+.nav-menu a {
     display: block;
     position: relative;
     color: #fff;
@@ -206,12 +194,8 @@ h1, h2, h3, h4, h5, h6 {
     color: rgb(71, 201, 105);
     text-decoration: none;
 }
-.nav-menu-games a:hover, .nav-menu-games .active > a, .nav-menu-games li:hover > a {
-    color: rgb(255,110,30);
-    text-decoration: none;    
-}
 /* Mobile Navigation */
-.mobile-nav-toggle, mobile-nav-toggle-games { /*kreseczki */
+.mobile-nav-toggle { /*kreseczki */
     position: fixed;
     right: 15px;
     top: 26px;
@@ -225,14 +209,14 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 /*    text-align: right;  */
 }
-.mobile-nav-toggle-scrolled, mobile-nav-toggle-scrolled-games { /*kreseczki kiedy sie zjedzie w dol*/
+.mobile-nav-toggle-scrolled { /*kreseczki kiedy sie zjedzie w dol*/
     top: 12px;
 }
 .mobile-nav-toggle-scrolled-contact{
     margin-top: 0px;
 }
 
-.mobile-nav-toggle i, .mobile-nav-toggle-games i { /*kolorek kreseczek*/
+.mobile-nav-toggle i { /*kolorek kreseczek*/
   color: #fff;
 /*    rgb(133, 242, 156)*/
 }
@@ -305,19 +289,12 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
     width: 100%;
     height: 80vh;
-    background: url('../images/6.jpg') top center;     
-    background-size: cover;
-    position: relative;
-}
-#hero-games {
-    width: 100%;
-    height: 80vh;
-    background: url('../images/5.jpg') top center;     
+    background: url('../images/6.jpg') top center;
     background-size: cover;
     position: relative;
 }
 
-#hero:before, #hero-games:before {
+#hero:before {
     content: "";
     background: rgba(5, 44, 63, 0.5);
     position: absolute;
@@ -327,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
 }
 
-#hero .hero-container, #hero-games .hero-container {
+#hero .hero-container {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -342,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 15px;
 }
 
-#hero h1, #hero-games h1 {
+#hero h1 {
     margin: 0 0 15px 0;
     font-size: 48px;
     font-weight: 700;
@@ -351,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
-#hero h2, #hero-games h2 {
+#hero h2 {
     color: #eee;
     margin-bottom: 30px;
     font-size: 24px;
@@ -372,6 +349,11 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 */
+
+#hero .btn-get-started:hover {
+    background: #85b0be;
+    border: 2px solid #85b0be;
+}
 
 @media (min-width: 1024px) {
     #hero {
