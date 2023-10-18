@@ -36,17 +36,17 @@
   });
 
   // Activate smooth scroll on page load with hash links in the url
-  $(document).ready(function() {
-    if (window.location.hash) {
-      var initial_nav = window.location.hash;
-      if ($(initial_nav).length) {
-        var scrollto = $(initial_nav).offset().top - scrolltoOffset;
-        $('html, body').animate({
-          scrollTop: scrollto
-        }, 1500, 'easeInOutExpo');
-      }
-    }
-  });
+//  $(document).ready(function() {
+//    if (window.location.hash) {
+//      var initial_nav = window.location.hash;
+//      if ($(initial_nav).length) {
+//        var scrollto = $(initial_nav).offset().top - scrolltoOffset;
+//        $('html, body').animate({
+//          scrollTop: scrollto
+//        }, 1500, 'easeInOutExpo');
+//      }
+//    }
+//  });
 
   // Mobile Navigation
   if ($('.nav-menu').length) {
@@ -116,61 +116,34 @@
   });
 
   if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
+    $('#header').addClass('header-scrolled');  
+  } 
+    
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
+    } else {
+      $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
+    }
+  });
+if ($(window).scrollTop() > 100) {
+    $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
   }
 
-  // Back to top button
+  // Back to top button zmieniccccccccccccccccccccccccccccccccccccccccccccc
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
+      $('.scroll-to-top-button').fadeIn('slow');
     } else {
-      $('.back-to-top').fadeOut('slow');
+      $('.scroll-to-top-button').fadeOut('slow');
     }
   });
 
-  $('.back-to-top').click(function() {
+  $('.scroll-to-top-button').click(function() {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
     return false;
-  });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
-      layoutMode: 'fitRows'
-    });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox();
-    });
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
   });
 
 })(jQuery);
