@@ -12,6 +12,15 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
+body::-webkit-scrollbar {
+    width: 0.4rem;
+}
+body::-webkit-scrollbar-track {
+    background: #2e362f;
+}
+body::-webkit-scrollbar-thumb {
+    background: #2a6336;
+}
 
 a {
   color: #85b0be;
@@ -33,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   display: none;
   right: 15px;
-  bottom: 15px;
+  bottom: 25px;
   z-index: 99999;
 }
 
@@ -41,18 +50,25 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  width: 40px;
+  font-size: 30px;
+  width: 60px;
   height: 40px;
-  border-radius: 4px;
-  background: #85b0be;
-  color: #fff;
-  transition: all 0.4s;
+  border-radius: 20px;
+/*  background: #85b0be;*/
+/*
+    outline-style: solid;
+    outline-color: green;
+    outline-width: 1.5px;
+*/
+    border-style: solid;
+    border-width: thin;
+  color: green;
+  transition: all 0.3s;
 }
 
 .back-to-top i:hover {
-  background: #6a9fb0;
-  color: #fff;
+  background: #fff;
+  color: green;
 }
 
 /*--------------------------------------------------------------
@@ -60,8 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #header {
   z-index: 997;
-  transition: all 0.5s;
-  background: #052c3f;
+  transition: all 0.3s;
   padding: 22px 0;
 }
 
@@ -70,17 +85,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(5, 44, 63, 0.8);
-  padding: 15px 0;
+    padding: 15px 0;
+    background: rgba(42, 99, 54, 0.7);
+    transition: background 1s ease-out;
 }
 
 #header .logo h1 {
   font-size: 36px;
-  margin: 0;
   padding: 0;
+    margin: 0;
   line-height: 1;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   text-transform: uppercase;
 }
 
@@ -98,6 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   #header .logo h1 {
     font-size: 28px;
+      
       }
     .container-fluid {
         padding-left: 5px;
@@ -221,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile Navigation */
-.mobile-nav-toggle {
+.mobile-nav-toggle { /*kreseczki */
   position: fixed;
   right: 15px;
   top: 15px;
@@ -234,13 +251,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   cursor: pointer;
   text-align: right;
+    
 }
 
-.mobile-nav-toggle i {
+.mobile-nav-toggle i { /*kolorek kreseczek*/
   color: #fff;
+/*    rgb(133, 242, 156)*/
 }
 
-.mobile-nav {
+.mobile-nav { /* kiedy juz zostanie rozsueniety*/
+    text-align: center;
   position: fixed;
   top: 55px;
   right: 15px;
@@ -252,8 +272,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 10px 0;
+    height: 200px;
 }
 
 .mobile-nav * {
@@ -272,7 +293,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #85b0be;
+  color: rgb(52, 128, 68);
+    background-color: rgb(84,227,114);
   text-decoration: none;
 }
 
@@ -320,7 +342,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-active .mobile-nav {
   opacity: 1;
-    height: 28%;
+    200px;
   visibility: visible;
 }
 
@@ -1381,11 +1403,15 @@ section {
 #footer .footer-top .social-links {
   margin-top: 10px;
 }
+#footer .footer-top .social-links-size {
+    width: 20px; 
+    height: 20px;
+}
 
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #85b0be;
+  background: rgb(42, 99, 54);
   color: #fff;
   line-height: 1;
   padding: 7px 0;
@@ -1398,9 +1424,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #649aac;
-  color: #fff;
-  text-decoration: none;
+  background: #fff;
 }
 
 #footer .footer-bottom {
