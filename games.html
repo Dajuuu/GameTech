@@ -8,23 +8,23 @@
     <meta name="description" content="Games and technology news website">
     <meta name="keywords" content="Games, Tech, technology, news, JS, CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTech Homepage</title>
+    <title>GameTech Games Page</title>
     
     <!-- fonts are used from the: https://fonts.google.com -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- CSS stylesheets -->
-    <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
+    <link href="assets/css/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
     <link href="assets/css/style_games.css" rel="stylesheet">  <!-- my css styling -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
 </head>
 
 <body>
     <!-- Progress bar that appears at the top of the page -->
-    <!-- Progress bar code is also in the main.js and style.css - more info there-->
+    <!-- Progress bar code is also in the script.js and style.css - more info there-->
     <div class="progressBar"></div>
     
     <!-- Header -->
@@ -174,15 +174,15 @@
         <div class="row container-fluid">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
                 <div class="row news-bottom row-outline-bottom">
-                    <img src="assets/images/games-page/news-hor1.jpg" alt="Two female anime characters flying" class="image">
+                    <a href="#"><img src="assets/images/games-page/news-below1.jpg" alt="Two female anime characters flying" class="image"></a>
                     <h3 class="news-text-color">Sony closes the <b>Japan Studio</b> - left many employees without the job</h3>
                 </div>        
                 <div class="row news-bottom row-outline-bottom">
-                    <img src="assets/images/games-page/news-below2.jpg" alt="Male character looking into the distance. Woods and mountains as background" class="image">
+                    <a href="#"><img src="assets/images/games-page/news-below2.jpg" alt="Male character looking into the distance. Woods and mountains as background" class="image"></a>
                     <h3 class="news-text-color"><b>Days Gone</b> with upgraded graphics on PC, increased field of view and many, many more</h3>
                 </div>        
                 <div class="row news-bottom row-outline-bottom m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
-                    <img src="assets/images/games-page/news-below3.jpg" alt="Someone holding a futuristic weapon looking at high building" class="image">
+                    <a href="#"><img src="assets/images/games-page/news-below3.jpg" alt="Vehicle parked on a green grass. Mountains, trees and big floating building" class="image"></a>
                     <h3 class="news-text-color">343 Industries kept themselfves busy. <b>Halo Infinite</b> now looks much better</h3>
                 </div>  
             </div>
@@ -249,25 +249,25 @@
 
     <!-- Back to the top and toggle dark-mode buttons -->
     <!-- styling classes for both buttons are in the style.css -->
-    <!-- JavaScript code responsible for them to work is in the main.js -->
+    <!-- JavaScript code responsible for them to work is in the script.js -->
     <!-- In both buttons there are IcoFont icons used - more in the report.html -->
     <a href="#" class="scroll-to-top-button"><i class="icofont-simple-up"></i></a>
-    <a class="dark-mode-button"><i class="icofont-adjust"></i></a>
+    <a href="#" class="dark-mode-button"><i class="icofont-adjust"></i></a>
 
     <!-- JavaScript files -->
     
     <!-- jQuery files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/jquery/jquery.easing.min.js"></script>
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/jquery/jquery.easing.min.js"></script>
     <!-- Bootstrap files -->
-    <script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>    
-    <script src="assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>    
+    <script src="assets/js/bootstrap/bootstrap.bundle.js"></script>
     <!-- AOS (Animate on scroll) library .js file -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
     AOS.init();
     </script>
     <!-- my JavaScript file -->
-    <script src="assets/js/main.js"></script> 
+    <script src="assets/js/script.js"></script> 
 </body>
 </html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- All of the meta information, fonts and css stylesheets used-->
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel Zielinski">
+    <meta name="description" content="Games and technology news website">
+    <meta name="keywords" content="Games, Tech, technology, news, JS, CSS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTech report.html</title>
+    
+    <!-- fonts are used from the: https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">  <!-- bootstrap -->
+    <link href="assets/css/icofont/icofont.min.css" rel="stylesheet">  <!-- IcoFont icons--> 
+    <link href="assets/css/style.css" rel="stylesheet">  <!-- my css styling -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library -->
+</head>
+
+<body>
+    <!-- Progress bar that appears at the top of the page -->
+    <!-- Progress bar code is also in the script.js and style.css - more info there-->
+    <div class="progressBar"></div>
+    
+    <!-- Header -->
+    <!-- *** header code was greatly modified and changed compared to the template - more in the style.css in the header section-->
+    <!-- -->
+    <!-- * header-scrolled-contact, mobile-nav-toggle-scrolled-contact, header-fixed-pos: responsive behaviour of the header (these classes are written by me) - more info in the style.css -->
+    <!-- * container-fluid - maintains header width (style.css) -->
+    <!-- * align-center, display-flex - pretty self-explanatory classes (style.css) -->
+    <!-- * m-rightAuto - margin-right: auto (style.css) -->
+    <header id="header" class="header-scrolled-constant mobile-nav-toggle-scrolled-constant header-fixed-pos">
+        <div class="container-fluid display-flex align-center">
+            <div class="logo m-rightAuto"> <!-- logo class was from the template (modified) - more info in the style.css -->
+                <h1><a href="index.html">GAMETECH</a></h1> <!-- logo as a hyperlink to the main page -->
+            </div>
+            <!-- Hyperlinks to other sites -->
+            <!-- nav tag classes names remained the same. Only nav-manu CSS was changed -->
+            <!-- * nav-menu - navigation styling etc. More in style.css -->
+            <!-- * d-none - display: none (bootstrap) -->
+            <!-- * d-lg-block - display: block (bootstrap) -->
+            <nav class="nav-menu d-none d-lg-block"> 
+                <ul>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container-fluid" style="margin-top: 140px;">
+        <h2><b>Report: Large Coursework</b></h2><br>
+        <h2><b>Daniel Zielinski</b></h2><br><br>
+        <h4><b>Introduction:</b> My site is for the people to read latest news about video games and technology. I chose to use hierarchical structure.</h4><br>
+        <h4><b>State 3 things that have inspired you when creating your website: </b></h4>
+        <ul>
+            <li><h4>I am very interested in technology and video games are my passion. </h4></li>      
+            <li><h4>I like to read news about both every day from various other sites. </h4></li>      
+            <li><h4>I wanted to see how I can make site like this.</h4></li>      
+        </ul><br><br>
+        
+        <h4><b>State 3 ways in which your site is accessible: </b></h4>
+        <ul>
+            <li><h4>Alternative text for images and videos, if for some reason they could not be seen. </h4></li>      
+            <li><h4>Consistent navigation</h4></li>      
+            <li><h4>Site itself uses bright colours. This is especially useful for the text to be more readable. Although if someone prefers dark colours - dark mode is also available for this site</h4></li>      
+        </ul><br><br>
+        
+        <h4><b>State 3 ways in which you have considered usability in your site: </b></h4>
+        <ul>
+            <li><h4>Site is responsive; it can be used on multiple devices </h4></li>      
+            <li><h4>Clarity; design of the website is simple and consistent, without unnecessary distractions. Every section of information is labelled. Navigation is straightforward.</h4></li>      
+            <li><h4>Relevancy; if a user is interested in technology news section, she/he can easily navigate to this particular section to find needed information in this field. </h4></li>      
+        </ul><br><br>
+        
+        <h4><b>What aspect(s) of your work do you think worked well and why?</b></h4>
+        <h4>I think the design is a well-made and any group of users can quickly familiarise themselves with the site’s layout.</h4>
+        <h4>Site is also responsive, but this is mostly thanks to the Bootstrap classes – I just adjusted them to my needs and add multiple @media queries to better suit my website.</h4>
+        <h4>I was also struggling a bit with progress bar code but eventually manage to make it work</h4>
+        <h4>Some CSS effects such as separating bars on the news pages.</h4><br><br>       
+        
+        <h4><b>What aspect(s) of your work could be improved, and how might you do things differently another time?</b></h4>
+        <h4>Maybe add more subpages, add something like search bar. In the news pages I could add horizontal image scroll. In the future I will try make a website with different design and layout.</h4><br><br> 
+        <h4>More clear focus indicators - website is keyboard-friendly but some elements are unclear or do not work fully as intended.</h4> 
+        
+        <h4><b>Appendices:</b></h4>
+        <h4>All appendices are in the “Documentation” folder in the root directory.</h4><br><br> 
+
+        <h4><b>What resources were used when creating your work?</b></h4>
+        <h4>My site was made based on Bootstrap template: Vlava - <a href="https://bootstrapmade.com/demo/Vlava/">Vlava Template</a></h4>
+        <h4>Because of that some pieces of code in my project may be similar to the template’s. Everything used from the template is described and changed in at least some aspects. What was changed and what stayed the same is written exactly in the .html, .css, and .js files. Some of the code used from other sources is explained here, in the report.html file.</h4>
+        <h4>I have used Bootstrap v4.6 mainly for the flexbox grid, as well as some effects that helped my site look how I wanted (image carousel). </h4>
+        <h4>For the JS library I used the jQuery and AOS (Animate On Scroll Library).</h4>
+        <h4>Fonts were imported from the https://fonts.google.com/.</h4> 
+        <h4>IcoFont (up-arrow and dark-mode switch) and flaticon (social media) icons were used.</h4>
+        <h4>If I wanted to check some CSS, jQuery, Bootstrap or HTML properties, methods, etc. I went mostly with https://www.w3schools.com/ references. All colours were taken from the Google RGB colour picker.</h4><br><br><br>
+        
+        <h4><b>Resources:</b></h4><br>
+        
+        <h4><b>1.</b> Bootstrap, “Bootstrap v4.6 library and framework”, 2021. Available: <a href="https://getbootstrap.com/docs/4.6/getting-started/download/">Bootstrap v4.6 </a>[Accessed: 20-Feb-2021]</h4><br>
+        <h4><b>2.</b> jQuery, “jQuery v3.5.1 JavaScript library”, 2020. Available: <a href="https://jquery.com/download/">jQuery v3.5.1 </a>[Accessed: 20-Feb-2021]</h4><br>
+        <h4><b>3.</b> GSGD. “jQuery Easing Plugin (version 1.3)”, 2007. Available: <a href="https://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin v1.3 </a>[Accessed: 20-Feb-2021]</h4><br>
+        <h4><b>4.</b> Michal Snik, “ AOS (Animate On Scroll Library).”, 2018, Available: <a href="https://michalsnik.github.io/aos/">AOS </a>[Accessed: 20-Feb-2021]</h4><br>
+        <h4><b>5.</b> Icofont, “Icons”, year unknown. Available: <a href=" https://icofont.com/">Icofont </a>[Accessed: 20-Feb-2021]</h4><br>
+        <h4><b>6.</b> Flaticon, “Icons”, year unknown. Available: <a href="https://www.flaticon.com/categories/social-media">Flaticon </a>[Accessed: 21-Feb-2021]</h4><br>
+        <h4><b>7.</b> Google, “Fonts”, year unknown. Available: <a href="https://fonts.google.com/">Google Fonts </a>[Accessed: Multiple times (finding the best fonts)]</h4><br>
+        <h4><b>7.</b> w3schools.com, “HTML, CSS, jQuery References”. Available:  <a href="https://www.w3schools.com/default.asp">w3schools.com </a>[Accessed: Multiple times]</h4><br><br>
+        
+        <h4><b>Code used in my project:</b></h4><br>
+        
+        <h4><b>1. Newsletter</b></h4>
+        <h4>Asamshahadat, ’Newsletter Form – 1’, year unknown. [Source code].</h4>
+        <h4><a href="https://bootsnipp.com/snippets/gN8P1">Link </a></h4>
+        <h4>I modified the code to match my website’s colours and design, added the AOS library effect, changed the text. I got rid of lines of code that I did not need (z-index in the CSS stylesheet, content, input-group-btn classes in the .html) and add some that were needed (such as border-radius in the CSS stylesheet)</h4><br>        
+        
+        <h4><b>2. Carousel</b></h4>
+        <h4>Víctor Simental, “Bootstrap 4 - two and more carousel in one page example”, year unknown. [Source code].</h4>
+        <h4><a href="https://codepen.io/vicmx/pen/oOdxvO">Link </a></h4>
+        <h4>I used the code form the “Carousel 5 + 6” section and changed some code. I added the headings and styling of the images, as well as black text boxes. Small white indicators at the bottom of the carousel are also styled differently. Carousel style section in the “style.css” file was also written by me. The carousel itself uses Bootstrap to function properly.</h4><br>        
+           
+        <h4><b>3. Load more</b></h4>
+        <h4>Tigran Soghomonyan, “Simple "Load More””, year unknown. [Source code].</h4>
+        <h4><a href="https://codepen.io/Tigran_91/pen/JyaZPz">Link </a></h4>
+        <h4>From the CSS I used the “#loadMore” and “.noContent” with few lines changed. To the JavaScript, apart from adapting this code to my website, I have added the part of code which detects if number of images is zero. If so, the “Load More” button does not appear. The “.slideDown” easing type was also added.</h4><br>
+        
+        <h4><b>4. Custom scrollbar</b></h4>
+        <h4>w3schools, “How TO - Custom Scrollbar”, year unknown. [Source code].</h4>
+        <h4><a href="https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp">Link </a></h4>
+        <h4>From site mentioned above I looked up how to make the custom scrollbar. Colours and styling were made by me, from W3Shools I took the commands needed.</h4><br><br><br>     
+        
+        <h3><b>Images:</b></h3>
+        <h4>(Some of the text headings are taken from different news sites – they are paraphrased to avoid any form of plagiarism)</h4><br><br>        
+        
+        <h3><b> - Homepage</b></h3>
+        
+        <h4><a href="https://wall.alphacoders.com/big.php?i=1022371">Background</a></h4>
+        <h4><a href="https://whatnext.pl/premiera-horizon-forbidden-west-2/">Latest games news image 1</a></h4>
+        <h4><a href="https://komorkomania.pl/33605,pokemon-go-boom-powoli-konczy-sie">Latest games news image 2</a></h4>
+        <h4><a href="https://www.benchmark.pl/aktualnosci/e3-2021-online.html">Latest games news image 3</a></h4>
+        <h4><a href="https://www.notebookcheck.net/CDPR-delays-Cyberpunk-2077-Patch-1-2-until-late-March-at-the-earliest-on-account-of-its-extensive-scope-and-the-company-s-recent-cyber-attack.524634.0.html">Latest games news image 4</a></h4>
+        <h4><a href="https://www.mobimaniak.pl/323109/geforce-rtx-3080-ti-3060-3050/">Tech image 1</a></h4>
+        <h4><a href="https://www.bankier.pl/wiadomosc/Citi-bitcoin-moze-byc-preferowany-w-swiatowym-handlu-8065987.html ">Tech image 2</a></h4>
+        <h4><a href="https://www.gsmmaniak.pl/1198110/iphone-13-touch-id-mniejszy-notch/">Tech image 3</a></h4>
+        <h4><a href="https://www.gamesradar.com/razer-deathadder-v2-review/">Shop image 1</a></h4>
+        <h4><a href="https://pixel-shop.pl/pl/p/Kubek-Kilof-Minecraft/1687?gclid=CjwKCAjwxuuCBhATEiwAIIIz0WSzxcwTvt0Lo9ScVklKAXLZYSA2sbs0qAl6YMhgyRT9DoYQZIO3ihoCDyUQAvD_BwE">Shop image 2</a></h4>
+        <h4><a href="https://venturebeat.com/2020/09/28/xbox-series-x-impressions/">Shop image 3</a></h4><br><br>
+        
+        <h3><b> - Games Page</b></h3>
+        
+        <h4><a href="https://wallpapercave.com/valheim-game-wallpapers">Background</a></h4>
+        <h4><a href="https://laracroftdaily.tumblr.com/post/190485802755/welcome-to-paititi-in-shadow-of-the-tomb-raider">Gif 1</a></h4>
+        <h4><a href="https://giphy.com/gifs/playstation-ps5-ratchet-clank-fZ7apAe298pMlibSXP">Gif 2</a></h4>
+        <h4><a href="https://www.telepolis.pl/tech/rozrywka/anthem-20-co-dalej-z-gra-ea">News image 1</a></h4>
+        <h4><a href="https://www.gry-online.pl/newsroom/ghost-recon-breakpoint-otrzyma-nowa-zawartosc-w-2021-roku/z21f5ea">News image 2</a></h4>
+        <h4><a href="https://www.microsoft.com/en-in/p/life-is-strange-complete-season-episodes-1-5/c205fbspz3w8?activetab=pivot:overviewtab">News image 3</a></h4>
+        <h4><a href="https://wall.alphacoders.com/big.php?i=600220">News image 4</a></h4>
+        <h4><a href="https://www.pexels.com/photo/woman-in-knitted-long-sleeve-shirt-holding-black-mobile-phone-3756791/">Author image</a></h4>
+        <h4><a href="https://www.popzara.com/games/game-reviews/gravity-rush-2/">News below 1</a></h4>
+        <h4><a href="https://www.purepc.pl/znamy-wymagania-sprzetowe-gry-days-gone-pc-na-steamie-pojawil-sie-wysyp-screenow-z-wersji-komputerowej">News below 2</a></h4>
+        <h4><a href="https://www.eurogamer.pl/articles/2021-03-01-halo-infinite-wyglada-znacznie-lepiej-po-poprawkach-sugeruja-nowe-screeny">News below 3</a></h4><br><br>
+        
+        <h3><b> - Tech Page</b></h3>
+        
+        <h4><a href="https://unsplash.com/photos/Q1p7bh3SHj8">Background</a></h4>
+        <h4><a href="https://www.walpaperlist.com/2020/01/apple-watch-wallpaper-gif.html">Gif 1</a></h4>
+        <h4><a href="https://gifer.com/en/hR9">Gif 2</a></h4>
+        <h4><a href="https://www.bbc.com/news/technology-56433082">News image 1</a></h4>
+        <h4><a href="https://www.forbes.pl/technologie/najmocniejszy-superkomputer-na-swiecie-przyspieszy-rozwoj-medycyny-spersonalizowanej/81fj2ql">News image 2</a></h4>
+        <h4><a href="https://www.theverge.com/2021/3/18/22338702/intel-xe-hpg-gaming-gpu-dg2-scavenger-hunt-march-26th">News image 3</a></h4>
+        <h4><a href="https://www.theverge.com/2021/3/16/22331567/google-nest-hub-new-2021-smart-display-sleep-tracking-soli-price-specs-features">News image 4</a></h4>
+        <h4><a href="https://www.pexels.com/photo/smiling-man-in-front-of-green-plants-2078265/ ">Author image</a></h4>
+        <h4><a href="https://www.theverge.com/2021/3/18/22338911/facebook-instagram-kids-privacy-coppa">News below 1</a></h4>
+        <h4><a href="https://www.theverge.com/2021/3/18/22336600/nvidia-geforce-now-price-tier-cloud-gaming-subscription">News below 2</a></h4>
+        <h4><a href="https://www.theverge.com/2021/3/16/22325460/intel-11th-gen-desktop-chips-rocket-lake-s-faster-speeds-cores-gaming">News below 3</a></h4><br><br>  
+        
+        <h3><b> - Shop Page</b></h3>
+        
+        <h4><a href="https://technologia.dziennik.pl/sprzet/artykuly/604739,razer-kraken-x-headset-gracze.html">Product image 1</a></h4>
+        <h4><a href="https://www.mobimaniak.pl/318860/nintendo-switch-nowa-wersja-4k/">Product image 2</a></h4>
+        <h4><a href="https://pl.creative.com/p/speakers/creative-pebble-v2">Product image 3</a></h4>
+        <h4><a href="https://www.purepc.pl/logitech-g915-i-g815-niskoprofilowe-klawiatury-mechaniczne">Latest additions image 1</a></h4>
+        <h4><a href="https://www.hyperxgaming.com/poland/pl/microphone/quadcast-gaming-microphone">Latest additions image 2</a></h4>
+        <h4><a href="https://www.x-kom.pl/p/500094-procesor-amd-ryzen-7-amd-ryzen-7-3700x.html">Product below image 1</a></h4>
+        <h4><a href="https://www.al.to/p/519361-gadzet-figurka-z-gry-cdp-figurka-wiedzmin-triss.html">Product below image 2</a></h4>
+        <h4><a href="https://4gift.pl/cyberpunk-2077-figurka-johnny-silverhand-funko-pop-nr-590.html?gclid=Cj0KCQjwl9GCBhDvARIsAFunhsm0g9WbyBMHqUi_3HpVhZJ5TYlSIATNKfwolpgnKfZHGw3YFNf5QP4aAvtFEALw_wcB">Product below image 3</a></h4>
+        <h4><a href="https://www.mediaexpert.pl/lego/lego/lego-art-iron-man-z-wytworni-marvel-studios-31199?gclid=Cj0KCQjwl9GCBhDvARIsAFunhsmZEjWAd1uh29sxAfBjBLJdweskNSMpR5-lz1Gh7UUenGI6axnmEdAaAm9cEALw_wcB">Product below image 4</a></h4>
+        <h4><a href="https://www.x-kom.pl/p/500982-gra-na-pc-pc-cyberpunk-2077.html?gclid=Cj0KCQjwl9GCBhDvARIsAFunhslKKk7PUTTPrFLT1Pgk-hjthsRA1vtrTw1WK7R1zXXkJhafLFWOx3IaAjFNEALw_wcB">Product below image 5</a></h4>
+        <h4><a href="https://www.mediaexpert.pl/gaming/pokoj-gracza/fotele-gamingowe/fotel-diablo-x-horn-2-0-xl-bialo-czarny">Product below image 6</a></h4>
+        <h4><a href="https://www.ceneo.pl/97578851">Product below image 7</a></h4>
+        <h4><a href="https://www.tabletowo.pl/nvidia-nvidia-geforce-rtx-3060-yi-premiera-ceny/">Product below image 8</a></h4>
+
+
+        <br><br><br><br><br>
+    </section>
+</body>
+</html>

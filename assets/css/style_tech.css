@@ -1,15 +1,15 @@
-/**
-* Template Name: Vlava - v2.2.1
-* Template URL: https://bootstrapmade.com/vlava-free-bootstrap-one-page-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/**/
+/* To better manage the styling of all pages I have decided to make three separate .css files*/
+/* This CSS file is styling one page: tech.html */
+/**/
 
 /*----------*/
 /* General */
 /*----------*/
 
 /* scrollbar*/
+/* - https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+/* - More in the report.html in "Custom scrollbar" section*/
 body::-webkit-scrollbar {
     width: 1rem;
 }
@@ -19,6 +19,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background: #145196;
 }
+body::-webkit-scrollbar-thumb:hover {
+  background: #1b63b5;
+}
 
 /* font used in the body section*/
 body {
@@ -26,7 +29,9 @@ body {
     font-weight: 400;
 }
 
-/* progress bar that appears on scroll*/
+/* progress bar that appears on pages*/
+/* - this code is written by myself*/
+/* - more in the script.js */
 .progressBar { 
     background-color: blue;
     position: fixed;  
@@ -38,6 +43,7 @@ body {
 }
 
 /* maintains the size of sections/site*/
+/* - this code is written by myself*/
 .container-fluid {
 	margin-left: auto;
 	margin-right: auto;
@@ -49,7 +55,6 @@ body {
 a {
     color: #1a5496;
 }
-
 a:hover {
     color: #2665ad;
     text-decoration: none;
@@ -71,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* section colours*/
+/* - this code is written by myself*/
 .section-color-white {
     background-color: white;
 }
@@ -83,7 +89,6 @@ h1, h2, h3, h4, h5, h6 {
 .color-change-from-ghostwhite {
     background-color: #121212; /*darkmode*/
 }
-
 /* author small column section*/
 .section-color-gray{
     background-color: lightgray;
@@ -93,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #121212; /*darkmode*/
 }
 
-/* small positioning classes*/
+/* few useful positioning classes*/
 .m-rightAuto {margin-right: auto;}
 .m-bottom20 {margin-bottom: 20px;}
 
@@ -108,21 +113,31 @@ h1, h2, h3, h4, h5, h6 {
 /* - More in the report.html in Newsletter section*/
 /*----------*/
 
+/* newsletter section padding and text alignment */
+/*  - changed: padding */
+/*  - added: text-align */
+/*  - deleted: background */
 .newsletter {
     padding: 80px 20px;
     text-align: center;
 }
+/* newsletter max-width */
+/*  - changed: max-width */
+/*  - deleted: text-align, position, z-index */
 .newsletter .content {
     max-width: 600px;
     margin: auto;
 }
-/* styling "email writing" section*/
+/* styling "email writing" section */
+/*  - changed: border-color, border-radius */
 .newsletter .content .form-control {
     border-color: #2665ad;
     border-radius: 10px 0px 0px 10px;
     height: 50px;
 }
-/* styling button*/
+/* styling button */
+/*  - changed: background, border-radius, font-weight */
+/*  - deleted: min-height */
 .newsletter .content .btn {
     background: #2665ad;
     color: #fff;
@@ -130,6 +145,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     height: 50px;
 }
+/* code below was written by me */
+/* styling button on hover */
 .newsletter .content .btn:hover {
     background: #3672b5; 
 }
@@ -139,30 +156,28 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
 }
 
+
 /*----------*/
 /* Scroll to the top button */
-/* - This section was copied and modified */
-/* - https://codepen.io/matthewcain/pen/ZepbeR */
-/* - More in the report.html in Scroll to the top button section*/
+/* - This section was modified from the template*/
 /*----------*/
 
 /* button position */
-/* changed: bottom and z-index*/
+/*  - changed: bottom and z-index*/
 .scroll-to-top-button {
     display: none;
     position: fixed;
     right: 15px;
     bottom: 70px;
-    z-index: 10;
+    z-index: 100;
 }
-
 /* button styling */
-/* changed: colour, size, transistion time */
+/*  - changed: colour, size, transistion time */
 .scroll-to-top-button i {
     display: flex;
     width: 60px;
     height: 40px;
-    font-size: 30px; /* font size is needed to adjust the size of the arrow*/
+    font-size: 30px; /* font size is needed to adjust the size of the icon*/
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
@@ -171,29 +186,31 @@ h1, h2, h3, h4, h5, h6 {
     color: #285d99;
     transition: all 0.3s;
 }
+/* button on hover styling */
 .scroll-to-top-button i:hover {
     background: darkgrey;
     color: #285d99;
 }
 
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
+/*----------*/
+/* Toggle dark mode button */
+/* - This section was modified and copied from "Scroll to the top button" section above */
+/*----------*/
+
 /* button position*/
 .dark-mode-button {
     display: none;
     position: fixed;
     right: 15px;
     bottom: 20px;
-    z-index: 100;
+    z-index: 110;
 }
 /* button styling */
-/* changed: colour, size, transistion time */
 .dark-mode-button i {
     display: flex;
     width: 60px;
     height: 40px;
-    font-size: 30px; /* font size is needed to adjust the size of the arrow*/
+    font-size: 30px; /* font size is needed to adjust the size of the icon*/
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
@@ -202,45 +219,41 @@ h1, h2, h3, h4, h5, h6 {
     color: #285d99;
     transition: all 0.3s;
 }
+/* button on hover styling */
 .dark-mode-button i:hover {
     background: darkgrey;
     color: #285d99;
 }
 
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-/*-------------------------------------------------------------*/
-
-
-
 /*----------*/
 /* Header */
+/* - This section was modified from the template*/
 /*----------*/
 
-/* header when user is on the of the page */
-/*  - changed: deleted background */
+/* header base styling */
+/*  - deleted: background */
 #header {
-    z-index: 9;
+    z-index: 99;
     transition: all 0.3s;
     padding: 20px 0;
 }
 /* makes header in fixed position*/
-/* - this was made by me*/
+/* - this code is written by myself*/
 .header-fixed-pos {
     position: fixed;
-    z-index: 80;
+    z-index: 99;
     top: 0;
     right: 0;
     left: 0; 
 }
-/* header when user is below the fixed y coordinate (main.js file) */
+/* header when user is below the fixed y coordinate (script.js file) */
 /*  - changed: different padding and background values */
 #header.header-scrolled {
     padding: 5px 0;
     background: rgba(23, 72, 128, 0.7);
 }
 
-/* logo size and posistioning */
+/* logo size, positioning and styling*/
 /*  - changed: positioning of the logo */
 #header .logo h1 {
     padding-left: 10px;
@@ -253,11 +266,11 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 5px;
 }
+/* logo on hover styling*/
 #header .logo h1 a, #header .logo h1 a:hover {
     color: #fff;
     text-decoration: none;
 }
-
 /* @media to adjust the font-size of the logo*/
 /*  - changed: font-size */
 /*  - added: @media for the container-fluid */
@@ -275,6 +288,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------*/
 /* Desktop Navigation Menu */
+/* - This section was modified from the template*/
 /*----------*/
 
 /* navbar spacing and positioning*/
@@ -291,7 +305,6 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     float: left;
 }
-
 /* navbar buttons*/
 /*  - changed: padding, font-size */
 .nav-menu a {
@@ -305,7 +318,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px 10px 15px;
     transition: 0.3s;
 }
-/* changed: colour */
+/* navbar buttons on hover */
+/*  - changed: colour */
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
     color: rgb(58, 122, 194);
     text-decoration: none;
@@ -313,6 +327,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------*/
 /* Mobile Navigation Menu*/
+/* * When user is using smaller screen device this code applies*/
+/* - This section was modified from the template*/
 /*----------*/
 
 /* navigation menu at the top of the page */
@@ -321,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     right: 15px;
     top: 26px;
-    z-index: 19;
+    z-index: 111;
     border: none;
     background: none;
     font-size: 25px;
@@ -331,23 +347,16 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-toggle-scrolled {
     top: 12px;
 }
-
-/* navigation menu position on the contact and shop pages */
-.mobile-nav-toggle-scrolled-contact{
-    margin-top: 0px;
-}
-
 /* colour of the navigation menu*/
 .mobile-nav-toggle i {
   color: #fff;
 }
-
 /* navigation menu itself*/
 /*  - added: text-align, height */
 /*  - deleted: bottom*/
 /*  - changed: positioning, colour*/
 .mobile-nav { 
-    z-index: 20;
+    z-index: 102;
     overflow-y: auto;
     text-align: center;
     position: fixed;
@@ -378,25 +387,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     outline: none;
 }
-
+/* navigation menu list bars on hover */
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
     background-color: rgba(38, 110, 191, 0.8);
     text-decoration: none;
 }
 /* background goes darker when user opens the navbar list*/
 .mobile-nav-overly {
-    z-index: 18;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
     position: fixed;
     background: rgba(11, 11, 11, 0.6);
     overflow: hidden;
     display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     transition: ease-out 0.2s;
 }
-
 /* opacity of the navbar list*/
 .mobile-nav-active .mobile-nav {
     opacity: 1;
@@ -405,6 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------*/
 /* Welcome section - image and text user sees first*/
+/* - This section was modified from the template (name of this section is also changed)*/
 /*----------*/
 
 /* welcome background image*/
@@ -413,11 +422,11 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     width: 100%;
     height: 85vh;
-    background: url('../images/9.jpg') top center;
+    background: url('../images/bg_tech.jpg') top center;
     background-size: cover;
 }
-
 /* background image overlay*/
+/*  - changed: background*/
 .welcome:before {
     position: absolute;
     bottom: 0;
@@ -427,7 +436,6 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     background: rgba(10, 44, 44, 0.5);
 }
-
 /* text on the background*/
 /*  - added: margin-top*/
 /*  - deleted: padding*/
@@ -444,8 +452,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-top: 300px;
 }
-
-/* welcome section h1 styling*/
+/* welcome section upper text (big) h2 styling*/
 /*  - deleted: margin*/
 /*  - changed: font-size, font-weight, line-height*/
 .welcome h2.big {
@@ -455,15 +462,14 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     color: #fff;
 }
-
 /* welcome section h2 styling*/
+/*  - changed: color*/
 .welcome h2 {
     font-size: 24px;
     margin-bottom: 30px;
     color: #fff;
 }
-
-/* this @media allows background's parallax effect on bigger screens*/
+/* this @media allows background's parallax effect only on bigger screens*/
 @media (min-width: 1024px) {
     
     .welcome {
@@ -474,7 +480,7 @@ h1, h2, h3, h4, h5, h6 {
 /* shrinks the text size on smaller screens */
 @media (max-width: 768px) {
     
-    .welcome h1 {
+    .welcome h2.big {
         font-size: 28px;
         line-height: 36px;
     }
@@ -489,7 +495,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------*/
-/* Latest news section*/
+/* Latest technology news section*/
 /* - this code is written by myself*/
 /*----------*/
 
@@ -497,13 +503,11 @@ h1, h2, h3, h4, h5, h6 {
 .news-text-color {
     color: black;
 }
-
 /* section spacing*/
 .news-section {
 	padding-top: 40px;
 	padding-bottom: 30px;
 }
-
 /* styling h3 heading in this section*/
 .news-section h3, h4 {
     margin: 10px 15px 10px 15px;
@@ -519,7 +523,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
     margin-top: 40px; 
 }
-
 /* gifs styling*/
 .latest-news-gif {
     object-fit: cover;
@@ -540,8 +543,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
     border-right: 1px solid aqua;
 }
-/* - I have decided to make the row outlines for two sections*/
-/* - this helped maintain responsiveness of the site*/
+/* - I have decided to make the two row outlines version (upper and bottom) - this helped maintain responsiveness of them*/
 /* --- */
 /* outline between the upper/latest news rows*/
 .row-outline-upper {
@@ -557,7 +559,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 1px solid aqua;
 }
 
-/* row outlines and images behavior on small screen*/
+/* row outlines and images behaviour on small screen*/
 @media (max-width: 575px) {
     
     /*changing the colour of rows to become "invisible" */
@@ -572,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 0px;
     }
 }
-
+/* making the positioning of outlines look as intended on smaller screens*/
 @media (min-width: 576px) and (max-width: 991px) {
     
     .row-outline-bottom {
@@ -587,7 +589,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*----------*/
-/* More news section*/
+/* More news section */
 /* - this code is written by myself*/
 /*----------*/
 
@@ -595,7 +597,6 @@ h1, h2, h3, h4, h5, h6 {
 .news-bottom {
     padding: 25px 15px 25px 10px;
 }
-
 /* bottom news image styling*/
 .news-bottom .image {
     object-fit: cover;
@@ -603,14 +604,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 30px;
     margin-right: 30px;
     height: 200px;
-    width: 350px;
+    width: 355px;
     float: left;
 }
-
 /* h3 header styling*/
 .news-bottom h3 {
     margin: 10px 15px 10px 15px;
-    max-width: 450px;
+    max-width: 435px;
     float: right;
 }
 /* padding of author column*/
@@ -628,7 +628,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 80px;
     margin-bottom: 30px;
 }
-
 /* h3 header styling*/
 .news-bottom-column h3 {
     text-align: center;
@@ -666,6 +665,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------*/
 /* Footer*/
+/* - This section was modified from the template */
 /*----------*/
 
 /* footer base styling*/
@@ -707,18 +707,20 @@ footer .social-links a {
     text-align: center;
     transition: 0.3s;
 }
-
+/* buttons styling on hover*/
 footer .social-links a:hover {
     background: #fff;
 }
-
 /* styling of bottom lines of text*/
-/* added: margin-top */
-/* deleted: z-index, position, padding-bottom, text-align;*/
+/*  - added: margin-top */
+/*  - deleted: z-index, position, padding-bottom, text-align;*/
 footer .footer-bottom {
     margin-top: 10px;
 }
 
+/* Two classes that are toggled when user switches to dark mode*/
+/* - text is change to white*/
+/* - the mobile navigation menu is changing background colour*/
 .color-change-to-white-text {
     color: white;
 }
