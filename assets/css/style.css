@@ -7,7 +7,6 @@
 
 /*----------*/
 /* General */
-/* - all code here is written by myself*/
 /*----------*/
 
 
@@ -42,10 +41,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
+
+/* titles size and position*/
+.head-title {
+	margin-bottom: 1rem;
+    text-align: center;
+	line-height: 1.5;
+}
 /* section colours*/
 .section-color-gw {
     background-color: ghostwhite;
 }
+
+.m-bottom20 {margin-bottom: 20px; }
 /*
 .section-bg-color-green {
     background-color: lightgreen;
@@ -89,19 +97,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Scroll to the top button */
 /* - This section was copied and modified */
 /* - https://codepen.io/matthewcain/pen/ZepbeR */
-/* - More in the report.html in Newsletter section*/
+/* - More in the report.html in Scroll to the top button section*/
 /*----------*/
 
-/* button position*/
+/* button position */
+/* changed: bottom and z-index*/
 .scroll-to-top-button {
     display: none;
+    position: fixed;
     right: 15px;
     bottom: 25px;
-    position: fixed;
     z-index: 10;
 }
 
-/* button styling*/
+/* button styling */
+/* changed: colour, size, transistion time */
 .scroll-to-top-button i {
     display: flex;
     font-size: 30px; /* font size is needed to adjust the size of the arrow*/
@@ -122,20 +132,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /*----------*/
 /* Header */
-/* - This section was copied and modified */
-/* - https://codepen.io/matthewcain/pen/ZepbeR */
-/* - More in the report.html in Newsletter section*/
 /*----------*/
+
+/* header when user is on the of the page */
+/*  - changed: deleted background */
 #header {
     z-index: 9;
     transition: all 0.3s;
     padding: 20px 0;
 }
 
-#header.header-transparent {
-    background: none;
-}
-
+/* header when user is below the fixed y coordinate (main.js file) */
+/*  - changed: different padding and background values */
+/*  - added: header-scrolled-contact for the contact page */
 #header.header-scrolled {
     padding: 5px 0;
     background: rgba(42, 99, 54, 0.7);
@@ -144,10 +153,11 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(42, 99, 54, 0.9);
 }
 
+/* logo size and posistioning */
+/*  - changed: positioning of the logo */
 #header .logo h1 {
     font-size: 36px;
     padding-left: 10px;
-    /* zabawa ze strzalkami w logo*/
     padding-bottom: 7px;
     padding-top: 7px;
     margin: 0;
@@ -156,54 +166,47 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 5px;
     text-transform: uppercase;
 }
-
 #header .logo h1 a, #header .logo h1 a:hover {
     color: #fff;
     text-decoration: none;
 }
 
-#header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
-}
-
+/* @media to adjust the font-size of the logo*/
+/*  - changed: font-size */
+/*  - added: @media for the container-fluid */
 @media (max-width: 768px) {
     
     #header .logo h1 {
-    font-size: 28px;
-      
-      }
+        font-size: 30px;
+    }
+    /* container-fluid padding to make sure everything is aligned*/
     .container-fluid {
         padding-left: 15px;
         padding-right: 15px;
     }
-/*
-.news-section {
-	padding-top: 1000px;
-	padding-bottom: 1000px;
-
-  }
-*/
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+/*----------*/
+/* Desktop Navigation Menu */
+/*----------*/
+
+/* navbar spacing and positioning*/
+/*  - changed: positioning */
 .nav-menu,.nav-menu * {
     margin: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
     list-style: none;
 }
-
+/* navbar buttons alignment*/
+/*  - deleted: white-space */
 .nav-menu > ul > li {
     position: relative;
-    white-space: nowrap;
     float: left;
 }
 
+/* navbar buttons*/
+/*  - changed: padding, font-size */
 .nav-menu a {
     display: block;
     position: relative;
@@ -211,17 +214,23 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px 10px 15px;
     transition: 0.3s;
     font-size: 17px;
-    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     text-transform: uppercase;
 }
-
+/* changed: colour */
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
     color: rgb(71, 201, 105);
     text-decoration: none;
 }
-/* Mobile Navigation */
-.mobile-nav-toggle { /*kreseczki */
+
+/*----------*/
+/* Mobile Navigation Menu*/
+/*----------*/
+
+/* navigation menu at the top of the page */
+/*  - deleted: cursor, outline, line-height, text-align */
+.mobile-nav-toggle { 
     position: fixed;
     right: 15px;
     top: 26px;
@@ -230,47 +239,50 @@ h1, h2, h3, h4, h5, h6 {
     background: none;
     font-size: 25px;
     transition: all 0.3s;
-    outline: none !important;
-    line-height: 1;
-    cursor: pointer;
-/*    text-align: right;  */
 }
-.mobile-nav-toggle-scrolled { /*kreseczki kiedy sie zjedzie w dol*/
+/* navigation menu position when user scrolls down */
+.mobile-nav-toggle-scrolled {
     top: 12px;
 }
+
+/* navigation menu position on the contact and shop pages */
 .mobile-nav-toggle-scrolled-contact{
     margin-top: 0px;
 }
 
-.mobile-nav-toggle i { /*kolorek kreseczek*/
+/* colour of the navigation menu*/
+.mobile-nav-toggle i {
   color: #fff;
-/*    rgb(133, 242, 156)*/
 }
 
-.mobile-nav { /* kiedy juz zostanie rozsueniety*/
+/* navigation menu itself*/
+/*  - added: text-align, height */
+/*  - deleted: bottom*/
+/*  - changed: positioning, colour*/
+.mobile-nav { 
     text-align: center;
     position: fixed;
     top: 65px;
     right: 15px;
-/*    bottom: 15px;*/
     left: 15px;
     z-index: 20;
-    overflow-y: auto;
-    background: #fff;
+    background: ghostwhite;
     transition: ease-in-out 0.2s;
     opacity: 0;
     visibility: hidden;
     border-radius: 20px;
     padding: 10px 0;
     height: 200px;
+    overflow-y: auto;
 }
 
+/* navigation menu list*/
 .mobile-nav * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     list-style: none;
 }
-
+/* navigation menu list bars*/
 .mobile-nav a {
     display: block;
     position: relative;
@@ -281,10 +293,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-    color: rgb(52, 128, 68);
-    background-color: rgb(84,227,114);
+    background-color: rgba(41, 150, 70, 0.8);
     text-decoration: none;
 }
+/* background goes darker when user opens the navbar list*/
 .mobile-nav-overly {
     width: 100%;
     height: 100%;
@@ -298,31 +310,30 @@ h1, h2, h3, h4, h5, h6 {
     transition: ease-out 0.2s;
 }
 
-/*
-.mobile-nav-active { chowa scrollbar po wejsciu w okienko
-  overflow: hidden;
-}
-*/
-
+/* opacity of the navbar list*/
 .mobile-nav-active .mobile-nav {
     opacity: 1;
     visibility: visible;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
+/*----------*/
+/* Welcome section - image and text user sees first*/
+/*----------*/
+
+/* welcome background image*/
+/*  - changed: height, image*/
+#welcome {
     width: 100%;
-    height: 80vh;
+    height: 85vh;
     background: url('../images/6.jpg') top center;
     background-size: cover;
     position: relative;
 }
 
-#hero:before {
+/* background image overlay*/
+#welcome:before {
     content: "";
-    background: rgba(5, 44, 63, 0.5);
+    background: rgba(10, 44, 44, 0.5);
     position: absolute;
     bottom: 0;
     top: 0;
@@ -330,7 +341,10 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
 }
 
-#hero .hero-container {
+/* text on the background*/
+/*  - added: margin-top*/
+/*  - deleted: padding*/
+#welcome .welcome-container {
     position: absolute;
     bottom: 0;
     top: 0;
@@ -342,199 +356,206 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     text-align: center;
     margin-top: 300px;
-    padding: 0 15px;
+    
 }
 
-#hero h1 {
-    margin: 0 0 15px 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
+/* welcome section h1 styling*/
+/*  - deleted: margin*/
+/*  - changed: font-size, font-weight, line-height*/
+#welcome h1 {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 76px;
     text-transform: uppercase;
     color: #fff;
 }
 
-#hero h2 {
+/* welcome section h2 styling*/
+#welcome h2 {
     color: #eee;
     margin-bottom: 30px;
     font-size: 24px;
 }
 
-/*
-#hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 28px;
-    border-radius: 4px;
-    transition: 0.5s;
-    border: 2px solid #85b0be;
-    color: #fff;
-}
-*/
-
-#hero .btn-get-started:hover {
-    background: #85b0be;
-    border: 2px solid #85b0be;
-}
-
+/* this @media allows background's parallax effect on bigger screens*/
 @media (min-width: 1024px) {
-    #hero {
+    #welcome {
         background-attachment: fixed;
         }
     }
 
+/* shrinks the text size on smaller screens */
 @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
+    
+    #welcome h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    /* added: margin-left, margin-right*/
+    #welcome h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
-/*do intodcution section*/
-.news-section {
-	padding-top: 40px;
-	padding-bottom: 10px;
-}
+/*----------*/
+/* Latest games news section*/
+/* - this code is written by myself*/
+/*----------*/
+
+/* maintains the size of the section*/
 .container-fluid {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1380px;
 	overflow-x: hidden;
 }
-.head-title {
 
-	margin-bottom: 1rem;
-    text-align: center;
-	line-height: 1.4;
-}
-
-.small-news-boxes .small-news-boxes-transp {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0); /* Fallback color */
-    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-    color: #f1f1f1;
-    width: 100%;
-    padding: 15px;
-}
-.head-title-sub {
-	font-size: 1.4rem;
-	max-width: 1500px;
-	margin: 0 auto 80px;
-}
-.small-news-link {
-    color: white;
-}
-.small-news-link:hover, .small-news-link:focus {
-    color: #3db856;
-    text-decoration: none;
+/* section spacing*/
+.news-section {
+	padding-top: 40px;
+	padding-bottom: 10px;
 }
 
-.small-news-img {
+/* image styling*/
+.latest-news-img {
     border-radius: 8px;
     margin-top: 20px;
     width: 100%; 
     height: 400px;  
 }
-#carousel-section
-{
+
+/* small, transparent text boxes*/
+.latest-news-boxes .latest-news-boxes-transp {
+    position: absolute;
+    bottom: 0px;
+    border-radius: 8px;
+    background: rgba(4, 7, 23, 0.5);
+    width: 100%;
+    padding: 15px;
+}
+/* link colour*/
+.latest-news-link {
+    color: white;
+}
+.latest-news-link:hover, .latest-news-link:focus {
+    color: #3db856;
+    text-decoration: none;
+}
+
+/*----------*/
+/* Carousel*/
+/* This code was written by myself*/
+/* More in the raport.html in the Carousel section*/
+/*----------*/
+
+/* carousel section spacing*/
+.carousel-section {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-.m-bottom20 {margin-bottom: 20px; }
 
-.carousel-padding{
+/* this class helps to align the carousels*/
+.carousel-padding {
     padding-left: 15px; 
     padding-right: 15px;
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-/*  background: url("../img/footer-bg.jpg") top center no-repeat;*/
-    background-color: rgb(48, 56, 49);
+/* styling of the images in the carousel */
+.carousel-image {
+    height: 350px; 
+    border-radius: 8px;
+}
+
+/* styling of the small indicatiors at the bottom*/
+.carousel-indicators li {
+    border-radius: 100%;
+    height: 5px;
+}
+
+/*----------*/
+/* Footer*/
+/*----------*/
+
+/* footer base styling*/
+/*  - added: background-color, padding text-align */
+/*  - deleted: background*/
+/*  - changed: font-size*/
+footer {
+    background-color: rgb(23, 26, 23);
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     position: relative;
-}
-
-#footer::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(1, 11, 16, 0.6);
-    z-index: 1;
-}
-
-#footer .footer-top {
-    position: relative;
-    z-index: 2;
+    padding: 30px 0px 30px 0;
     text-align: center;
-    padding: 20px 20px;
 }
 
-#footer .footer-top .social-links {
-    margin-top: 10px;
-}
-#footer .footer-top .social-links-size { /*szerokosc ikonek*/
+/* size of the icons used*/
+/* written by myself*/
+/* icons: https://www.flaticon.com/categories/social-media */
+footer .social-links-size { 
+    margin-top: 3px;
+    margin-left: 1px;
     width: 20px; 
     height: 20px;
 }
 
-#footer .footer-top .social-links a { /*szerokosc guzikow*/
-    font-size: 18px;
+/* size, positioning and colour of the buttons*/
+/*  - deleted: font-size, margin*/
+/*  - changed: background, height, width */
+footer .social-links a { 
     display: inline-block;
-    background: rgb(42, 99, 54);
+    background: #2a6336;
     color: #fff;
     line-height: 1;
     padding: 7px 0;
-    margin-right: 4px;
-    border-radius: 50%;
+    margin: 0px 4px 15px 4px;
+    border-radius: 100%;
     text-align: center;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     transition: 0.3s;
 }
 
-#footer .footer-top .social-links a:hover {
+footer .social-links a:hover {
     background: #fff;
 }
 
-#footer .footer-bottom {
-    z-index: 2;
-    position: relative;
-    padding-bottom: 20px;
-    text-align: center;
+/* styling of bottom lines of text*/
+/* added: margin-top */
+/* deleted: z-index, position, padding-bottom, text-align;*/
+footer .footer-bottom {
+    margin-top: 10px;
 }
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
+
+
+/*----------*/
+/* Contact page*/
+/* This code was written by myself*/
+/*----------*/
+
+/* section spacing*/
 .contact-space {
     padding-bottom: 30px;
     padding-top: 10px;
 }
 
+/* spacing between the form boxes*/
 .contact .boxes-margin {
     margin-bottom: 11px;
     margin-top: 11px;   
 }
-.contact .outline {
+
+/* form boxes styling (outline and background colour)*/
+.contact .boxes-styling {
     border-color: #2a6336;
     background: ghostwhite;
 }
+
+/* "send message" button styling*/
 .contact .btn {
     min-height: 50px; 
     border-radius: 10px;
@@ -547,16 +568,16 @@ h1, h2, h3, h4, h5, h6 {
     background: #328042;
 }
 
-/**/
-/* Shop page*/
-/**/
+/*----------*/
+/* Contact page*/
+/* Only some parts are copied and modified from other sources*/
+/*----------*/
 
-
-
-
+/* spacing between the images*/
 .shop-image{
     margin: 60px 10px 60px 10px;
 }
+/* images ine the middle section (latest additions)*/
 .shop-image #middle {
     border-radius: 8px;
     border: 10px outset #b52d0b;
@@ -564,7 +585,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 400px; 
     opacity: 1;
 }
-
+/* images styling*/
 .shop-image .image {
     opacity: 1;
     transition: .2s ease;
@@ -573,89 +594,105 @@ h1, h2, h3, h4, h5, h6 {
     width: 96%; 
     height: 400px;
 }
-.shop-image .description-pos{
+
+/* description of the images */
+.shop-image .description{
     transition: .2s ease;
     opacity: 0;
     position: absolute;
     top: 75%;
     left: 48%;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.shop-image:hover .description-pos {
+.shop-image:hover .description {
     opacity: 1;
-
 }
+
+/* description is always visible on smaller screens*/
 @media (max-width: 991px) {
-    .shop-image .description-pos {
+    .shop-image .description {
     opacity: 1;
     }
 }
+/* hovering on image makes it bigger and changes the opacity*/
+/* - only on bigger screens*/
 @media (min-width: 992px) {
-.shop-image:hover .image {
-    opacity: 0.8;
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1);
+    
+    .shop-image:hover .image {
+        opacity: 0.8;
+        transform: scale(1.1);
     }
 }
 
+/* text styling in the description box*/
+.shop-image .description .text-up {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
 
-
-.shop-image .description-pos .btn { /* zmiana nazwy*/
-  background-color: #d1411d;
+/* button styling in the description box*/
+.shop-image .description .btn { /* zmiana nazwy*/
+    background-color: #d1411d;
+    color: white;
     border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+    font-size: 16px;
+    padding: 16px 32px;
 }
-.shop-image .description-pos .btn:hover { /* zmiana nazwy*/
-  background-color: #b33212;
-}
-
-.shop-image .description-pos .text-up { /* zmiana nazwy*/
-  color: white;
-  font-size: 20px;
-  padding-bottom: 20px;
+.shop-image .description .btn:hover { /* zmiana nazwy*/
+    background-color: #b33212;
 }
 
-/* Zmodyfikowac text on hover w buy now (jest zielony co troche nie pasuje)*/
-
-.shop-image-below .image:hover {
-    opacity: 0.8;
-}
-.shop-image-below .description-pos .btn { /* zmiana nazwy*/
-  background-color: #d1411d;
-    border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-.shop-image-below .description-pos .btn:hover { /* zmiana nazwy*/
-  background-color: #b33212;
-}
-
-/*load more button*/
-
+/* image styling for the images at the bottom*/
 .shop-image-below {
     height: 300px;
     width: 100%;
-    color: #fff;
-    font-size: 24px;
-    line-height: 100px; /* centering text just for view */
-    text-align: center;
-    background-color: grey;
-    margin: 10px;
+    margin: 10px 0;
     border-radius: 8px;
     display: none;
-    transition: .2s ease;
+    transition: transform .2s ease;
     opacity: 1;
 }
 .shop-image-below:hover {
     opacity: 0.8;
 }
+
+/* small ribbon in the top right corner of middle images */
+/*  - only thing I had to look for was the rotate property*/
+.corner-ribbon{
+    width: 100px;
+    top: 40px;
+    right: 53px;
+    left: auto;
+    letter-spacing: 2px;
+    background: #c93224;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    transform: rotate(30deg);
+}
+/* making sure the postion is right*/
+@media (max-width: 950px) {
+    
+    .corner-ribbon{
+        right: 48px;
+    }
+}
+    
+/*----------*/
+/* Load more button */
+/* - This section was copied and modified */
+/* - https://codepen.io/Tigran_91/pen/JyaZPz */
+/* - More in the report.html in Load more section*/
+/*----------*/
+
+/* button styling*/
+/*  - added: font-weight*/
+/*  - deleted: border*/
+/*  - changed: width, background-color*/
 #loadMore {
     width: 200px;
     color: #fff;
@@ -672,30 +709,10 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #328042;
     text-decoration: none;
 }
+
+/* button disappearing code*/
+/*  - deleted: color, pointer-events*/
 .noContent {
-    color: #000 !important;
     background-color: transparent !important;
     pointer-events: none;
 }
-
-/* Different positions */
-.corner-ribbon-right{
-    width: 100px;
-    top: 40px;
-    right: 53px;
-    left: auto;
-    background: #e43;
-    position: absolute;
-    text-align: center;
-    line-height: 40px;
-    letter-spacing: 2px;
-    color: #f0f0f0;
-    transform: rotate(30deg);
-    -webkit-transform: rotate(30deg);
-}
-@media (max-width: 950px) {
-    
-    .corner-ribbon-right{
-    right: 48px;
-}
-

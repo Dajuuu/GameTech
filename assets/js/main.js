@@ -107,16 +107,17 @@
   });
 
   // Toggle .header-scrolled class to #header when page is scrolled
+    /* Added: making script to work only on the certain pages 
+    */
 $(window).scroll(function() {
-    if(location.pathname=='/index.html' || location.pathname=='/games.html' || location.pathname=='/tech.html'){
+//    if($location.pathname=='../index.html' || $location.pathname=='../games.html' || $location.pathname=='../tech.html'){
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
             $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
         } else {
             $('#header').removeClass('header-scrolled');
             $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
-        }
-    }
+            }
 });
 if(location.pathname=='/index.html' || location.pathname=='/games.html' || location.pathname=='/tech.html'){
 if ($(window).scrollTop() > 100) {
@@ -124,12 +125,34 @@ if ($(window).scrollTop() > 100) {
     $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
 } 
 }
+    
+//      $(window).scroll(function() {
+//    if ($(this).scrollTop() > 100) {
+//      $('#header').addClass('header-scrolled');
+//    } else {
+//      $('#header').removeClass('header-scrolled');
+//    }
+//  });
+//
+//  if ($(window).scrollTop() > 100) {
+//    $('#header').addClass('header-scrolled');  
+//  } 
+    
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
+    } else {
+      $('.mobile-nav-toggle').removeClass('mobile-nav-toggle-scrolled');
+    }
+  });
+    
 
 /* 
     This is the scroll-to-top-button function, that appears in the 
     bottom right corner of the screen after user is below fixed y coord.
     - This section was copied and modified
     - https://codepen.io/matthewcain/pen/ZepbeR
+    - More in the report.html 
 */   
 $(window).scroll(function() {
     if ($(window).scrollTop() > 400) {
@@ -150,6 +173,17 @@ $('.scroll-to-top-button').click(function() {
     
     
     
+//$(document).ready(function(){
+//    $(".shop-image-below").slice(0, 4).show();
+//    $("#loadMore").on("click", function(e){
+//        e.preventDefault();
+//    $(".shop-image-below:hidden").slice(0, 4).slideDown(2000, 'linear');
+//        
+//    if($(".shop-image-below:hidden").length == 0) {
+//        $("#loadMore").text("").addClass("noContent");
+//    }
+//  });
+//})
 $(document).ready(function(){
   $(".shop-image-below").slice(0, 4).show();
   $("#loadMore").on("click", function(e){
@@ -160,5 +194,15 @@ $(document).ready(function(){
     }
   });
 })
+//    $(document).ready(function(){
+//    $(".shop-image-below").slice(0, 4).show();
+//    $("#loadMore").on("click", function(e){
+//        e.preventDefault();
+//    $(".shop-image-below:hidden").slice(0, 4).slideDown(1000);
+//    if($(".shop-image-below:hidden").length == 0) {
+//        $("#loadMore").text("").addClass("noContent");
+//    }
+//  });
+//})
     
 })(jQuery);
