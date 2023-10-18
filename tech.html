@@ -19,20 +19,20 @@
     <link href="assets/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- animacje przejscia - css -->
-    <link href="assets/css/style.css" rel="stylesheet">   
+    <link href="assets/css/style_tech.css" rel="stylesheet">   
 </head>
 
 <body>
     
 <!-- ======= Header ======= -->
-<header id="header" class="header-scrolled-contact mobile-nav-toggle-scrolled-contact fixed-top d-flex align-items-center header-transparent">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent" >
     <div class="container-fluid d-flex align-items-center">
         <div class="logo mr-auto">
             <h1><a href="index.html"><span>GAMETECH</span></a></h1>
         </div>
         <nav class="nav-menu d-none d-lg-block"> <!-- skrypt odpowiedzialnu za navbar jest w main.js-->
             <ul>
-                <li><a href="index.html">Games</a></li>
+                <li><a href="games.html">Games</a></li>
                 <li><a href="tech.html">Tech</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -42,41 +42,120 @@
 </header>
 
 <!-- ======= Main image and text  ======= -->
-<section class="news-section" style="margin-top: 100px">
+<section id="hero">
+    <div class="hero-container">
+        <h1>Welcome to GameTech</h1>
+        <h2>Your daily games and technology news</h2>
+    </div>
+</section>
+
+<!-- Introduction section -->
+<section class="news-section" style="background: #fff">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
-                <h2 class="head-title">Contact Us</h2>
+                <h2 class="head-title">Latest games news</h2>
             </div>
         </div>
     </div>
-    </section>
-<section class="contact container-fluid">
-<div class="row contact-space">
-    
-          <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://maps.google.com/maps?q=52.231752,21.006091&z=15&output=embed" frameborder="0" style="border-radius: 10px; width: 100%; height: 400px;" allowfullscreen></iframe>
-          </div>
-          <div class="col-lg-6">
-            <form>
-                <div class="input-group boxes-margin">
-                  <input type="text" class="form-control outline" placeholder="Name"/>
+    <!-- small box news section with lightgrey backround-->
+    <div class="section-bg-color">
+        <div class="row container-fluid">  
+            <!-- small boxes-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                        <div style="margin-top: 40px">
+                      <video id="video1" width="630" autoplay muted loop>
+                        <source src="assets/images/video1.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                      </video>
+                        </div>
+                        <h3>dsadsadasdasd</h3>
+                    </div>
                 </div>
-                <div class="input-group boxes-margin ">
-                  <input type="email" class="form-control outline" placeholder="E-mail" />
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                    <img src="assets/images/1.jpg" alt="Image" class="small-news-img">
+                        <h3>dddd</h3>
+                    </div>
                 </div>
-              <div class="input-group boxes-margin">
-                <input type="text" class="form-control outline" placeholder="Subject" />
-              </div>
-              <div class="input-group boxes-margin">
-                <textarea class="form-control outline" rows="7" data-rule="required" placeholder="Message"></textarea>
-              </div>
-              <div class="text-center input-group-btn"><button class="btn" type="submit">Send Message</button></div>
-            </form>
-          </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                    <img src="assets/images/1.jpg" alt="Image" class="small-news-img">
+                        <h3>dddd</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">  
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                        <div style="margin-top: 40px">
+                      <video id="video1" width="630" autoplay muted loop>
+                        <source src="assets/images/video1.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                      </video>
+                        </div>
+                        <h3>dddd</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                    <img src="assets/images/1.jpg" alt="Image" class="small-news-img">
+                        <h3>dddddddd</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="small-news-boxes m-bottom20">
+                    <div data-aos="fade-down"> <!-- AOS effect -->
+                    <img src="assets/images/1.jpg" alt="Image" class="small-news-img">
+                        <h3>dddd</h3>
+                    </div>
+                </div>
+            </div>
 
+        </div>
     </div>
-    </section>
+</section>
+
+ <!-- row -->
+<section id="carousel-section">
+    <div class="container-fluid">
+    <div id="carousel">
+    <div class="slide">
+        <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+    <div class="slide">
+        <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+    <div class="slide">
+        <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+    <div class="slide">
+        <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+    <div class="slide">
+        <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+    <div class="slide">
+                <a href="contact.html"><img src="http://placehold.it/300x150"/></a>
+        <h2>dd</h2>
+    </div>
+        </div>
+</div>
+</section>
     
 <section class="section-bg-color newsletter">
     <div class="container">

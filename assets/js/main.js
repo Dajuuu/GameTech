@@ -108,7 +108,7 @@
 
   // Toggle .header-scrolled class to #header when page is scrolled
 $(window).scroll(function() {
-    if(location.pathname=='/index.html' || location.pathname=='/games.html'){
+    if(location.pathname=='/index.html' || location.pathname=='/games.html' || location.pathname=='/tech.html'){
         if ($(this).scrollTop() > 100) {
             $('#header').addClass('header-scrolled');
             $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');
@@ -118,7 +118,7 @@ $(window).scroll(function() {
         }
     }
 });
-if(location.pathname=='/index.html' || location.pathname=='/games.html'){
+if(location.pathname=='/index.html' || location.pathname=='/games.html' || location.pathname=='/tech.html'){
 if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
     $('.mobile-nav-toggle').addClass('mobile-nav-toggle-scrolled');

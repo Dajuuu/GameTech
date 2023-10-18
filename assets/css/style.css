@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     position: relative;
     color: #fff;
-    padding: 5px 5px 10px 25px;
+    padding: 10px 15px 10px 15px;
     transition: 0.3s;
     font-size: 17px;
     font-family: "Poppins", sans-serif;
