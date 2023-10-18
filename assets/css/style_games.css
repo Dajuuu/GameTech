@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #c94116;
 }
 /* newsletter headers base text colour and padding*/
-.newsletter .header {
+.newsletter-header {
     padding-bottom: 20px;
     color: black;
 }
