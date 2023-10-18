@@ -57,9 +57,9 @@
 
     <!-- Background and welcome text -->
     <!-- This code uses template's modified CSS and changed names -->
-    <section class="welcome"> <!-- background-->
-        <div class="container"> <!-- text on the background -->
-            <h2 class="big">Welcome to GameTech</h2>
+    <section class="welcome"> <!-- background -->
+        <div class="container"> <!-- text on the background (style.css) -->
+            <h2 class="big">Welcome to GameTech</h2> <!-- making this h2 header bigger (style.css) -->
             <h2>Your daily games and technology news</h2>
         </div>
     </section>
@@ -67,15 +67,15 @@
     <!-- Text above section 1 -->
     <!-- *** This code is written by myself *** -->
     <!-- -->
-    <!-- * section-color-white - section color (white) -->
-    <!-- * news-section - text positioning -->
-    <!-- * container-fluid - maintains header width -->
+    <!-- * section-color-white - section color (white) (style.css) -->
+    <!-- * news-section - text positioning (style.css) -->
+    <!-- * container-fluid - maintains header width (style.css) -->
     <section class="section-color-white news-section">
         <div class="container-fluid">
             <!-- bootstrap responsive flexbox (row and col classes) -->
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2 class="head-title">Latest games news</h2> <!-- head title styling -->
+                    <h2 class="head-title">Latest games news</h2> <!-- head title styling (style.css) -->
                 </div>
             </div>
         </div>
@@ -83,11 +83,11 @@
         <!-- Section 1 - Latest games news -->
         <!-- *** This code is written by myself *** -->
         <!-- -->
-        <!-- four images (with text as hyperlinks) with responsive behaviour -->
-        <!-- * section-color-ghostwhite - section color (ghostwhite) -->
+        <!-- four images with text (images and text as hyperlinks) with responsive behaviour -->
+        <!-- * section-color-ghostwhite - section color (ghostwhite) (style.css) -->
         <div class="section-color-ghostwhite">
             <!-- bootstrap responsive flexbox (row and col classes) -->
-            <!-- * container-fluid - maintains this section width -->
+            <!-- * container-fluid - maintains this section width (style.css) -->
             <!-- * latest-news-img - image styling (style.css) -->
             <!-- * latest-news-boxes-text - black transparent text box styling (style.css) -->
             <!-- * latest-news-link - text colour (style.css) -->
@@ -96,7 +96,7 @@
                     <div class="m-bottom20"> <!-- margin-bottom: 20px (style.css) -->
                         <div data-aos="fade-down"> <!-- AOS effect -->
                             <!-- image and text are used as hyperlinks -->
-                            <a href="games.html"><img src="assets/images/homepage/latest-games-news1.jpg" alt="Women with ginger hair looking into the distance" class="latest-news-img"></a> 
+                            <a href="games.html"><img class="latest-news-img" src="assets/images/homepage/latest-games-news1.jpg" alt="Women with ginger hair looking into the distance"></a> 
                             <div class="latest-news-boxes-text"> 
                                 <a href="games.html" class="latest-news-link">Horizon II: Forbidden West - coming this year?</a>
                             </div>
@@ -109,7 +109,7 @@
                         <div data-aos="fade-down"> <!-- AOS effect -->
                             <!-- image and text are used as hyperlinks -->
                             <!-- classes are described below the start of this section -->
-                            <a href="games.html"><img src="assets/images/homepage/latest-games-news2.jpg" alt="Big Pokemon Go logo on a dark background" class="latest-news-img"></a>
+                            <a href="games.html"><img class="latest-news-img" src="assets/images/homepage/latest-games-news2.jpg" alt="Big Pokemon Go logo on a dark background"></a>
                             <div class="latest-news-boxes-text">
                                 <a href="games.html" class="latest-news-link">New league in Pokemon Go is just around the corner!</a>
                             </div>
@@ -122,7 +122,7 @@
                         <div data-aos="fade-down"> <!-- AOS effect -->
                             <!-- image and text are used as hyperlinks -->
                             <!-- classes are described below the start of this section -->
-                            <a href="games.html"><img src="assets/images/homepage/latest-games-news3.jpg" alt="E3 2021 logo with hexagon background" class="latest-news-img"></a>
+                            <a href="games.html"><img class="latest-news-img" src="assets/images/homepage/latest-games-news3.jpg" alt="E3 2021 logo with hexagon background"></a>
                             <div class="latest-news-boxes-text">
                                 <a href="games.html" class="latest-news-link">E3 2021 without live event. How will it look like?</a>
                             </div>
@@ -135,7 +135,7 @@
                         <div data-aos="fade-down"> <!-- AOS effect -->
                             <!-- image and text are used as hyperlinks -->
                             <!-- classes are described below the start of this section -->
-                            <a href="games.html"><img src="assets/images/homepage/latest-games-news4.jpg" alt="Two characters from Cyberpunk 2077 standing and looking forward" class="latest-news-img"></a>
+                            <a href="games.html"><img class="latest-news-img" src="assets/images/homepage/latest-games-news4.jpg" alt="Two characters from Cyberpunk 2077 standing and looking forward"></a>
                             <div class="latest-news-boxes-text">
                                 <a href="games.html" class="latest-news-link">Patch 1.2 for Cyberpunk 2077 is getting a delay</a>
                             </div>
@@ -152,7 +152,7 @@
     <!-- *** Carousel uses Bootstrap classes to function properly *** -->   
     <!-- -->
     <!-- bootstrap responsive flexbox (row and col classes) -->
-    <!-- * section-color-white - section color (white) -->
+    <!-- * section-color-white - section color (white) (style.css) -->
     <!-- * container-fluid - maintains this section width (style.css) -->
     <!-- * carousel-section - padding-bottom (style.css) -->
     <section class="section-color-white carousel-section">
@@ -166,8 +166,9 @@
                         <h2 class="head-title">Technology</h2> <!-- head title styling -->
                         <!-- * carousel-left - id to help distinguish two carousels. This is also to be able to change the images -->
                         <!-- * slide - class that makes the image changing smooth (bootstrap) -->
-                        <!-- * carousel - position: relative (bootstrap)-->
-                        <div id="carousel-left" class="carousel slide">
+                        <!-- * carousel - position: relative (bootstrap) -->
+                        <!-- * data-ride="carousel" - images ability to change (bootstrap) -->
+                        <div id="carousel-left" class="carousel slide" data-ride="carousel">
                             <!-- * carousel-indicators - class to have ability to change the images by clicking small indicators at the bottom (bootstrap) -->
                             <!--  changed: the name of data-target id, <li> styling -->
                             <ol class="carousel-indicators"> 
@@ -178,27 +179,25 @@
                             <!-- * carousel-inner - positioning class (bootstrap)-->
                             <!-- * carousel-item - indicates that this image is a part of the carousel (bootstrap)-->
                             <!-- * active - indicates that this image is being displayed first (bootstrap) -->
-                            <!-- * w-100 - width: 100% (bootstrap)-->
                             <!-- * carousel-image - styling of the images (style.css)-->
                             <!-- * carousel-caption - positioning of the text box (bootstrap with changed styling in style.css)-->
                             <!-- * margin - margin-bottom (style.css)-->
                             <!--  deleted: role -->
                             <div class="carousel-inner"> 
                                 <div class="carousel-item active"> 
-                                    <a href="tech.html"><img class="w-100 carousel-image" src="assets/images/homepage/tech1.jpg" alt="RTX 3060 graphics card"></a>
+                                    <a href="tech.html"><img class="carousel-image" src="assets/images/homepage/tech1.jpg" alt="RTX 3060 graphics card"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">RTX 3060 - out of stock before the release?</h5> 
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <a href="tech.html"><img class="w-100 carousel-image" src="assets/images/homepage/tech2.jpg" alt="Big Bitcoin on a black/gold background"></a>
+                                    <a href="tech.html"><img class="carousel-image" src="assets/images/homepage/tech2.jpg" alt="Big Bitcoin on a black/gold background"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">Bitcoin's 6% price growth</h5> 
                                     </div>
                                 </div>
-
                                 <div class="carousel-item">
-                                    <a href="tech.html"><img class="w-100 carousel-image" src="assets/images/homepage/tech3.jpg" alt="iPhone's front facing and back facing sides"></a>
+                                    <a href="tech.html"><img class="carousel-image" src="assets/images/homepage/tech3.jpg" alt="iPhone's front facing and back facing sides"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">iPhone 13 with or without the Touch ID?</h5> 
                                     </div>
@@ -232,6 +231,7 @@
                         <!-- * carousel-left - id to help distinguish two carousels. This is also to be able to change the images -->
                         <!-- * slide - class that makes the image changing smooth (bootstrap) -->
                         <!-- * carousel - position: relative (bootstrap)-->
+                        <!-- * data-ride="carousel" - images ability to change (bootstrap) -->
                         <div id="carousel-right" class="carousel slide" data-ride="carousel">
                             <!-- * carousel-indicators - class to have ability to change the images by clicking small indicators at the bottom (bootstrap) -->
                             <!--  changed: the name of data-target id, <li> styling -->
@@ -243,26 +243,25 @@
                             <!-- * carousel-inner - positioning class (bootstrap)-->
                             <!-- * carousel-item - indicates that this image is a part of the carousel (bootstrap)-->
                             <!-- * active - indicates that this image is being displayed first (bootstrap) -->
-                            <!-- * w-100 - width: 100% (bootstrap)-->
                             <!-- * carousel-image - styling of the images (style.css)-->
                             <!-- * carousel-caption - positioning of the text box (bootstrap with changed styling in style.css)-->
                             <!-- * margin - margin-bottom (style.css)-->
                             <!--  deleted: role -->
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <a href="shop.html"><img class="w-100 carousel-image" src="assets/images/homepage/shop1.jpg" alt="Razer DeathAdder mouse on and dark mousepad"></a>
+                                    <a href="shop.html"><img class="carousel-image" src="assets/images/homepage/shop1.jpg" alt="Razer DeathAdder mouse on and dark mousepad"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">Gaming</h5> 
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <a href="shop.html"><img class="w-100 carousel-image" src="assets/images/homepage/shop2.png" alt="Cup that looks like Minecraft's diamond ore"></a>
+                                    <a href="shop.html"><img class="carousel-image" src="assets/images/homepage/shop2.png" alt="Cup that looks like Minecraft's diamond ore"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">Gadgets</h5> 
                                     </div>
                                 </div>
                                 <div class="carousel-item">
-                                    <a href="shop.html"><img class="w-100 carousel-image" src="assets/images/homepage/shop3.png" alt="Black XBOX console with black controller"></a>
+                                    <a href="shop.html"><img class="carousel-image" src="assets/images/homepage/shop3.png" alt="Black XBOX console with black controller"></a>
                                     <div class="carousel-caption">
                                         <h5 class="margin">Consoles</h5> 
                                     </div>
@@ -293,20 +292,22 @@
     <!-- Newsletter -->
     <!-- *** This code was copied and modified - more in the report.html *** -->
     <!-- -->
-    <!-- * section-color-ghostwhite - section color (ghostwhite) -->
-    <!-- * newsletter - padding and text alignment -->
+    <!-- * section-color-ghostwhite - section color (ghostwhite) (style.css) -->
+    <!-- * newsletter - padding and text alignment/base class (style.css) -->
+    <!-- * header - newsletter header styling (style.css) -->
+    <!-- * btn - button styling (style.css) -->
     <section class="section-color-ghostwhite newsletter">
         <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                <div class="content"> <!-- maintains this section width -->
+                <div class="content"> <!-- maintains this section width (style.css) -->
                     <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
                             <!-- headers styling and text-->
-                            <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                            <h6 class="newsletter-header">Stay up to date with our latest news</h6>
-                            <!-- email input field with field's styling-->
-                            <div class="input-group">
+                            <h3 class="header">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                            <h6 class="header">Stay up to date with our latest news</h6>
+                            <!-- email input field with field's styling -->
+                            <div class="input-group"> <!-- makes button and input field next to each other (bootstrap)-->
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
                                 <button class="btn" type="submit">Subscribe</button>
                             </div>
@@ -322,6 +323,7 @@
     <!-- CSS styling was changed as well as whole footer code here -->
     <!-- -->
     <!-- * social-links - styling of the buttons (style.css)-->
+    <!-- * footer-bottom - styling of bottom lines of text (style.css)-->
     <footer>
         <div class="social-links">
             <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>

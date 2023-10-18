@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
-    <meta name="keywords" content="Games, Tech, technology, news, JS">
+    <meta name="keywords" content="Games, Tech, technology, news, JS, CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameTech Contact Page</title>
     
@@ -74,9 +74,10 @@
     <!-- *** Bootstrap forms - https://getbootstrap.com/docs/4.6/components/forms *** -->
     <!-- -->
     <!-- * section-color-white - section colour (white) (style.css) -->
-    <!-- * container-fluid - maintains header width -->
+    <!-- * container-fluid - maintains header width (style.css) -->
     <!-- * contact - base class (style.css) -->
-    <!-- * contact-space - section spacing (style.css) -->
+    <!-- * space - section spacing (style.css) -->
+    <!-- * header - header styling (style.css) -->
     <section class="section-color-white">
         <div class="contact container-fluid">
             <!-- bootstrap responsive flexbox (row and col classes) -->
@@ -116,20 +117,22 @@
     <!-- Newsletter -->
     <!-- *** This code was copied and modified - more in the report.html *** -->
     <!-- -->
-    <!-- * section-color-ghostwhite - section color (ghostwhite) -->
-    <!-- * newsletter - padding and text alignment -->
+    <!-- * section-color-ghostwhite - section color (ghostwhite) (style.css) -->
+    <!-- * newsletter - padding and text alignment/base class (style.css) -->
+    <!-- * header - newsletter header styling (style.css) -->
+    <!-- * btn - button styling (style.css) -->
     <section class="section-color-ghostwhite newsletter">
         <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                <div class="content"> <!-- maintains this section width -->
+                <div class="content"> <!-- maintains this section width (style.css) -->
                     <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
                             <!-- headers styling and text-->
-                            <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                            <h6 class="newsletter-header">Stay up to date with our latest news</h6>
+                            <h3 class="header">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                            <h6 class="header">Stay up to date with our latest news</h6>
                             <!-- email input field with field's styling-->
-                            <div class="input-group">
+                            <div class="input-group"> <!-- makes button and input field next to each other (bootstrap)-->
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
                                 <button class="btn" type="submit">Subscribe</button>
                             </div>
@@ -145,6 +148,7 @@
     <!-- CSS styling was changed as well as whole footer code here -->
     <!-- -->
     <!-- * social-links - styling of the buttons (style.css)-->
+    <!-- * footer-bottom - styling of bottom lines of text (style.css)-->
     <footer>
         <div class="social-links">
             <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>

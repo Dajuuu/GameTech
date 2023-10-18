@@ -177,7 +177,7 @@
     $(document).ready(function(){
         $(".shop-image-below").slice(0, 4).show();
 
-        $("#loadMore").on("click", function(loadMoreBtn){
+        $("#loadMore").on("click", function(loadMoreBtn) {
 
             loadMoreBtn.preventDefault();
             $(".shop-image-below:hidden").slice(0, 4).slideDown();

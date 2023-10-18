@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="author" content="Daniel Zielinski">
     <meta name="description" content="Games and technology news website">
-    <meta name="keywords" content="Games, Tech, technology, news, JS">
+    <meta name="keywords" content="Games, Tech, technology, news, JS, CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameTech Shop Page</title>
     
@@ -60,7 +60,7 @@
     <!-- -->
     <!-- * section-color-lightgray - section colour (lightgray) -->
     <!-- * news-section-shop - text positioning (style.css) -->
-    <!-- * container-fluid - maintains header width -->
+    <!-- * container-fluid - maintains header width (style.css) -->
     <section class="section-color-lightgray shop-spacing">
         <div class="container-fluid">
             <!-- bootstrap responsive flexbox (row and col classes) -->
@@ -76,17 +76,21 @@
     <!-- *** This code is written by myself *** -->
     <!-- three images (with text and buttons) with responsive behaviour -->
     <!-- -->
-    <!-- * section-color-lightgray - section colour (lightgray) -->
+    <!-- * section-color-lightgray - section colour (lightgray) (style.css) -->
     <section class="section-color-lightgray">
         <!-- bootstrap responsive flexbox (row and col classes) -->
-        <!-- * container-fluid - maintains this section width -->
+        <!-- * container-fluid - maintains this section width (style.css) -->
         <!-- * padding-right - making images align perfectly -->
         <div class="row container-fluid" style="padding-right: 0px"> 
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="shop-image">  <!-- spacing between images -->
-                <!-- image (with its source), text and button styling -->
-                <!-- more info in style.css -->
-                <a href="#"><img src="assets/images/shop-page/product1.png" alt="Black headphones with blury background" class="upper"></a>
+                <!-- images (with theirs source), text and button styling -->
+                <!-- * shop-image - spacing between images/base class (style.css) -->
+                <!-- * upper - styling of this section (style.css) -->
+                <!-- * description - description of the images styling (style.css) -->
+                <!-- * text-up - text styling in the description box (style.css) -->
+                <!-- * btn - button styling in the description box (style.css) -->
+                <div class="shop-image">  
+                <img class="upper" src="assets/images/shop-page/product1.png" alt="Black headphones with blury background">
                     <div class="description">
                         <h6 class="text-up">Razer Kraken X</h6>
                         <button class="btn">Buy Now!</button>
@@ -95,10 +99,8 @@
             </div>
             <!-- bootstrap responsive flexbox (row and col classes) -->
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="shop-image">  <!-- spacing between images -->
-                <!-- image (with its source), text and button styling -->
-                <!-- more info in style.css -->
-                <img src="assets/images/shop-page/product2.jpg" alt="Black speakers on a darkblue background" class="upper">
+                <div class="shop-image"> 
+                <img class="upper" src="assets/images/shop-page/product2.jpg" alt="Black speakers on a darkblue background">
                     <div class="description">
                         <h6 class="text-up">Creative Pebble V2</h6>
                         <button class="btn">Buy Now!</button>
@@ -107,10 +109,8 @@
             </div>
             <!-- bootstrap responsive flexbox (row and col classes) -->
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-                <div class="shop-image">   <!-- spacing between images -->
-                <!-- image (with its source), text and button styling -->
-                <!-- more info in style.css -->
-                <img src="assets/images/shop-page/product3.jpg" alt="Video game console on a red background" class="upper">
+                <div class="shop-image">  
+                <img class="upper" src="assets/images/shop-page/product3.jpg" alt="Video game console on a red background">
                     <div class="description">
                         <h6 class="text-up">Nintendo Switch</h6>
                         <button class="btn">Buy Now!</button>
@@ -123,8 +123,8 @@
     <!-- Text above section 2 -->
     <!-- *** This code is written by myself *** -->
     <!-- -->
-    <!-- * section-color-lightgreen - section colour (lightgreen) -->
-    <!-- * container-fluid - maintains this section width -->
+    <!-- * section-color-lightgreen - section colour (lightgreen) (style.css) -->
+    <!-- * container-fluid - maintains this section width (style.css) -->
     <section class="section-color-lightgreen">
         <div class="container-fluid">
             <!-- bootstrap responsive flexbox (row and col classes)-->
@@ -137,16 +137,20 @@
         
         <!-- Section 2 - latest additions in shop -->
         <!-- *** This code is written by myself *** -->
+        <!-- two images (with text and buttons) with responsive behaviour -->
         <!-- -->
         <!-- bootstrap responsive flexbox (row and col classes) -->
-        <!-- two images (with text and buttons) with responsive behaviour -->
-        <!-- * container-fluid - maintains this section width -->
-        <!-- * padding-right - making images align perfectly -->
+        <!-- * container-fluid - maintains this section width (style.css) -->
+        <!-- * padding-right - making images align perfectly (style.css)  -->
         <div class="row container-fluid" style="padding-right: 0px;">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div data-aos="flip-up"> <!-- AOS library animation -->
-                    <!-- image (with its source), text and button styling -->
-                    <!-- more info in style.css -->
+                    <!-- images (with theirs source), text and button styling -->
+                    <!-- * shop-image - spacing between images/base class (style.css) -->
+                    <!-- * middle - styling of this section (style.css) -->
+                    <!-- * description - description of the images styling (style.css) -->
+                    <!-- * text-up - text styling in the description box (style.css) -->
+                    <!-- * btn - button styling in the description box (style.css) -->
                     <div class="shop-image">
                     <div class="corner-ribbon">Low Price!</div> <!-- ribbon that appears in the top right corner of the image -->
                     <img class="middle" src="assets/images/shop-page/latest-product1.jpg" alt="Black RGB Logitech keyboard on a dark pad">
@@ -160,8 +164,6 @@
             <!-- bootstrap responsive flexbox (row and col classes) -->
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div data-aos="flip-up">  <!-- AOS library animation -->
-                    <!-- image (with its source), text and button styling -->
-                    <!-- more info in style.css -->
                     <div class="shop-image">
                     <div class="corner-ribbon">Low Price!</div>  <!-- ribbon that appears in the top right corner of the image -->
                     <img class="middle" src="assets/images/shop-page/latest-product2.jpg" alt="RGB microphone standing, gradient background">
@@ -178,8 +180,8 @@
     <!-- Text above section 3 -->
     <!-- *** This code is written by myself *** -->
     <!-- -->
-    <!-- * section-color-lightgray - section colour (lightgray) -->
-    <!-- * container-fluid - maintains this section width -->
+    <!-- * section-color-lightgray - section colour (lightgray) (style.css) -->
+    <!-- * container-fluid - maintains this section width (style.css) -->
     <!-- * padding-top - positioning of this section -->
     <section class="section-color-lightgray" style="padding-top: 50px">
         <div class="container-fluid">
@@ -193,38 +195,39 @@
         
         <!-- Section 3 - more shop offers -->
         <!-- *** This code is written by myself *** -->
+        <!-- Eight images (Four hidden and four shown) with responsive behaviour -->
         <!-- -->
-        <!-- * container-fluid - maintains this section width -->
-        <!-- * shop-image-below - images styling. More in style.css -->
+        <!-- * container-fluid - maintains this section width (style.css) -->
+        <!-- * shop-image-below - images styling (style.css)-->
         <!-- bootstrap responsive flexbox (row and col classes) -->
         <!-- all images have their alternative texts (alt) -->
         <div class="row container-fluid">
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below1.png" alt="AMD Ryzen 7 processor gray/dark box" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below1.png" alt="AMD Ryzen 7 processor gray/dark box"></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below2.jpg" alt="Triss Merigold (The Witcher series) figurine" class="shop-image-below"></a>              
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below2.jpg" alt="Triss Merigold (The Witcher series) figurine"></a>              
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below3.jpg" alt="Johnny Silverhand (Cyberpunk 2077) Funko POP figurine" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below3.jpg" alt="Johnny Silverhand (Cyberpunk 2077) Funko POP figurine"></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below4.png" alt="LEGO Iron Man set" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below4.png" alt="LEGO Iron Man set"></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below5.png" alt="Cyberpunk 2077 PC game box" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below5.png" alt="Cyberpunk 2077 PC game box"></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below6.png" alt="Diablo Chair X-Horn 2.0 (XL) black/white" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below6.png" alt="Diablo Chair X-Horn 2.0 (XL) black/white"></a>
             </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below7.png" alt="MSI black gaming laptop" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below7.png" alt="MSI black gaming laptop"></a>
             </div>        
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                <a href="#"><img src="assets/images/shop-page/product-below8.png" alt="Nvidia Rtx graphics card" class="shop-image-below"></a>
+                <a href="#"><img class="shop-image-below" src="assets/images/shop-page/product-below8.png" alt="Nvidia Rtx graphics card"></a>
             </div>
 
-            <!-- Load more button under the first row of images (4 images)-->
+            <!-- Load more button under the first row of images (four images)-->
             <!-- By clicking the button other row of images shows up -->
             <!-- More info in style.css, script.js and report.html-->
             <a href="#" id="loadMore">Load More</a>
@@ -234,20 +237,22 @@
     <!-- Newsletter -->
     <!-- *** This code was copied and modified - more in the report.html *** -->
     <!-- -->
-    <!-- * section-color-ghostwhite - section colour (ghostwhite) -->
-    <!-- * newsletter - padding and text alignment -->
+    <!-- * section-color-ghostwhite - section color (ghostwhite) (style.css) -->
+    <!-- * newsletter - padding and text alignment/base class (style.css) -->
+    <!-- * header - newsletter header styling (style.css) -->
+    <!-- * btn - button styling (style.css) -->
     <section class="section-color-ghostwhite newsletter">
         <!-- bootstrap responsive flexbox (row and col classes) -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"> 
-                <div class="content"> <!-- maintains this section width -->
+                <div class="content"> <!-- maintains this section width (style.css) -->
                     <div data-aos="fade-right">  <!-- AOS library animation -->
                         <form>
                             <!-- headers styling and text-->
-                            <h3 class="newsletter-header">SUBSCRIBE TO OUR NEWSLETTER</h3>
-                            <h6 class="newsletter-header">Stay up to date with our latest news</h6>
+                            <h3 class="header">SUBSCRIBE TO OUR NEWSLETTER</h3>
+                            <h6 class="header">Stay up to date with our latest news</h6>
                             <!-- email input field with field's styling-->
-                            <div class="input-group">
+                            <div class="input-group"> <!-- makes button and input field next to each other (bootstrap)-->
                                 <input type="email" class="form-control" placeholder="Write your e-mail here">
                                 <button class="btn" type="submit">Subscribe</button>
                             </div>
@@ -263,6 +268,7 @@
     <!-- CSS styling was changed as well as whole footer code here -->
     <!-- -->
     <!-- * social-links - styling of the buttons (style.css)-->
+    <!-- * footer-bottom - styling of bottom lines of text (style.css)-->
     <footer>
         <div class="social-links">
             <a href="#"><img src="assets/images/icons/twitter.png" alt="Twitter icon" class="social-links-size"></a>

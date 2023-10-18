@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 80px 20px;
     text-align: center;
 }
-/* newsletter max-width */
+/* newsletter max-width and margin properties*/
 /*  - changed: max-width */
 /*  - deleted: text-align, position, z-index */
 .newsletter .content {
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px 0px 0px 10px;
     height: 50px;
 }
-/* styling button */
+/* button styling */
 /*  - changed: background, border-radius, font-weight */
 /*  - deleted: min-height */
 .newsletter .content .btn {
@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #328042;
 }
 /* newsletter headers base text colour and padding*/
-.newsletter-header {
+.newsletter .header {
     padding-bottom: 20px;
     color: black;
 }
@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 5px 0;
     background: rgba(42, 99, 54, 0.7);
 }
-/* this class is used only on "shop" and "contact" pages*/
+/* this class is used only in "shop" and "contact" pages*/
 /* it makes the header visible all the time */
 /* - this code is written by myself*/
 #header.header-scrolled-constant {
@@ -343,6 +343,7 @@ h1, h2, h3, h4, h5, h6 {
 /*----------*/
 /* Mobile Navigation Menu*/
 /* * When user is using smaller screen device this code applies*/
+/* * More code in the script.js */
 /* - This section was modified from the template*/
 /*----------*/
 
@@ -351,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-toggle { 
     position: fixed;
     right: 15px;
-    top: 26px;
+    top: 22px;
     z-index: 111;
     border: none;
     background: none;
@@ -361,7 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 /* navigation menu icon position when user scrolls down */
 /* - this code is written by myself*/
 .mobile-nav-toggle-scrolled {
-    top: 12px;
+    top: 8px;
 }
 /* navigation menu position on the "contact" and "shop" pages */
 /* - this code is written by myself*/
@@ -573,6 +574,8 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: cover;
     height: 350px; 
     border-radius: 8px;
+    margin: 2px;
+    width: 100%;  
 }
 /* styling of the small indicatiors at the bottom*/
 .carousel-indicators li {
@@ -663,7 +666,7 @@ footer .footer-bottom {
 .contact .space {
     padding: 20px; 
 }
-/* section spacing*/
+/* header styling*/
 .contact .header {
     text-align: center;
     margin-bottom: 20px;
@@ -713,7 +716,7 @@ footer .footer-bottom {
     padding-top: 140px;
     margin-bottom: -40px;
 }
-/* images in the upper section ("futured") */
+/* styling of images in the upper section ("futured") */
 .shop-image .upper {
     object-fit: cover;
     opacity: 1;
@@ -723,19 +726,22 @@ footer .footer-bottom {
     width: 96%; 
     height: 400px;
 }
-/* images in the middle section ("latest additions") */
+/* styling of images in the middle section ("latest additions") */
+/* border outset style: https://www.w3schools.com/cssref/pr_border-style.asp*/
 .shop-image .middle {
     object-fit: cover;
+    opacity: 1;
+    transition: .2s ease;
     border-radius: 8px;
     border: 10px outset #248a38;
     width: 96%; 
     height: 400px; 
-    opacity: 1;
 }
 /* description of the images */
+/* transform translate property: https://www.w3schools.com/cssref/css3_pr_transform.asp */
 .shop-image .description {
+    opacity: 1;
     transition: .2s ease;
-    opacity: 0;
     position: absolute;
     top: 75%;
     left: 48%;
@@ -743,37 +749,12 @@ footer .footer-bottom {
     transform: translate(-50%, -50%);
     text-align: center;  
 }
-
-.shop-image:hover .description {
-    opacity: 1;
-}
-
-/* description is always visible on smaller screens*/
-@media (max-width: 991px) {
-    .shop-image .description {
-    opacity: 1;
-    }
-}
-/* hovering on image makes it bigger and changes the opacity*/
-/* - only on bigger screens*/
-@media (min-width: 992px) {
-    
-    .shop-image:hover .upper {
-        opacity: 0.8;
-        transform: scale(1.1);
-    }
-    .shop-image:hover .middle {
-        opacity: 0.8;
-    }
-}
-
 /* text styling in the description box*/
 .shop-image .description .text-up {
     color: #fff;
     font-size: 20px;
     padding-bottom: 20px;
 }
-
 /* button styling in the description box*/
 .shop-image .description .btn { 
     background-color: #d1411d;
@@ -786,6 +767,43 @@ footer .footer-bottom {
 .shop-image .description .btn:hover {
     background-color: #b33212;
 }
+/* button on focus styling */
+.shop-image .description .btn:focus { 
+    color: black;
+    background-color: #fff;
+    border-color: blue;
+}  
+/* small ribbon in the top right corner of middle images */
+/* transform rotate property*/
+/* https://www.w3schools.com/cssref/css3_pr_transform.asp */
+.shop-image .corner-ribbon {
+    width: 100px;
+    top: 40px;
+    right: 58px;
+    left: auto;
+    letter-spacing: 2px;
+    background: #c93224;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    transition: .2s ease;
+    transform: rotate(30deg);
+    z-index: 10;
+}
+/* making sure the position of ribbon is right*/
+@media (min-width: 768px) and (max-width: 950px){
+    
+    .shop-image .corner-ribbon{
+        right: 48px;
+    }
+}
+@media (max-width: 576px){
+    
+    .shop-image .corner-ribbon{
+        right: 45px;
+    }
+}
 /* image styling for the images at the bottom*/
 .shop-image-below {
     object-fit: cover;
@@ -797,34 +815,27 @@ footer .footer-bottom {
     display: none;
     opacity: 1;
 }
-/* image opacity changer on hover */
-.shop-image-below:hover {
+/* hovering on image makes it bigger and/or changes the opacity*/
+/* it also applies to the small ribbon on images (w/o the opacity)*/
+/* - only on bigger screens*/
+@media (min-width: 992px) {
+    
+    .shop-image:hover .upper {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    .shop-image:hover .middle {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+    .shop-image:hover .corner-ribbon {
+        width: 120px;
+    }
+    .shop-image-below:hover {
     opacity: 0.8;
 }
+/* image opacity changer on hover */
 
-/* small ribbon in the top right corner of middle images */
-/*  - only thing I had to look for was the rotate property*/
-/* https://www.w3schools.com/cssref/css3_pr_transform.asp */
-.corner-ribbon{
-    width: 100px;
-    top: 40px;
-    right: 53px;
-    left: auto;
-    letter-spacing: 2px;
-    background: #c93224;
-    position: absolute;
-    text-align: center;
-    line-height: 40px;
-    color: #fff;
-    transform: rotate(30deg);
-    z-index: 10;
-}
-/* making sure the position is right*/
-@media (max-width: 950px) {
-    
-    .corner-ribbon{
-        right: 48px;
-    }
 }
     
 /*----------*/
