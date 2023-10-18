@@ -125,21 +125,29 @@ if ($(window).scrollTop() > 100) {
 } 
 }
 
-  // Back to top button zmieniccccccccccccccccccccccccccccccccccccccccccccc
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.scroll-to-top-button').fadeIn('slow');
-    } else {
-      $('.scroll-to-top-button').fadeOut('slow');
+/* 
+    This is the scroll-to-top-button function, that appears in the 
+    bottom right corner of the screen after user is below fixed y coord.
+    - This section was copied and modified
+    - https://codepen.io/matthewcain/pen/ZepbeR
+*/   
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 400) {
+        $('.scroll-to-top-button').fadeIn('slow');
+    } 
+    else {
+        $('.scroll-to-top-button').fadeOut('slow');
     }
-  });
+});
 
-  $('.scroll-to-top-button').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
+$('.scroll-to-top-button').click(function() {
+    $('html, body').animate({scrollTop: 0}, 1200, 'easeInOutExpo');
     return false;
-  });
+});
+    
+/* end of scroll to the top button*/
+    
+    
     
     
 $(document).ready(function(){

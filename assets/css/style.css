@@ -5,12 +5,27 @@
 * License: https://bootstrapmade.com/license/
 */
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+/*----------*/
+/* General */
+/* - all code here is written by myself*/
+/*----------*/
+
+
+/* font used in the body section*/
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
 }
+
+/* links colour*/
+a {
+    color: #3b9c4e;
+}
+a:hover {
+    color: #40b357;
+    text-decoration: none;
+}
+
 /* scrollbar*/
 body::-webkit-scrollbar {
     width: 1rem;
@@ -22,86 +37,95 @@ body::-webkit-scrollbar-thumb {
     background: #2a6336;
 }
 
-a {
-    color: #3b9c4e;
-}
-
-a:hover {
-    color: #40b357;
-    text-decoration: none;
-}
+/* headings styling*/
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
-.section-bg-color {
+/* section colours*/
+.section-color-gw {
     background-color: ghostwhite;
 }
+/*
 .section-bg-color-green {
     background-color: lightgreen;
 }
+*/
+
+/*----------*/
+/* Newsletter section */
+/* - This section was copied and modified */
+/* - https://bootsnipp.com/snippets/gN8P1 */
+/* - More in the report.html in Newsletter section*/
+/*----------*/
 
 .newsletter {
     padding: 80px 20px;
-}
-
-.newsletter .content {
-    max-width: 650px;
-    margin: 0 auto;
     text-align: center;
-    position: relative;
-    z-index: 2; 
 }
-
+.newsletter .content {
+    max-width: 600px;
+    margin: auto;
+}
+/* styling "email writing" section*/
 .newsletter .content .form-control {
     height: 50px;
     border-color: #2a6336;
     border-radius: 10px 0px 0px 10px;
-    
 }
-
+/* styling button*/
 .newsletter .content .btn {
-    min-height: 50px; 
-    border-radius: 0px 10px 10px 0px;
+    height: 50px;
     background: #2a6336;
+    border-radius: 0px 10px 10px 0px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
 }
 .newsletter .content .btn:hover {
     background: #328042;
 }
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+
+/*----------*/
+/* Scroll to the top button */
+/* - This section was copied and modified */
+/* - https://codepen.io/matthewcain/pen/ZepbeR */
+/* - More in the report.html in Newsletter section*/
+/*----------*/
+
+/* button position*/
 .scroll-to-top-button {
+    display: none;
     right: 15px;
     bottom: 25px;
     position: fixed;
-    display: none;
     z-index: 10;
 }
 
+/* button styling*/
 .scroll-to-top-button i {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
+    font-size: 30px; /* font size is needed to adjust the size of the arrow*/
     width: 60px;
     height: 40px;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     border-style: solid;
     border-width: thin;
     color: green;
     transition: all 0.3s;
 }
-
 .scroll-to-top-button i:hover {
     background: #fff;
     color: green;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/*----------*/
+/* Header */
+/* - This section was copied and modified */
+/* - https://codepen.io/matthewcain/pen/ZepbeR */
+/* - More in the report.html in Newsletter section*/
+/*----------*/
 #header {
     z-index: 9;
     transition: all 0.3s;
@@ -154,11 +178,13 @@ h1, h2, h3, h4, h5, h6 {
         padding-left: 15px;
         padding-right: 15px;
     }
+/*
 .news-section {
-	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-top: 1000px;
+	padding-bottom: 1000px;
 
   }
+*/
 }
 
 /*--------------------------------------------------------------
